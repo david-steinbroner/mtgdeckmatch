@@ -116,7 +116,7 @@ const Results = () => {
               return (
             <Card
               key={precon.id}
-              className="group hover:shadow-card-hover transition-all duration-300 border-2 relative overflow-hidden flex flex-col h-full"
+              className="group hover:shadow-card-hover transition-all duration-300 border-2 relative overflow-hidden flex flex-col"
             >
               {/* Best Match Badge */}
               {index === 0 && matchedResults.length > 0 && (
@@ -130,16 +130,23 @@ const Results = () => {
               
               {/* Clickable Commander Card Image */}
               {commanderCard && (
-                <CardImageModal
-                  imageUrl={imageUrl}
-                  cardName={precon.commander}
-                  deckName={precon.name}
-                />
+                <div className="p-4">
+                  <CardImageModal
+                    imageUrl={imageUrl}
+                    cardName={precon.commander}
+                    deckName={precon.name}
+                  />
+                </div>
               )}
               
-              <CardHeader className={commanderCard ? "-mt-16 relative z-10" : ""}>
+              <CardHeader className="pt-4 pb-2">
                 {/* Deck Name */}
-                <CardTitle className="text-2xl text-foreground drop-shadow-lg">{precon.name}</CardTitle>
+                <CardTitle className="text-2xl text-foreground">{precon.name}</CardTitle>
+                
+                {/* Price */}
+                <p className="text-sm text-muted-foreground font-semibold">
+                  Typical Price: $40-60
+                </p>
                 
                 {/* Commander Name */}
                 <p className="text-sm text-muted-foreground">
@@ -162,7 +169,7 @@ const Results = () => {
                 </div>
               </CardHeader>
               
-              <CardContent className="space-y-4 flex-1 flex flex-col">
+              <CardContent className="space-y-4 flex-1 flex flex-col p-6">
                 {/* Flavor Description */}
                 {deckELI5[precon.id] && (
                   <div className="bg-secondary/20 rounded-lg p-4 border border-secondary/30">
@@ -215,23 +222,36 @@ const Results = () => {
                 </div>
 
                 {/* Buttons - Always at bottom */}
-                <div className="mt-auto pt-4">
-                  <div className="grid grid-cols-2 gap-2">
-                    <Button
-                      variant="outline"
-                      className="group-hover:border-primary"
-                      onClick={() => window.open(precon.edhrec_url, "_blank")}
-                    >
-                      Learn More
-                      <ExternalLink className="w-4 h-4 ml-2" />
-                    </Button>
-                    <Button
-                      variant="default"
-                      className="bg-accent hover:bg-accent/90 text-accent-foreground"
-                      onClick={() => window.open(precon.edhrec_url, "_blank")}
-                    >
-                      Buy This Deck
-                    </Button>
+                <div className="mt-auto pt-4 space-y-3">
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="space-y-1">
+                      <Button
+                        variant="outline"
+                        className="w-full group-hover:border-primary h-auto py-3"
+                        onClick={() => window.open(precon.edhrec_url, "_blank")}
+                      >
+                        Learn More
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </Button>
+                      <p className="text-[10px] text-muted-foreground text-center leading-tight">
+                        See full card list on EDHREC →
+                      </p>
+                    </div>
+                    <div className="space-y-1">
+                      <Button
+                        variant="default"
+                        className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-auto py-3"
+                        onClick={() => {
+                          const searchQuery = encodeURIComponent(precon.name + " commander deck");
+                          window.open(`https://www.tcgplayer.com/search/magic/product?productLineName=magic&q=${searchQuery}&view=grid`, "_blank");
+                        }}
+                      >
+                        Buy This Deck
+                      </Button>
+                      <p className="text-[10px] text-muted-foreground text-center leading-tight">
+                        Purchase on TCGPlayer ($40-60) →
+                      </p>
+                    </div>
                   </div>
                 </div>
               </CardContent>
