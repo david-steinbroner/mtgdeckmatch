@@ -235,28 +235,29 @@ const Results = () => {
                 {/* Deck Name */}
                 <CardTitle className="text-base leading-none text-foreground">{precon.name}</CardTitle>
                 
-                {/* Price */}
-                <p className="text-[11px] text-muted-foreground font-semibold">
-                  $40-60
-                </p>
-                
-                {/* Commander Name */}
-                <p className="text-[11px] text-muted-foreground leading-tight">
+                {/* Price, Commander, and Colors on one line */}
+                <div className="flex items-center gap-2 flex-wrap text-[11px]">
+                  {/* Price */}
+                  <span className="text-muted-foreground font-semibold">$40-60</span>
+                  <span className="text-muted-foreground">•</span>
+                  
+                  {/* Commander Name */}
                   <span className="font-semibold text-foreground">{precon.commander}</span>
-                </p>
-                
-                {/* Colors */}
-                <div className="flex items-center gap-1 flex-wrap">
-                  <div className="flex gap-0.5">
-                    {precon.colors.map((color) => (
-                      <span key={color} className="text-sm">
-                        {getColorSymbol(color)}
-                      </span>
-                    ))}
+                  <span className="text-muted-foreground">•</span>
+                  
+                  {/* Colors */}
+                  <div className="flex items-center gap-1">
+                    <div className="flex gap-0.5">
+                      {precon.colors.map((color) => (
+                        <span key={color} className="text-sm">
+                          {getColorSymbol(color)}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="font-semibold text-foreground">
+                      {precon.color_identity}
+                    </span>
                   </div>
-                  <span className="text-[11px] font-semibold text-foreground">
-                    {precon.color_identity}
-                  </span>
                 </div>
               </CardHeader>
               
