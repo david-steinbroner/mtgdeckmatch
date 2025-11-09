@@ -291,13 +291,13 @@ const Results = () => {
                     </p>
                     {!isLoadingReasons && (
                       <ul className="space-y-0.5">
-                        {/* User's explicit input */}
-                        {userInputBullet && (
+                        {/* User's explicit input - HIDDEN - Uncomment to restore */}
+                        {/* {userInputBullet && (
                           <li className="text-[11px] text-foreground flex items-start gap-1">
                             <span className="text-accent text-sm leading-none">•</span>
                             <span>{userInputBullet}</span>
                           </li>
-                        )}
+                        )} */}
                         {/* AI-generated reason */}
                         {aiReasons[index] && (
                           <li className="text-[11px] text-foreground flex items-start gap-1">
