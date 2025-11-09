@@ -54,15 +54,17 @@ const Welcome = () => {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button 
-            variant="hero" 
-            size="lg" 
-            onClick={() => navigate("/path-selection")} 
-            className="text-lg px-12 py-6 h-auto rounded-xl w-full sm:w-auto"
-          >
-            Let's Find Your Deck!
-          </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
+          <div className="flex flex-col items-center gap-2">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              onClick={() => navigate("/path-selection")} 
+              className="text-lg px-12 py-6 h-auto rounded-xl w-full sm:w-auto"
+            >
+              Let's Find Your Deck!
+            </Button>
+          </div>
           
           <div className="flex flex-col items-center gap-2">
             <Button 

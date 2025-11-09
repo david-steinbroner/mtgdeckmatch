@@ -274,6 +274,22 @@ const Results = () => {
     setSurpriseDecks(newDecks);
   };
 
+  const handleGoBack = () => {
+    switch (source) {
+      case 'vibes':
+        navigate('/vibes-questions');
+        break;
+      case 'power':
+        navigate('/power-questions');
+        break;
+      case 'surprise':
+      case 'search':
+      default:
+        navigate('/');
+        break;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-3 py-3">
       <div className="max-w-7xl mx-auto space-y-3">
@@ -339,7 +355,7 @@ const Results = () => {
                 <Button variant="outline" size="sm" onClick={() => navigate("/")}>
                   Start Over
                 </Button>
-                <Button variant="secondary" size="sm" onClick={() => navigate(-1)}>
+                <Button variant="secondary" size="sm" onClick={handleGoBack}>
                   Go Back
                 </Button>
               </div>
