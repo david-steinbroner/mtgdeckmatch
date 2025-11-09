@@ -11,11 +11,11 @@ export const CardImageModal = ({ imageUrl, cardName, deckName }: CardImageModalP
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary rounded-lg transition-all hover:opacity-90">
+        <button className="cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary rounded-lg transition-all hover:opacity-90 flex items-center justify-center h-28 lg:h-32 w-full bg-muted/30">
           <img
             src={imageUrl}
             alt={`${cardName} - Commander of ${deckName}`}
-            className="w-full rounded-t-lg object-cover h-32 lg:h-36"
+            className="w-full rounded-t-lg object-cover h-full"
             loading="lazy"
           />
         </button>
