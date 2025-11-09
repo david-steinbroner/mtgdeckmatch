@@ -9,7 +9,7 @@ import { matchPrecons } from "@/utils/matcher";
 import { deckELI5 } from "@/utils/deckDescriptions";
 import { deckDifficulty } from "@/utils/deckDifficulty";
 import { getScryfallImageUrl, isPlaceholderUrl } from "@/utils/cardImageUtils";
-import { Sparkles } from "lucide-react";
+import { Sparkles, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
@@ -29,6 +29,9 @@ const Results = () => {
   const [isLoadingIntros, setIsLoadingIntros] = useState(true);
   const [surpriseDecks, setSurpriseDecks] = useState<any[]>([]);
   const [matchReasons, setMatchReasons] = useState<string[]>([]);
+  const [displayedDecks, setDisplayedDecks] = useState<any[]>([]);
+  const [backupDecks, setBackupDecks] = useState<any[]>([]);
+  const [dismissedIds, setDismissedIds] = useState<Set<string>>(new Set());
 
   // Helper function to get random IP decks
   const getRandomIPDecks = () => {
@@ -111,10 +114,17 @@ const Results = () => {
         score: m.score, 
         reasons: [m.matchReason] 
       }))
-    : matchPrecons(preconsData, userPreferences, pathType);
+     : matchPrecons(preconsData, userPreferences, pathType);
   
-  // Show only top 3 matches
-  const topMatches = matchedResults.slice(0, 3);
+  // Initialize displayed and backup decks
+  useEffect(() => {
+    if (matchedResults.length > 0) {
+      setDisplayedDecks(matchedResults.slice(0, 6));
+      setBackupDecks(matchedResults.slice(6));
+    }
+  }, [matchedResults.length]);
+
+  const topMatches = displayedDecks;
 
   // Generate AI deck intros on mount
   useEffect(() => {
@@ -263,6 +273,35 @@ const Results = () => {
       G: "🟢",
     };
     return symbols[colorCode] || colorCode;
+  };
+
+  // Calculate relative match percentage
+  const getMatchPercentage = (score: number, index: number) => {
+    if (matchedResults.length === 0 || source === 'surprise') return null;
+    
+    const bestScore = matchedResults[0]?.score || 1;
+    if (bestScore === 0) return null;
+    
+    const percentage = Math.round((score / bestScore) * 100);
+    return percentage;
+  };
+
+  // Handle dismissing a deck
+  const handleDismissDeck = (deckId: string) => {
+    // Mark as dismissed
+    setDismissedIds(prev => new Set([...prev, deckId]));
+    
+    // Remove from displayed
+    const updatedDisplayed = displayedDecks.filter(d => d.precon.id !== deckId);
+    
+    // If we have backups, add the next one
+    if (backupDecks.length > 0) {
+      const nextDeck = backupDecks[0];
+      setDisplayedDecks([...updatedDisplayed, nextDeck]);
+      setBackupDecks(backupDecks.slice(1));
+    } else {
+      setDisplayedDecks(updatedDisplayed);
+    }
   };
 
   const handleShuffleAgain = () => {
@@ -423,49 +462,61 @@ const Results = () => {
               const imageUrl = commanderCard?.image_url && !isPlaceholderUrl(commanderCard.image_url)
                 ? commanderCard.image_url
                 : getScryfallImageUrl(precon.commander);
+              const matchPercentage = getMatchPercentage(score, index);
+              const originalIndex = matchedResults.findIndex(m => m.precon.id === precon.id);
               
               return (
             <Card
               key={precon.id}
-              className="group hover:shadow-card-hover transition-all duration-300 border-2 relative flex flex-col h-full"
+              className="group hover:shadow-card-hover transition-all duration-300 border-2 relative flex flex-col h-full animate-fade-in"
             >
-              {/* Best Match Badge */}
-              {index === 0 && matchedResults.length > 0 && source !== 'search' && (
+              {/* X Dismiss Button */}
+              <button
+                onClick={() => handleDismissDeck(precon.id)}
+                className="absolute top-2 right-2 z-20 w-7 h-7 rounded-full bg-muted/80 hover:bg-destructive hover:text-destructive-foreground transition-all duration-200 flex items-center justify-center opacity-0 group-hover:opacity-100"
+                aria-label="Dismiss deck"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              {/* Match Percentage Badge */}
+              {matchPercentage !== null && source !== 'surprise' && (
                 <div className="absolute top-2 left-2 z-10">
-                  <Badge className="bg-gradient-to-r from-accent to-accent/80 text-accent-foreground font-semibold px-1.5 py-0.5 text-[10px] flex items-center gap-0.5">
-                    <Sparkles className="w-2.5 h-2.5" />
-                    Best Match
+                  <Badge className="bg-gradient-to-r from-accent to-accent/80 text-accent-foreground font-semibold px-2 py-0.5 text-xs">
+                    {matchPercentage}% Match
                   </Badge>
                 </div>
               )}
 
               {/* Match Reason (for search mode) */}
-              {source === 'search' && matchReasons[index] && (
-                <div className="bg-accent/10 border-b border-accent/20 p-3">
-                  <p className="text-sm flex items-start gap-2 text-foreground">
-                    <span className="text-xl flex-shrink-0">💡</span>
-                    <span><strong>Why this matched:</strong> {matchReasons[index]}</span>
+              {source === 'search' && matchReasons[originalIndex] && (
+                <div className="bg-accent/10 border-b border-accent/20 p-2.5">
+                  <p className="text-xs flex items-start gap-2 text-foreground">
+                    <span className="text-lg flex-shrink-0">💡</span>
+                    <span><strong>Why this matched:</strong> {matchReasons[originalIndex]}</span>
                   </p>
                 </div>
               )}
 
               {/* Personalized Intro Banner */}
-              {aiIntros[index] && !isLoadingIntros && source !== 'search' && (
-                <div className="bg-primary/10 border-b border-primary/20 p-3">
-                  <p className="text-sm italic flex items-center gap-2 text-foreground">
-                    <Sparkles className="w-4 h-4 text-primary flex-shrink-0" />
-                    <span>{aiIntros[index]}</span>
+              {aiIntros[originalIndex] && !isLoadingIntros && source !== 'search' && (
+                <div className="bg-primary/10 border-b border-primary/20 p-2.5">
+                  <p className="text-xs italic flex items-center gap-2 text-foreground">
+                    <Sparkles className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                    <span>{aiIntros[originalIndex]}</span>
                   </p>
                 </div>
               )}
               
-              {/* Clickable Commander Card Image - Ultra Compact */}
+              {/* Clickable Commander Card Image - Smaller Size */}
               <div className="p-2">
-                <CardImageModal
-                  imageUrl={imageUrl}
-                  cardName={precon.commander}
-                  deckName={precon.name}
-                />
+                <div className="relative aspect-[5/7] rounded-lg overflow-hidden">
+                  <CardImageModal
+                    imageUrl={imageUrl}
+                    cardName={precon.commander}
+                    deckName={precon.name}
+                  />
+                </div>
               </div>
               
               <CardHeader className="pt-2 pb-1 space-y-1">

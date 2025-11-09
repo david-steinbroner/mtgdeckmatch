@@ -207,6 +207,6 @@ export function matchPrecons(precons, userPreferences, pathType = "vibes") {
   // Sort by score descending
   scoredPrecons.sort((a, b) => b.score - a.score);
   
-  // Return top 3
-  return scoredPrecons.slice(0, 3);
+  // Return top 15 results for better replacement options
+  return scoredPrecons.slice(0, 15);
 }
