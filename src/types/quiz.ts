@@ -9,7 +9,7 @@ export interface VibeOption {
 
 export interface QuizAnswer {
   questionId: string;
-  answerId: string;
+  answerId: string | string[]; // Can be single answer or array for checkboxes
 }
 
 export interface QuizState {

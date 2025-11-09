@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ProgressIndicator } from "@/components/ProgressIndicator";
 import { OptionCard } from "@/components/OptionCard";
+import { TextInputQuestion } from "@/components/TextInputQuestion";
+import { ColorCheckboxQuestion } from "@/components/ColorCheckboxQuestion";
 import { vibesQuestions } from "@/data/vibes-questions";
 import { ArrowLeft } from "lucide-react";
 import { QuizAnswer } from "@/types/quiz";
@@ -13,22 +15,29 @@ const VibesQuestions = () => {
   const [answers, setAnswers] = useState<QuizAnswer[]>([]);
 
   const currentQuestion = vibesQuestions[currentQuestionIndex];
-  const totalQuestions = 5; // Total questions in the flow
+  const totalQuestions = vibesQuestions.length;
 
-  const handleOptionSelect = (answerId: string) => {
+  const handleAnswer = (answerId: string | string[]) => {
     // Save answer
     const newAnswer: QuizAnswer = {
       questionId: currentQuestion.id,
       answerId,
     };
     
-    setAnswers([...answers, newAnswer]);
+    const newAnswers = [...answers, newAnswer];
+    setAnswers(newAnswers);
 
-    // TODO: Move to next question or results
-    console.log("Answer saved:", newAnswer);
-    console.log("All answers:", [...answers, newAnswer]);
-    
-    // For now, just log - will implement navigation to next question later
+    // Move to next question or results
+    if (currentQuestionIndex < vibesQuestions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      // Quiz complete, navigate to results
+      navigate("/results");
+    }
+  };
+
+  const handleOptionSelect = (answerId: string) => {
+    handleAnswer(answerId);
   };
 
   const handleStartOver = () => {
@@ -90,23 +99,44 @@ const VibesQuestions = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               {currentQuestion.question}
             </h2>
-            <p className="text-muted-foreground text-lg">
-              Choose the one that speaks to you most
-            </p>
+            {currentQuestion.type === "multiple-choice" && (
+              <p className="text-muted-foreground text-lg">
+                Choose the one that speaks to you most
+              </p>
+            )}
           </div>
 
-          {/* Options Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
-            {currentQuestion.options.map((option) => (
-              <OptionCard
-                key={option.id}
-                title={option.title}
-                description={option.description}
-                icon={option.icon}
-                onClick={() => handleOptionSelect(option.id)}
-              />
-            ))}
-          </div>
+          {/* Multiple Choice Options */}
+          {currentQuestion.type === "multiple-choice" && currentQuestion.options && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
+              {currentQuestion.options.map((option) => (
+                <OptionCard
+                  key={option.id}
+                  title={option.title}
+                  description={option.description}
+                  icon={option.icon}
+                  onClick={() => handleOptionSelect(option.id)}
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Text Input Question */}
+          {currentQuestion.type === "text-input" && (
+            <TextInputQuestion
+              placeholder={currentQuestion.placeholder}
+              quickSelects={currentQuestion.quickSelects}
+              onSubmit={handleAnswer}
+            />
+          )}
+
+          {/* Checkbox Question */}
+          {currentQuestion.type === "checkbox" && (
+            <ColorCheckboxQuestion
+              colorOptions={currentQuestion.colorOptions}
+              onSubmit={handleAnswer}
+            />
+          )}
         </div>
       </div>
     </div>
