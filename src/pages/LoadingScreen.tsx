@@ -76,32 +76,34 @@ const LoadingScreen = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted flex items-center justify-center p-4">
-      <div className="max-w-md w-full text-center space-y-6 animate-fade-in">
-        <div className="text-6xl mb-4">🔍</div>
-        
-        {isCustomInput && customText ? (
-          <>
-            <h2 className="text-2xl font-bold text-foreground">
-              Searching for...
-            </h2>
-            <p className="text-xl text-primary font-semibold italic">
-              "{customText}"
-            </p>
-            {interpretation && (
-              <p className="text-lg text-muted-foreground">
-                {interpretation}
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+      <div className="pt-[25vh]">
+        <div className="max-w-[600px] mx-auto px-6 text-center space-y-6 animate-fade-in">
+          <div className="text-6xl mb-4">🔍</div>
+          
+          {isCustomInput && customText ? (
+            <>
+              <h2 className="text-2xl font-bold text-foreground">
+                Searching for...
+              </h2>
+              <p className="text-xl text-primary font-semibold italic">
+                "{customText}"
               </p>
-            )}
-          </>
-        ) : (
-          <h2 className="text-2xl font-bold text-foreground">
-            Finding your perfect deck...
-          </h2>
-        )}
+              {interpretation && (
+                <p className="text-base text-muted-foreground">
+                  {interpretation}
+                </p>
+              )}
+            </>
+          ) : (
+            <h2 className="text-2xl font-bold text-foreground">
+              Finding your perfect deck...
+            </h2>
+          )}
 
-        <div className="flex justify-center pt-4">
-          <Loader2 className="w-12 h-12 animate-spin text-primary" />
+          <div className="flex justify-center pt-4">
+            <Loader2 className="w-12 h-12 animate-spin text-primary" />
+          </div>
         </div>
       </div>
     </div>

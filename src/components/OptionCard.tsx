@@ -14,25 +14,25 @@ export const OptionCard = ({ title, description, icon: Icon, onClick, className 
     <button
       onClick={onClick}
       className={cn(
-        "group relative bg-gradient-to-br from-card to-card/80 rounded-xl p-6",
+        "group relative bg-gradient-to-br from-card to-card/80 rounded-xl p-8",
         "border-2 border-border hover:border-primary",
-        "transition-all duration-300 hover:shadow-card-hover hover:scale-105",
-        "text-left w-full",
+        "transition-all duration-200 hover:shadow-lg hover:scale-105",
+        "text-left w-full cursor-pointer",
         className
       )}
     >
-      <div className="space-y-3">
+      <div className="space-y-4">
         {/* Icon */}
-        <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300">
-          <Icon className="w-7 h-7 text-primary" />
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-200">
+          <Icon className="w-8 h-8 text-primary" />
         </div>
         
         {/* Text */}
-        <div className="space-y-1">
-          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+        <div className="space-y-1.5">
+          <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
             {title}
           </h3>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-base text-muted-foreground">
             {description}
           </p>
         </div>
