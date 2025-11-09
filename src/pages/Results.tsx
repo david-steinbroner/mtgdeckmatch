@@ -47,6 +47,62 @@ const Results = () => {
   // Show only top 3 matches
   const topMatches = matchedResults.slice(0, 3);
 
+  // Get user's input for personalization
+  const getUserInputBullet = () => {
+    if (pathType === "vibes") {
+      const vibeAnswer = answers.find(a => a.questionId === "vibe");
+      const creatureAnswer = answers.find(a => a.questionId === "creature-types");
+      
+      const vibeMap: Record<string, string> = {
+        cute: "cute & cuddly",
+        creepy: "creepy & dark",
+        whimsical: "whimsical & magical",
+        chaotic: "chaotic & funny",
+        epic: "epic & heroic",
+        nature: "nature & primal",
+      };
+      
+      if (creatureAnswer?.answerId && creatureAnswer.answerId !== "Skip this question") {
+        return `You wanted ${creatureAnswer.answerId} - this deck delivers!`;
+      } else if (vibeAnswer?.answerId) {
+        return `You wanted ${vibeMap[vibeAnswer.answerId] || vibeAnswer.answerId} vibes - perfect match!`;
+      }
+    } else if (pathType === "power") {
+      const archetypeAnswer = answers.find(a => a.questionId === "archetype");
+      const powerAnswer = answers.find(a => a.questionId === "power-level");
+      
+      const archetypeMap: Record<string, string> = {
+        aggro: "aggressive",
+        control: "controlling",
+        combo: "combo",
+        midrange: "midrange/value",
+        political: "political",
+      };
+      
+      const powerMap: Record<string, string> = {
+        beginner: "beginner-friendly",
+        focused: "focused",
+        "high-power": "high-power",
+      };
+      
+      const parts = [];
+      if (archetypeAnswer?.answerId) {
+        parts.push(archetypeMap[archetypeAnswer.answerId] || archetypeAnswer.answerId);
+      }
+      if (powerAnswer?.answerId) {
+        parts.push(powerMap[powerAnswer.answerId] || powerAnswer.answerId);
+      }
+      
+      if (parts.length > 0) {
+        return `You wanted ${parts.join(", ")} - this matches your playstyle!`;
+      }
+    }
+    
+    return null;
+  };
+  
+  const userInputBullet = getUserInputBullet();
+
   // Get commander card
   const getCommanderCard = (precon: any) => {
     return precon.cards?.find((card: any) => card.is_commander);
@@ -64,20 +120,13 @@ const Results = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-4 py-12">
-      <div className="max-w-6xl mx-auto space-y-8">
-        {/* Header */}
-        <div className="text-center space-y-4 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            {topMatches.length > 0 ? "We Found Your Perfect Decks!" : "No Perfect Matches"}
-          </h1>
-            <p className="text-lg text-muted-foreground">
-              {topMatches.length > 0 
-                ? pathType === "vibes" 
-                  ? "Here are the decks that match your style" 
-                  : "Here are the decks that match how you like to play"
-                : "But don't worry, we can help you find something great!"}
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-3 py-6">
+      <div className="max-w-6xl mx-auto space-y-4">
+        {/* Header - Compact */}
+        <div className="text-center space-y-1 animate-fade-in">
+          <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            {topMatches.length > 0 ? "Your Perfect Decks" : "No Perfect Matches"}
+          </h2>
         </div>
 
         {/* No Matches Message */}
@@ -105,7 +154,7 @@ const Results = () => {
 
         {/* Deck Cards - Only show if we have matches */}
         {topMatches.length > 0 && (
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mt-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
             {topMatches.map(({ precon, score, reasons }, index) => {
               const commanderCard = getCommanderCard(precon);
               const difficultyInfo = deckDifficulty[precon.id];
@@ -120,16 +169,16 @@ const Results = () => {
             >
               {/* Best Match Badge */}
               {index === 0 && matchedResults.length > 0 && (
-                <div className="absolute top-4 right-4 z-10">
-                  <Badge className="bg-gradient-to-r from-accent to-accent/80 text-accent-foreground font-semibold px-3 py-1 flex items-center gap-1">
+                <div className="absolute top-2 right-2 z-10">
+                  <Badge className="bg-gradient-to-r from-accent to-accent/80 text-accent-foreground font-semibold px-2 py-0.5 text-xs flex items-center gap-1">
                     <Sparkles className="w-3 h-3" />
                     Best Match
                   </Badge>
                 </div>
               )}
               
-              {/* Clickable Commander Card Image */}
-              <div className="p-4">
+              {/* Clickable Commander Card Image - Compact */}
+              <div className="p-2">
                 <CardImageModal
                   imageUrl={imageUrl}
                   cardName={precon.commander}
@@ -137,66 +186,72 @@ const Results = () => {
                 />
               </div>
               
-              <CardHeader className="pt-4 pb-2">
+              <CardHeader className="pt-2 pb-1 space-y-1">
                 {/* Deck Name */}
-                <CardTitle className="text-2xl text-foreground">{precon.name}</CardTitle>
+                <CardTitle className="text-lg leading-tight text-foreground">{precon.name}</CardTitle>
                 
                 {/* Price */}
-                <p className="text-sm text-muted-foreground font-semibold">
+                <p className="text-xs text-muted-foreground font-semibold">
                   Typical Price: $40-60
                 </p>
                 
                 {/* Commander Name */}
-                <p className="text-sm text-muted-foreground">
+                <p className="text-xs text-muted-foreground leading-tight">
                   Commander: <span className="font-semibold text-foreground">{precon.commander}</span>
                 </p>
                 
                 {/* Colors */}
-                <div className="flex items-center gap-2 flex-wrap">
-                  <span className="text-sm text-muted-foreground">Colors:</span>
-                  <div className="flex gap-1">
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <span className="text-xs text-muted-foreground">Colors:</span>
+                  <div className="flex gap-0.5">
                     {precon.colors.map((color) => (
-                      <span key={color} className="text-xl">
+                      <span key={color} className="text-base">
                         {getColorSymbol(color)}
                       </span>
                     ))}
                   </div>
-                  <span className="text-sm font-semibold text-foreground ml-2">
+                  <span className="text-xs font-semibold text-foreground">
                     {precon.color_identity}
                   </span>
                 </div>
               </CardHeader>
               
-              <CardContent className="space-y-4 flex-1 flex flex-col p-6">
-                {/* Flavor Description */}
+              <CardContent className="space-y-2 flex-1 flex flex-col p-3 pt-0">
+                {/* Flavor Description - Compact */}
                 {deckELI5[precon.id] && (
-                  <div className="bg-secondary/20 rounded-lg p-4 border border-secondary/30">
-                    <p className="text-sm text-foreground leading-relaxed">
+                  <div className="bg-secondary/20 rounded-lg p-2 border border-secondary/30">
+                    <p className="text-xs text-foreground leading-snug">
                       {deckELI5[precon.id]}
                     </p>
                   </div>
                 )}
 
-                {/* Difficulty */}
+                {/* Difficulty - Compact */}
                 {difficultyInfo && (
-                  <div className="space-y-1">
-                    <p className="text-sm">
+                  <div className="space-y-0.5">
+                    <p className="text-xs">
                       <span className="font-semibold">Difficulty:</span> {difficultyInfo.level}/10
                     </p>
-                    <p className="text-xs text-muted-foreground italic">
+                    <p className="text-[10px] text-muted-foreground italic leading-tight">
                       {difficultyInfo.reason}
                     </p>
                   </div>
                 )}
 
-                {/* Match Reasons - WHY IT MATCHED */}
-                {reasons && reasons.length > 0 && (
-                  <div className="space-y-2 pt-2 border-t border-border bg-secondary/10 -mx-6 px-6 py-4">
-                    <p className="text-xs font-bold text-primary uppercase tracking-wide">Why this deck fits you:</p>
-                    <ul className="space-y-1.5">
-                      {reasons.map((reason, idx) => (
-                        <li key={idx} className="text-sm text-foreground flex items-start gap-2">
-                          <span className="text-accent text-lg leading-none">•</span>
+                {/* Match Reasons - WHY IT MATCHED with User Input */}
+                {(userInputBullet || (reasons && reasons.length > 0)) && (
+                  <div className="space-y-1.5 pt-1.5 border-t border-border bg-secondary/10 -mx-3 px-3 py-2">
+                    <p className="text-[10px] font-bold text-primary uppercase tracking-wide">Why this deck fits you:</p>
+                    <ul className="space-y-1">
+                      {userInputBullet && (
+                        <li className="text-xs text-foreground flex items-start gap-1.5">
+                          <span className="text-accent text-base leading-none">•</span>
+                          <span>{userInputBullet}</span>
+                        </li>
+                      )}
+                      {reasons && reasons.slice(0, 2).map((reason, idx) => (
+                        <li key={idx} className="text-xs text-foreground flex items-start gap-1.5">
+                          <span className="text-accent text-base leading-none">•</span>
                           <span>{reason}</span>
                         </li>
                       ))}
@@ -204,41 +259,26 @@ const Results = () => {
                   </div>
                 )}
 
-                {/* Tags Preview */}
-                <div className="space-y-1">
-                  <p className="text-xs font-semibold text-muted-foreground uppercase">Themes:</p>
-                  <div className="flex flex-wrap gap-1">
-                    {precon.tags.themes.primary.slice(0, 3).map((theme) => (
-                      <span
-                        key={theme}
-                        className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full"
-                      >
-                        {theme}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Buttons - Always at bottom */}
-                <div className="mt-auto pt-4 space-y-3">
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="space-y-1">
+                {/* Buttons - Compact and at bottom */}
+                <div className="mt-auto pt-2 space-y-2">
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="space-y-0.5">
                       <Button
                         variant="outline"
-                        className="w-full group-hover:border-primary h-auto py-3"
+                        className="w-full group-hover:border-primary h-auto py-2 text-xs"
                         onClick={() => window.open(precon.edhrec_url, "_blank")}
                       >
                         Learn More
-                        <ExternalLink className="w-4 h-4 ml-2" />
+                        <ExternalLink className="w-3 h-3 ml-1" />
                       </Button>
-                      <p className="text-[10px] text-muted-foreground text-center leading-tight">
-                        See full card list on EDHREC →
+                      <p className="text-[9px] text-muted-foreground text-center leading-tight">
+                        Full card list →
                       </p>
                     </div>
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <Button
                         variant="default"
-                        className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-auto py-3"
+                        className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-auto py-2 text-xs"
                         onClick={() => {
                           const searchQuery = encodeURIComponent(precon.name + " commander deck");
                           window.open(`https://www.tcgplayer.com/search/magic/product?productLineName=magic&q=${searchQuery}&view=grid`, "_blank");
@@ -246,8 +286,8 @@ const Results = () => {
                       >
                         Buy This Deck
                       </Button>
-                      <p className="text-[10px] text-muted-foreground text-center leading-tight">
-                        Purchase on TCGPlayer ($40-60) →
+                      <p className="text-[9px] text-muted-foreground text-center leading-tight">
+                        TCGPlayer ($40-60) →
                       </p>
                     </div>
                   </div>
@@ -259,13 +299,13 @@ const Results = () => {
           </div>
         )}
 
-        {/* Footer Actions - Only show if we have matches */}
+        {/* Footer Actions - Compact and Always Visible */}
         {topMatches.length > 0 && (
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <Button variant="outline" size="lg" onClick={() => navigate("/")}>
+          <div className="flex flex-row gap-3 justify-center items-center">
+            <Button variant="outline" size="sm" onClick={() => navigate("/")}>
               Start Over
             </Button>
-            <Button variant="secondary" size="lg" onClick={() => navigate(-1)}>
+            <Button variant="secondary" size="sm" onClick={() => navigate(-1)}>
               Go Back
             </Button>
           </div>

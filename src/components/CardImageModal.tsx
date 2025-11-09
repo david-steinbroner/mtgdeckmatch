@@ -15,7 +15,7 @@ export const CardImageModal = ({ imageUrl, cardName, deckName }: CardImageModalP
           <img
             src={imageUrl}
             alt={`${cardName} - Commander of ${deckName}`}
-            className="w-full rounded-t-lg object-cover h-48 lg:h-56"
+            className="w-full rounded-t-lg object-cover h-32 lg:h-36"
             loading="lazy"
           />
         </button>
