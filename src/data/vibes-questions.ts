@@ -75,16 +75,4 @@ export const vibesQuestions: Question[] = [
     placeholder: "e.g., squirrels, dragons, vampires...",
     quickSelects: ["Squirrels", "Dragons", "Zombies", "Cats", "Elves", "Skip this question"],
   },
-  {
-    id: "colors",
-    type: "checkbox",
-    question: "Color preferences?",
-    colorOptions: [
-      { id: "W", name: "White", symbol: "⚪" },
-      { id: "U", name: "Blue", symbol: "🔵" },
-      { id: "B", name: "Black", symbol: "⚫" },
-      { id: "R", name: "Red", symbol: "🔴" },
-      { id: "G", name: "Green", symbol: "🟢" },
-    ],
-  },
 ];

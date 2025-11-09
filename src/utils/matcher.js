@@ -29,23 +29,6 @@ export function matchPrecons(precons, userPreferences) {
       }
     }
     
-    // COLOR MATCHING (must-have filter)
-    if (userPreferences.colors && userPreferences.colors.length > 0) {
-      const preconColors = new Set(precon.colors || []);
-      const userColors = new Set(userPreferences.colors);
-      
-      // Precon colors must be subset of user's selected colors
-      const isValidColorCombo = [...preconColors].every(c => userColors.has(c));
-      if (!isValidColorCombo) {
-        return null; // Eliminate this deck
-      }
-      
-      // Bonus for exact match
-      if (preconColors.size === userColors.size) {
-        score += 5;
-      }
-    }
-    
     // Generate match reasons
     const reasons = [];
     if (userPreferences.vibe) {
@@ -64,7 +47,7 @@ export function matchPrecons(precons, userPreferences) {
     reasons.push(`${tags.complexity || 'moderate'} to play`);
     
     return { precon, score, reasons };
-  }).filter(result => result !== null); // Remove eliminated decks
+  });
   
   // Sort by score descending
   scoredPrecons.sort((a, b) => b.score - a.score);

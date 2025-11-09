@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import preconsData from "@/data/precons-data.json";
 import { matchPrecons } from "@/utils/matcher";
+import { deckELI5 } from "@/utils/deckDescriptions";
 import { ExternalLink, Sparkles } from "lucide-react";
 
 const Results = () => {
@@ -15,7 +16,6 @@ const Results = () => {
   const userPreferences = {
     vibe: answers.find(a => a.questionId === "vibe")?.answerId || null,
     creatureType: answers.find(a => a.questionId === "creature-types")?.answerId || null,
-    colors: answers.find(a => a.questionId === "colors")?.answerId || [],
   };
 
   // Get matched precons
@@ -23,6 +23,11 @@ const Results = () => {
   
   // Show only top 3 matches
   const topMatches = matchedResults.slice(0, 3);
+
+  // Get commander card
+  const getCommanderCard = (precon: any) => {
+    return precon.cards?.find((card: any) => card.is_commander);
+  };
 
   const getColorSymbol = (colorCode: string) => {
     const symbols: Record<string, string> = {
@@ -75,11 +80,13 @@ const Results = () => {
 
         {/* Deck Cards - Only show if we have matches */}
         {topMatches.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            {topMatches.map(({ precon, score, reasons }, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mt-12">
+            {topMatches.map(({ precon, score, reasons }, index) => {
+              const commanderCard = getCommanderCard(precon);
+              return (
             <Card
               key={precon.id}
-              className="group hover:shadow-card-hover transition-all duration-300 hover:scale-105 border-2 relative overflow-hidden"
+              className="group hover:shadow-card-hover transition-all duration-300 hover:scale-[1.02] border-2 relative overflow-hidden flex flex-col"
             >
               {/* Best Match Badge */}
               {index === 0 && matchedResults.length > 0 && (
@@ -91,8 +98,20 @@ const Results = () => {
                 </div>
               )}
               
-              <CardHeader>
-                <CardTitle className="text-2xl pr-24">{precon.name}</CardTitle>
+              {/* Commander Card Image */}
+              {commanderCard?.image_url && (
+                <div className="w-full h-80 overflow-hidden bg-muted relative">
+                  <img 
+                    src={commanderCard.image_url} 
+                    alt={commanderCard.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-80"></div>
+                </div>
+              )}
+              
+              <CardHeader className={commanderCard?.image_url ? "-mt-16 relative z-10" : ""}>
+                <CardTitle className="text-2xl text-foreground drop-shadow-lg">{precon.name}</CardTitle>
                 <div className="space-y-2">
                   <p className="text-sm text-muted-foreground">
                     Commander: <span className="font-semibold text-foreground">{precon.commander}</span>
@@ -112,7 +131,16 @@ const Results = () => {
                   </div>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 flex-1 flex flex-col">
+                {/* ELI5 Description */}
+                {deckELI5[precon.id] && (
+                  <div className="bg-secondary/20 rounded-lg p-4 border border-secondary/30">
+                    <p className="text-sm text-foreground leading-relaxed italic">
+                      {deckELI5[precon.id]}
+                    </p>
+                  </div>
+                )}
+
                 <div className="space-y-2">
                   <p className="text-sm">
                     <span className="font-semibold">Set:</span> {precon.set} ({precon.year})
@@ -156,26 +184,29 @@ const Results = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                  <Button
-                    variant="outline"
-                    className="group-hover:border-primary"
-                    onClick={() => window.open(precon.edhrec_url, "_blank")}
-                  >
-                    Learn More
-                    <ExternalLink className="w-4 h-4 ml-2" />
-                  </Button>
-                  <Button
-                    variant="default"
-                    className="bg-accent hover:bg-accent/90 text-accent-foreground"
-                    onClick={() => window.open(precon.edhrec_url, "_blank")}
-                  >
-                    Buy This Deck
-                  </Button>
+                <div className="mt-auto pt-4">
+                  <div className="grid grid-cols-2 gap-2">
+                    <Button
+                      variant="outline"
+                      className="group-hover:border-primary"
+                      onClick={() => window.open(precon.edhrec_url, "_blank")}
+                    >
+                      Learn More
+                      <ExternalLink className="w-4 h-4 ml-2" />
+                    </Button>
+                    <Button
+                      variant="default"
+                      className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                      onClick={() => window.open(precon.edhrec_url, "_blank")}
+                    >
+                      Buy This Deck
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
-            ))}
+          );
+        })}
           </div>
         )}
 
