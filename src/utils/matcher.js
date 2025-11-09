@@ -1,34 +1,87 @@
+import { parseCustomInput } from './customInputParser';
+
 export function matchPrecons(precons, userPreferences, pathType = "vibes") {
   const scoredPrecons = precons.map(precon => {
     let score = 0;
     const tags = precon.tags || {};
     
+    // Handle custom text input
+    let parsedInput = null;
+    let isCustomInput = false;
+    
+    if (userPreferences.customText) {
+      parsedInput = parseCustomInput(userPreferences.customText);
+      isCustomInput = true;
+    }
+    
     if (pathType === "vibes") {
       // VIBES PATH SCORING
       
-      // VIBE MATCHING (high weight)
-      if (userPreferences.vibe) {
-        const vibe = userPreferences.vibe.toLowerCase();
-        const primaryVibes = (tags.aesthetic_vibe?.primary || []).map(v => v.toLowerCase());
-        const secondaryVibes = (tags.aesthetic_vibe?.secondary || []).map(v => v.toLowerCase());
+      // CUSTOM TEXT MATCHING
+      if (isCustomInput && parsedInput) {
+        // Match vibes from custom text
+        parsedInput.vibes.forEach(vibe => {
+          const primaryVibes = (tags.aesthetic_vibe?.primary || []).map(v => v.toLowerCase());
+          const secondaryVibes = (tags.aesthetic_vibe?.secondary || []).map(v => v.toLowerCase());
+          
+          if (primaryVibes.includes(vibe.toLowerCase())) {
+            score += 10;
+          } else if (secondaryVibes.includes(vibe.toLowerCase())) {
+            score += 5;
+          }
+        });
         
-        if (primaryVibes.includes(vibe)) {
-          score += 10; // Primary match
-        } else if (secondaryVibes.includes(vibe)) {
-          score += 5; // Secondary match
+        // Match creature types from custom text
+        parsedInput.creatureTypes.forEach(type => {
+          const primaryTypes = (tags.creature_types?.primary || []).map(t => t.toLowerCase());
+          const secondaryTypes = (tags.creature_types?.secondary || []).map(t => t.toLowerCase());
+          
+          if (primaryTypes.includes(type.toLowerCase())) {
+            score += 10;
+          } else if (secondaryTypes.includes(type.toLowerCase())) {
+            score += 5;
+          }
+        });
+        
+        // Match themes from custom text
+        parsedInput.themes.forEach(theme => {
+          const deckThemes = (tags.themes || []).map(t => t.toLowerCase());
+          if (deckThemes.some(dt => dt.includes(theme.toLowerCase()) || theme.toLowerCase().includes(dt))) {
+            score += 5;
+          }
+        });
+        
+        // Match IPs from custom text
+        parsedInput.ips.forEach(ip => {
+          if (tags.intellectual_property?.toLowerCase() === ip.toLowerCase()) {
+            score += 8;
+          }
+        });
+      } else {
+        // VIBE MATCHING (high weight) - button selections
+        if (userPreferences.vibe) {
+          const vibe = userPreferences.vibe.toLowerCase();
+          const primaryVibes = (tags.aesthetic_vibe?.primary || []).map(v => v.toLowerCase());
+          const secondaryVibes = (tags.aesthetic_vibe?.secondary || []).map(v => v.toLowerCase());
+          
+          if (primaryVibes.includes(vibe)) {
+            score += 10; // Primary match
+          } else if (secondaryVibes.includes(vibe)) {
+            score += 5; // Secondary match
+          }
         }
-      }
-      
-      // CREATURE TYPE MATCHING
-      if (userPreferences.creatureType) {
-        const type = userPreferences.creatureType.toLowerCase();
-        const primaryTypes = (tags.creature_types?.primary || []).map(t => t.toLowerCase());
-        const secondaryTypes = (tags.creature_types?.secondary || []).map(t => t.toLowerCase());
         
-        if (primaryTypes.includes(type)) {
-          score += 10;
-        } else if (secondaryTypes.includes(type)) {
-          score += 5;
+        // CREATURE TYPE MATCHING - button selections
+        if (userPreferences.creatureType) {
+          const type = userPreferences.creatureType.toLowerCase();
+          const primaryTypes = (tags.creature_types?.primary || []).map(t => t.toLowerCase());
+          const secondaryTypes = (tags.creature_types?.secondary || []).map(t => t.toLowerCase());
+          
+          if (primaryTypes.includes(type)) {
+            score += 10;
+          } else if (secondaryTypes.includes(type)) {
+            score += 5;
+          }
         }
       }
       
@@ -95,7 +148,13 @@ export function matchPrecons(precons, userPreferences, pathType = "vibes") {
     
     reasons.push(`${tags.complexity || 'moderate'} difficulty to play`);
     
-    return { precon, score, reasons };
+    return { 
+      precon, 
+      score, 
+      reasons,
+      customText: parsedInput?.rawText || null,
+      isCustomInput 
+    };
   });
   
   // Sort by score descending

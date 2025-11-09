@@ -8,6 +8,7 @@ import Welcome from "./pages/Welcome";
 import PathSelection from "./pages/PathSelection";
 import VibesQuestions from "./pages/VibesQuestions";
 import PowerQuestions from "./pages/PowerQuestions";
+import LoadingScreen from "./pages/LoadingScreen";
 import Results from "./pages/Results";
 import NotFound from "./pages/NotFound";
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/path-selection" element={<PathSelection />} />
           <Route path="/vibes-questions" element={<VibesQuestions />} />
           <Route path="/power-questions" element={<PowerQuestions />} />
+          <Route path="/loading" element={<LoadingScreen />} />
           <Route path="/results" element={<Results />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

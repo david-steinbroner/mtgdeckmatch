@@ -29,8 +29,8 @@ const PowerQuestions = () => {
     if (currentQuestionIndex < powerQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      // Quiz complete, navigate to results with answers and path type
-      navigate("/results", { state: { answers: newAnswers, path: "power" } });
+      // Quiz complete, navigate to loading screen with answers and path type
+      navigate("/loading", { state: { answers: newAnswers, path: "power" } });
     }
   };
 

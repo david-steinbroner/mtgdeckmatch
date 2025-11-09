@@ -19,16 +19,22 @@ const Results = () => {
   const { toast } = useToast();
   const answers = location.state?.answers || [];
   const pathType = location.state?.path || "vibes";
-  const [aiReasons, setAiReasons] = useState<string[]>([]);
-  const [isLoadingReasons, setIsLoadingReasons] = useState(true);
+  const customText = location.state?.customText || "";
+  const isCustomInput = location.state?.isCustomInput || false;
+  const [aiIntros, setAiIntros] = useState<string[]>([]);
+  const [isLoadingIntros, setIsLoadingIntros] = useState(true);
 
   // Convert answers array to preferences object based on path
   let userPreferences = {};
   
   if (pathType === "vibes") {
+    const vibeAnswer = answers.find(a => a.questionId === "vibe")?.answerId || null;
+    const creatureAnswer = answers.find(a => a.questionId === "creature-types")?.answerId || null;
+    
     userPreferences = {
-      vibe: answers.find(a => a.questionId === "vibe")?.answerId || null,
-      creatureType: answers.find(a => a.questionId === "creature-types")?.answerId || null,
+      vibe: vibeAnswer,
+      creatureType: creatureAnswer,
+      customText: isCustomInput ? customText : null,
     };
   } else if (pathType === "power") {
     const archetypeAnswer = answers.find(a => a.questionId === "archetype")?.answerId;
@@ -53,43 +59,45 @@ const Results = () => {
   // Show only top 3 matches
   const topMatches = matchedResults.slice(0, 3);
 
-  // Generate AI match reasons on mount
+  // Generate AI deck intros on mount
   useEffect(() => {
-    const generateReasons = async () => {
+    const generateIntros = async () => {
       if (topMatches.length === 0) {
-        setIsLoadingReasons(false);
+        setIsLoadingIntros(false);
         return;
       }
 
       try {
-        const { data, error } = await supabase.functions.invoke('generate-match-reasons', {
+        const { data, error } = await supabase.functions.invoke('generate-deck-intros', {
           body: {
             matches: topMatches,
             userPreferences,
-            pathType
+            pathType,
+            customText,
+            isCustomInput
           }
         });
 
         if (error) {
-          console.error('Error generating match reasons:', error);
+          console.error('Error generating deck intros:', error);
           toast({
-            title: "Could not generate personalized reasons",
-            description: "Using default match explanations instead.",
+            title: "Could not generate personalized intros",
+            description: "Showing decks without personalized messages.",
             variant: "destructive",
           });
-          setAiReasons([]);
-        } else if (data?.reasons) {
-          setAiReasons(data.reasons);
+          setAiIntros([]);
+        } else if (data?.intros) {
+          setAiIntros(data.intros);
         }
       } catch (err) {
         console.error('Failed to call edge function:', err);
-        setAiReasons([]);
+        setAiIntros([]);
       } finally {
-        setIsLoadingReasons(false);
+        setIsLoadingIntros(false);
       }
     };
 
-    generateReasons();
+    generateIntros();
   }, []); // Run once on mount
 
   // Get user's input for personalization
@@ -229,6 +237,16 @@ const Results = () => {
                     <Sparkles className="w-2.5 h-2.5" />
                     Best Match
                   </Badge>
+                </div>
+              )}
+
+              {/* Personalized Intro Banner */}
+              {aiIntros[index] && !isLoadingIntros && (
+                <div className="bg-primary/10 border-b border-primary/20 p-3">
+                  <p className="text-sm italic flex items-center gap-2 text-foreground">
+                    <Sparkles className="w-4 h-4 text-primary flex-shrink-0" />
+                    <span>{aiIntros[index]}</span>
+                  </p>
                 </div>
               )}
               
