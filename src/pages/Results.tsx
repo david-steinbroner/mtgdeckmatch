@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CardImageModal } from "@/components/CardImageModal";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import preconsData from "@/data/precons-data.json";
 import { matchPrecons } from "@/utils/matcher";
 import { deckELI5 } from "@/utils/deckDescriptions";
@@ -340,8 +341,8 @@ const Results = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-3 py-3">
-      <div className="max-w-7xl mx-auto space-y-3">
+    <TooltipProvider>
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-2 py-2">\n      <div className="max-w-7xl mx-auto space-y-2">
         {/* Surprise Me Header */}
         {source === 'surprise' && topMatches.length > 0 && (
           <Card className="border-2 border-primary/30 bg-gradient-to-r from-primary/10 to-secondary/10 animate-fade-in">
@@ -479,38 +480,45 @@ const Results = () => {
                 <X className="w-4 h-4" />
               </button>
 
-              {/* Match Percentage Badge */}
+              {/* Match Percentage Badge with Tooltip */}
               {matchPercentage !== null && source !== 'surprise' && (
-                <div className="absolute top-2 left-2 z-10">
-                  <Badge className="bg-gradient-to-r from-accent to-accent/80 text-accent-foreground font-semibold px-2 py-0.5 text-xs">
-                    {matchPercentage}% Match
-                  </Badge>
-                </div>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="absolute top-2 left-2 z-10 cursor-help">
+                      <Badge className="bg-gradient-to-r from-accent to-accent/80 text-accent-foreground font-semibold px-2 py-0.5 text-xs">
+                        {matchPercentage}% Match
+                      </Badge>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <p className="text-xs">This deck has the highest weighted match based on your requests and available decks, according to our matching logic and analysis.</p>
+                  </TooltipContent>
+                </Tooltip>
               )}
 
               {/* Match Reason (for search mode) */}
               {source === 'search' && matchReasons[originalIndex] && (
-                <div className="bg-accent/10 border-b border-accent/20 p-2.5">
-                  <p className="text-xs flex items-start gap-2 text-foreground">
-                    <span className="text-lg flex-shrink-0">💡</span>
-                    <span><strong>Why this matched:</strong> {matchReasons[originalIndex]}</span>
+                <div className="bg-accent/10 border-b border-accent/20 p-1.5">
+                  <p className="text-[10px] flex items-start gap-1.5 text-foreground">
+                    <span className="text-sm flex-shrink-0">💡</span>
+                    <span><strong>Match:</strong> {matchReasons[originalIndex]}</span>
                   </p>
                 </div>
               )}
 
               {/* Personalized Intro Banner */}
               {aiIntros[originalIndex] && !isLoadingIntros && source !== 'search' && (
-                <div className="bg-primary/10 border-b border-primary/20 p-2.5">
-                  <p className="text-xs italic flex items-center gap-2 text-foreground">
-                    <Sparkles className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                <div className="bg-primary/10 border-b border-primary/20 p-1.5">
+                  <p className="text-[10px] italic flex items-center gap-1.5 text-foreground">
+                    <Sparkles className="w-3 h-3 text-primary flex-shrink-0" />
                     <span>{aiIntros[originalIndex]}</span>
                   </p>
                 </div>
               )}
               
-              {/* Clickable Commander Card Image - Smaller Size */}
-              <div className="p-2">
-                <div className="relative aspect-[5/7] rounded-lg overflow-hidden">
+              {/* Clickable Commander Card Image - Much Smaller */}
+              <div className="p-1.5">
+                <div className="relative aspect-[5/7] rounded-md overflow-hidden">
                   <CardImageModal
                     imageUrl={imageUrl}
                     cardName={precon.commander}
@@ -519,41 +527,38 @@ const Results = () => {
                 </div>
               </div>
               
-              <CardHeader className="pt-2 pb-1 space-y-1">
+              <CardHeader className="pt-1 pb-0.5 px-2 space-y-0.5">
                 {/* Deck Name */}
-                <CardTitle className="text-base leading-none text-foreground">{precon.name}</CardTitle>
+                <CardTitle className="text-sm leading-tight text-foreground">{precon.name}</CardTitle>
                 
                 {/* Price, Commander, and Colors on one line */}
-                <div className="flex items-center gap-2 flex-wrap text-[11px]">
+                <div className="flex items-center gap-1.5 flex-wrap text-[10px]">
                   {/* Price */}
                   <span className="text-muted-foreground font-semibold">$40-60</span>
                   <span className="text-muted-foreground">•</span>
                   
                   {/* Commander Name */}
-                  <span className="font-semibold text-foreground">{precon.commander}</span>
+                  <span className="font-semibold text-foreground truncate max-w-[120px]">{precon.commander}</span>
                   <span className="text-muted-foreground">•</span>
                   
                   {/* Colors */}
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-0.5">
                     <div className="flex gap-0.5">
                       {precon.colors.map((color) => (
-                        <span key={color} className="text-sm">
+                        <span key={color} className="text-xs">
                           {getColorSymbol(color)}
                         </span>
                       ))}
                     </div>
-                    <span className="font-semibold text-foreground">
-                      {precon.color_identity}
-                    </span>
                   </div>
                 </div>
               </CardHeader>
               
-              <CardContent className="space-y-2 flex-1 flex flex-col p-3 pt-0 overflow-y-auto">
+              <CardContent className="space-y-1.5 flex-1 flex flex-col p-2 pt-0">
                 {/* Flavor Description - Compact */}
                 {deckELI5[precon.id] && (
-                  <div className="bg-secondary/20 rounded-lg p-2.5 border border-secondary/30">
-                    <p className="text-[11px] text-foreground leading-tight">
+                  <div className="bg-secondary/20 rounded-md p-1.5 border border-secondary/30">
+                    <p className="text-[10px] text-foreground leading-tight line-clamp-2">
                       {deckELI5[precon.id]}
                     </p>
                   </div>
@@ -561,11 +566,11 @@ const Results = () => {
 
                 {/* Difficulty - Compact */}
                 {difficultyInfo && (
-                  <div className="space-y-1">
-                    <p className="text-[11px]">
+                  <div className="space-y-0.5">
+                    <p className="text-[10px]">
                       <span className="font-semibold">Difficulty:</span> {difficultyInfo.level}/10
                     </p>
-                    <p className="text-[9px] text-muted-foreground italic leading-tight">
+                    <p className="text-[9px] text-muted-foreground italic leading-tight line-clamp-2">
                       {difficultyInfo.reason}
                     </p>
                   </div>
@@ -621,6 +626,7 @@ const Results = () => {
         )}
       </div>
     </div>
+    </TooltipProvider>
   );
 };
 
