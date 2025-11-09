@@ -2,10 +2,12 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CommanderCardImage } from "@/components/CommanderCardImage";
+import { CardImageModal } from "@/components/CardImageModal";
 import preconsData from "@/data/precons-data.json";
 import { matchPrecons } from "@/utils/matcher";
 import { deckELI5 } from "@/utils/deckDescriptions";
+import { deckDifficulty } from "@/utils/deckDifficulty";
+import { getScryfallImageUrl, isPlaceholderUrl } from "@/utils/cardImageUtils";
 import { ExternalLink, Sparkles } from "lucide-react";
 
 const Results = () => {
@@ -106,10 +108,15 @@ const Results = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mt-12">
             {topMatches.map(({ precon, score, reasons }, index) => {
               const commanderCard = getCommanderCard(precon);
+              const difficultyInfo = deckDifficulty[precon.id];
+              const imageUrl = commanderCard?.image_url && !isPlaceholderUrl(commanderCard.image_url)
+                ? commanderCard.image_url
+                : getScryfallImageUrl(precon.commander);
+              
               return (
             <Card
               key={precon.id}
-              className="group hover:shadow-card-hover transition-all duration-300 hover:scale-[1.02] border-2 relative overflow-hidden flex flex-col"
+              className="group hover:shadow-card-hover transition-all duration-300 border-2 relative overflow-hidden flex flex-col h-full"
             >
               {/* Best Match Badge */}
               {index === 0 && matchedResults.length > 0 && (
@@ -121,57 +128,61 @@ const Results = () => {
                 </div>
               )}
               
-              {/* Commander Card Image */}
+              {/* Clickable Commander Card Image */}
               {commanderCard && (
-                <CommanderCardImage 
-                  commanderCard={commanderCard}
+                <CardImageModal
+                  imageUrl={imageUrl}
+                  cardName={precon.commander}
                   deckName={precon.name}
                 />
               )}
               
               <CardHeader className={commanderCard ? "-mt-16 relative z-10" : ""}>
+                {/* Deck Name */}
                 <CardTitle className="text-2xl text-foreground drop-shadow-lg">{precon.name}</CardTitle>
-                <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground">
-                    Commander: <span className="font-semibold text-foreground">{precon.commander}</span>
-                  </p>
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span className="text-sm text-muted-foreground">Colors:</span>
-                    <div className="flex gap-1">
-                      {precon.colors.map((color) => (
-                        <span key={color} className="text-xl">
-                          {getColorSymbol(color)}
-                        </span>
-                      ))}
-                    </div>
-                    <span className="text-sm font-semibold text-foreground ml-2">
-                      {precon.color_identity}
-                    </span>
+                
+                {/* Commander Name */}
+                <p className="text-sm text-muted-foreground">
+                  Commander: <span className="font-semibold text-foreground">{precon.commander}</span>
+                </p>
+                
+                {/* Colors */}
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-sm text-muted-foreground">Colors:</span>
+                  <div className="flex gap-1">
+                    {precon.colors.map((color) => (
+                      <span key={color} className="text-xl">
+                        {getColorSymbol(color)}
+                      </span>
+                    ))}
                   </div>
+                  <span className="text-sm font-semibold text-foreground ml-2">
+                    {precon.color_identity}
+                  </span>
                 </div>
               </CardHeader>
+              
               <CardContent className="space-y-4 flex-1 flex flex-col">
-                {/* ELI5 Description */}
+                {/* Flavor Description */}
                 {deckELI5[precon.id] && (
                   <div className="bg-secondary/20 rounded-lg p-4 border border-secondary/30">
-                    <p className="text-sm text-foreground leading-relaxed italic">
+                    <p className="text-sm text-foreground leading-relaxed">
                       {deckELI5[precon.id]}
                     </p>
                   </div>
                 )}
 
-                <div className="space-y-2">
-                  <p className="text-sm">
-                    <span className="font-semibold">From:</span> {precon.set} ({precon.year})
-                  </p>
-                  <p className="text-sm">
-                    <span className="font-semibold">How competitive:</span> {precon.tags.power_level}/10
-                  </p>
-                  <p className="text-sm">
-                    <span className="font-semibold">Difficulty:</span>{" "}
-                    <span className="capitalize">{precon.tags.complexity}</span>
-                  </p>
-                </div>
+                {/* Difficulty */}
+                {difficultyInfo && (
+                  <div className="space-y-1">
+                    <p className="text-sm">
+                      <span className="font-semibold">Difficulty:</span> {difficultyInfo.level}/10
+                    </p>
+                    <p className="text-xs text-muted-foreground italic">
+                      {difficultyInfo.reason}
+                    </p>
+                  </div>
+                )}
 
                 {/* Match Reasons - WHY IT MATCHED */}
                 {reasons && reasons.length > 0 && (
@@ -203,6 +214,7 @@ const Results = () => {
                   </div>
                 </div>
 
+                {/* Buttons - Always at bottom */}
                 <div className="mt-auto pt-4">
                   <div className="grid grid-cols-2 gap-2">
                     <Button
