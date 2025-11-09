@@ -61,11 +61,11 @@ export const MultiSelectCreatureQuestion = ({
   };
 
   return (
-    <div className="space-y-6 max-w-6xl mx-auto">
+    <div className="space-y-3 md:space-y-6 max-w-6xl mx-auto">
       {/* Selection Counter */}
       <div className="text-center">
         <p className={cn(
-          "text-base font-medium transition-colors",
+          "text-xs md:text-base font-medium transition-colors",
           selectedCreatures.length === maxSelections 
             ? "text-accent" 
             : "text-muted-foreground"
@@ -75,7 +75,7 @@ export const MultiSelectCreatureQuestion = ({
       </div>
 
       {/* Creature Options Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1.5 md:gap-3">
         {options.map((option) => {
           const isSelected = selectedCreatures.includes(option.id);
           const disabled = isDisabled(option.id);
@@ -86,9 +86,9 @@ export const MultiSelectCreatureQuestion = ({
               onClick={() => toggleCreature(option.id)}
               disabled={disabled}
               className={cn(
-                "relative bg-gradient-to-br from-card to-card/80 rounded-xl p-2 md:p-4",
+                "relative bg-gradient-to-br from-card to-card/80 rounded-lg md:rounded-xl p-1.5 md:p-4",
                 "border-2 transition-all duration-200",
-                "text-left min-h-[60px] md:min-h-[80px] flex items-center justify-center",
+                "text-left min-h-[44px] md:min-h-[80px] flex items-center justify-center",
                 isSelected
                   ? "border-accent shadow-card-hover bg-accent/5 scale-[1.02]"
                   : "border-border hover:border-primary/50 hover:scale-[1.01]",
@@ -98,14 +98,14 @@ export const MultiSelectCreatureQuestion = ({
             >
               {/* Checkmark for selected */}
               {isSelected && (
-                <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-accent flex items-center justify-center animate-scale-in">
-                  <Check className="w-4 h-4 text-accent-foreground" />
+                <div className="absolute top-1 right-1 md:top-2 md:right-2 w-4 h-4 md:w-6 md:h-6 rounded-full bg-accent flex items-center justify-center animate-scale-in">
+                  <Check className="w-2.5 h-2.5 md:w-4 md:h-4 text-accent-foreground" />
                 </div>
               )}
 
               {/* Creature Label */}
               <span className={cn(
-                "text-xs md:text-base font-semibold text-center px-2 md:px-6",
+                "text-[10px] md:text-base font-semibold text-center px-1 md:px-6",
                 isSelected ? "text-accent" : "text-foreground"
               )}>
                 {option.label}
@@ -116,12 +116,12 @@ export const MultiSelectCreatureQuestion = ({
       </div>
 
       {/* Bottom Buttons */}
-      <div className="flex flex-col sm:flex-row gap-2 md:gap-4 justify-between items-center pt-2 md:pt-4">
+      <div className="flex flex-col sm:flex-row gap-1.5 md:gap-4 justify-between items-center pt-1 md:pt-4">
         <Button
           variant="outline"
           size="sm"
           onClick={handleSkip}
-          className="w-full sm:w-auto md:text-base"
+          className="w-full sm:w-auto text-xs md:text-base h-8 md:h-9"
         >
           Skip this question
         </Button>
@@ -131,10 +131,10 @@ export const MultiSelectCreatureQuestion = ({
           size="sm"
           onClick={handleContinue}
           disabled={!canContinue}
-          className="w-full sm:w-auto gap-2 md:text-base"
+          className="w-full sm:w-auto gap-1 md:gap-2 text-xs md:text-base h-8 md:h-9"
         >
           Continue
-          <span className="text-lg">→</span>
+          <span className="text-sm md:text-lg">→</span>
         </Button>
       </div>
     </div>
