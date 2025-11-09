@@ -10,8 +10,7 @@ const PathSelection = () => {
     if (path === "vibes") {
       navigate("/vibes-questions");
     } else {
-      // TODO: Navigate to power questions
-      console.log("Power path not yet implemented");
+      navigate("/power-questions");
     }
   };
 

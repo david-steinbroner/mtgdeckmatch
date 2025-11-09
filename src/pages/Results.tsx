@@ -11,15 +11,35 @@ const Results = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const answers = location.state?.answers || [];
+  const pathType = location.state?.path || "vibes";
 
-  // Convert answers array to preferences object
-  const userPreferences = {
-    vibe: answers.find(a => a.questionId === "vibe")?.answerId || null,
-    creatureType: answers.find(a => a.questionId === "creature-types")?.answerId || null,
-  };
+  // Convert answers array to preferences object based on path
+  let userPreferences = {};
+  
+  if (pathType === "vibes") {
+    userPreferences = {
+      vibe: answers.find(a => a.questionId === "vibe")?.answerId || null,
+      creatureType: answers.find(a => a.questionId === "creature-types")?.answerId || null,
+    };
+  } else if (pathType === "power") {
+    const archetypeAnswer = answers.find(a => a.questionId === "archetype")?.answerId;
+    const powerLevelAnswer = answers.find(a => a.questionId === "power-level")?.answerId;
+    
+    // Map power level answer to range
+    const powerLevelRanges: Record<string, [number, number]> = {
+      "beginner": [4, 6],
+      "focused": [7, 8],
+      "high-power": [9, 10],
+    };
+    
+    userPreferences = {
+      archetype: archetypeAnswer || null,
+      powerLevelRange: powerLevelAnswer ? powerLevelRanges[powerLevelAnswer as string] : null,
+    };
+  }
 
-  // Get matched precons
-  const matchedResults = matchPrecons(preconsData, userPreferences);
+  // Get matched precons with path type
+  const matchedResults = matchPrecons(preconsData, userPreferences, pathType);
   
   // Show only top 3 matches
   const topMatches = matchedResults.slice(0, 3);
@@ -48,11 +68,13 @@ const Results = () => {
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             {topMatches.length > 0 ? "We Found Your Perfect Decks!" : "No Perfect Matches"}
           </h1>
-          <p className="text-lg text-muted-foreground">
-            {topMatches.length > 0 
-              ? "Here are the Commander precons that match your style" 
-              : "But don't worry, we can help you find something great!"}
-          </p>
+            <p className="text-lg text-muted-foreground">
+              {topMatches.length > 0 
+                ? pathType === "vibes" 
+                  ? "Here are the Commander precons that match your style" 
+                  : "Here are the Commander precons that match your power level"
+                : "But don't worry, we can help you find something great!"}
+            </p>
         </div>
 
         {/* No Matches Message */}
@@ -67,7 +89,7 @@ const Results = () => {
                 Try adjusting your color preferences or starting over to see more options!
               </p>
               <div className="flex gap-4 justify-center mt-6">
-                <Button variant="hero" size="lg" onClick={() => navigate("/vibes-questions")}>
+                <Button variant="hero" size="lg" onClick={() => navigate(pathType === "vibes" ? "/vibes-questions" : "/power-questions")}>
                   Adjust Preferences
                 </Button>
                 <Button variant="outline" size="lg" onClick={() => navigate("/")}>
