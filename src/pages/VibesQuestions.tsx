@@ -103,7 +103,7 @@ const VibesQuestions = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-2 md:p-4">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-2 md:p-4 pb-20 md:pb-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between py-1.5 md:py-6">
@@ -135,7 +135,7 @@ const VibesQuestions = () => {
         />
 
         {/* Question Content */}
-        <div className="mt-2 md:mt-8 space-y-2 md:space-y-8 animate-fade-in">
+        <div className="mt-4 md:mt-8 space-y-2 md:space-y-8 animate-fade-in">
           <div className="text-center space-y-0.5 md:space-y-2">
             <h2 className="text-lg md:text-4xl font-bold text-foreground">
               {currentQuestion.question}

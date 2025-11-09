@@ -385,13 +385,6 @@ const Results = () => {
                     size="sm"
                     onClick={() => navigate("/")}
                   >
-                    🔍 Find Specific Deck
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    onClick={() => navigate("/")}
-                  >
                     Start Over
                   </Button>
                 </div>

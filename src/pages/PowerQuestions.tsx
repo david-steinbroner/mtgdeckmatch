@@ -103,7 +103,7 @@ const PowerQuestions = () => {
         />
 
         {/* Question Content */}
-        <div className="mt-2 md:mt-8 space-y-2 md:space-y-8 animate-fade-in">
+        <div className="mt-4 md:mt-8 space-y-2 md:space-y-8 animate-fade-in">
           <div className="text-center space-y-0.5 md:space-y-2">
             <h2 className="text-lg md:text-4xl font-bold text-foreground">
               {currentQuestion.question}

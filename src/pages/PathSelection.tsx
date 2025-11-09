@@ -49,7 +49,7 @@ const PathSelection = () => {
         />
 
         {/* Main Content */}
-        <div className="mt-2 md:mt-8 space-y-2 md:space-y-6 animate-fade-in">
+        <div className="mt-4 md:mt-8 space-y-2 md:space-y-6 animate-fade-in">
           <div className="text-center space-y-0.5 md:space-y-2">
             <h2 className="text-xl md:text-4xl font-bold text-foreground">
               How do you want to choose?
