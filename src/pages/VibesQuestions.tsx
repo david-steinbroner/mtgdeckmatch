@@ -31,8 +31,8 @@ const VibesQuestions = () => {
     if (currentQuestionIndex < vibesQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      // Quiz complete, navigate to results
-      navigate("/results");
+      // Quiz complete, navigate to results with answers
+      navigate("/results", { state: { answers: newAnswers } });
     }
   };
 

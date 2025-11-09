@@ -1,11 +1,32 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import preconsData from "@/data/precons-data.json";
-import { ExternalLink } from "lucide-react";
+import { matchPrecons } from "@/utils/matcher";
+import { ExternalLink, Sparkles } from "lucide-react";
 
 const Results = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const answers = location.state?.answers || [];
+
+  // Convert answers array to preferences object
+  const userPreferences = {
+    vibe: answers.find(a => a.questionId === "vibe")?.answerId || null,
+    creatureType: answers.find(a => a.questionId === "creature-types")?.answerId || null,
+    colors: answers.find(a => a.questionId === "colors")?.answerId || [],
+  };
+
+  // Get matched precons
+  const matchedResults = matchPrecons(preconsData, userPreferences);
+  
+  // If no matches (color filter eliminated all), show all
+  const displayResults = matchedResults.length > 0 ? matchedResults : preconsData.map(precon => ({
+    precon,
+    score: 0,
+    reasons: ["No specific matches, but this is a great deck!"]
+  }));
 
   const getColorSymbol = (colorCode: string) => {
     const symbols: Record<string, string> = {
@@ -33,13 +54,23 @@ const Results = () => {
 
         {/* Deck Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          {preconsData.map((precon) => (
+          {displayResults.map(({ precon, score, reasons }, index) => (
             <Card
               key={precon.id}
-              className="group hover:shadow-card-hover transition-all duration-300 hover:scale-105 border-2"
+              className="group hover:shadow-card-hover transition-all duration-300 hover:scale-105 border-2 relative overflow-hidden"
             >
+              {/* Best Match Badge */}
+              {index === 0 && matchedResults.length > 0 && (
+                <div className="absolute top-4 right-4 z-10">
+                  <Badge className="bg-gradient-to-r from-accent to-accent/80 text-accent-foreground font-semibold px-3 py-1 flex items-center gap-1">
+                    <Sparkles className="w-3 h-3" />
+                    Best Match
+                  </Badge>
+                </div>
+              )}
+              
               <CardHeader>
-                <CardTitle className="text-2xl">{precon.name}</CardTitle>
+                <CardTitle className="text-2xl pr-24">{precon.name}</CardTitle>
                 <div className="space-y-2">
                   <p className="text-sm text-muted-foreground">
                     Commander: <span className="font-semibold text-foreground">{precon.commander}</span>
@@ -72,6 +103,21 @@ const Results = () => {
                     <span className="capitalize">{precon.tags.complexity}</span>
                   </p>
                 </div>
+
+                {/* Match Reasons */}
+                {reasons && reasons.length > 0 && (
+                  <div className="space-y-2 pt-2 border-t border-border">
+                    <p className="text-xs font-semibold text-muted-foreground uppercase">Why this deck?</p>
+                    <ul className="space-y-1">
+                      {reasons.map((reason, idx) => (
+                        <li key={idx} className="text-sm text-foreground flex items-start gap-2">
+                          <span className="text-accent mt-0.5">•</span>
+                          <span>{reason}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 {/* Tags Preview */}
                 <div className="space-y-1">
