@@ -167,11 +167,21 @@ const Results = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-3 py-3">
       <div className="max-w-7xl mx-auto space-y-3">
-        {/* Header - Ultra Compact */}
-        <div className="text-center animate-fade-in">
+        {/* Header with Buttons */}
+        <div className="flex justify-between items-center animate-fade-in">
           <h2 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             {topMatches.length > 0 ? "Your Perfect Decks" : "No Perfect Matches"}
           </h2>
+          {topMatches.length > 0 && (
+            <div className="flex gap-3">
+              <Button variant="outline" size="sm" onClick={() => navigate("/")}>
+                Start Over
+              </Button>
+              <Button variant="secondary" size="sm" onClick={() => navigate(-1)}>
+                Go Back
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* No Matches Message */}
@@ -332,18 +342,6 @@ const Results = () => {
             </Card>
           );
         })}
-          </div>
-        )}
-
-        {/* Footer Actions - Ultra Compact and Always Visible */}
-        {topMatches.length > 0 && (
-          <div className="flex flex-row gap-3 justify-center items-center">
-            <Button variant="outline" size="sm" onClick={() => navigate("/")}>
-              Start Over
-            </Button>
-            <Button variant="secondary" size="sm" onClick={() => navigate(-1)}>
-              Go Back
-            </Button>
           </div>
         )}
       </div>
