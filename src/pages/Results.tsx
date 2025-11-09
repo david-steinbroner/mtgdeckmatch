@@ -517,95 +517,81 @@ const Results = () => {
                 </div>
               )}
               
-              {/* Clickable Commander Card Image - Compact */}
-              <div className="p-1 flex justify-center">
-                <CardImageModal
-                  imageUrl={imageUrl}
-                  cardName={precon.commander}
-                  deckName={precon.name}
-                  triggerClassName="h-32 md:h-36 xl:h-40 w-full max-w-[200px] flex items-center justify-center bg-muted/30 rounded-md"
-                  imageClassName="max-h-full w-auto object-contain rounded-md"
-                />
-              </div>
-              
-              <CardHeader className="pt-1 pb-0.5 px-1.5 space-y-0.5">
-                {/* Deck Name */}
-                <CardTitle className="text-sm leading-tight text-foreground">{precon.name}</CardTitle>
+              {/* Two-column layout: Image left, Metadata right */}
+              <div className="grid grid-cols-[auto_1fr] gap-2 p-1.5">
+                {/* Left Column: Card Image */}
+                <div className="flex items-center justify-center">
+                  <CardImageModal
+                    imageUrl={imageUrl}
+                    cardName={precon.commander}
+                    deckName={precon.name}
+                    triggerClassName="h-28 md:h-32 w-auto flex items-center justify-center bg-muted/30 rounded-md"
+                    imageClassName="max-h-full w-auto object-contain rounded-md"
+                  />
+                </div>
                 
-                {/* Price, Commander, and Colors on one line */}
-                <div className="flex items-center gap-1.5 flex-wrap text-[10px]">
+                {/* Right Column: Metadata Stack */}
+                <div className="flex flex-col justify-center space-y-0.5 text-xs">
                   {/* Price */}
-                  <span className="text-muted-foreground font-semibold">$40-60</span>
-                  <span className="text-muted-foreground">•</span>
+                  <div className="text-muted-foreground font-semibold">$40-60</div>
                   
-                  {/* Commander Name */}
-                  <span className="font-semibold text-foreground truncate max-w-[120px]">{precon.commander}</span>
-                  <span className="text-muted-foreground">•</span>
+                  {/* Commander with label */}
+                  <div className="text-foreground">
+                    <span className="font-semibold">Commander:</span> {precon.commander}
+                  </div>
                   
                   {/* Colors */}
-                  <div className="flex items-center gap-0.5">
+                  <div className="flex items-center gap-1">
+                    <span className="text-muted-foreground">Colors:</span>
                     <div className="flex gap-0.5">
                       {precon.colors.map((color) => (
-                        <span key={color} className="text-xs">
+                        <span key={color} className="text-sm">
                           {getColorSymbol(color)}
                         </span>
                       ))}
                     </div>
                   </div>
+                  
+                  {/* Difficulty */}
+                  {difficultyInfo ? (
+                    <div className="text-muted-foreground text-[10px] leading-tight">
+                      <span className="font-semibold">Difficulty:</span> {difficultyInfo.level}/10 - {difficultyInfo.reason}
+                    </div>
+                  ) : (
+                    <div className="text-muted-foreground text-[10px]">
+                      <span className="font-semibold">Difficulty:</span> TBD
+                    </div>
+                  )}
                 </div>
-              </CardHeader>
+              </div>
               
-              <CardContent className="pb-1.5 px-1.5 space-y-1 flex-1 flex flex-col justify-between">
-
-                {/* Difficulty - Ultra Compact */}
-                {difficultyInfo && (
-                  <p className="text-[8px] text-muted-foreground leading-tight line-clamp-1">
-                    {difficultyInfo.level}/10 • {difficultyInfo.reason}
+              {/* Full-width bottom section */}
+              <CardContent className="px-2 pb-2 pt-0 space-y-1.5 flex flex-col">
+                {/* Deck Name - Second Largest */}
+                <h3 className="text-lg font-bold leading-tight text-foreground">{precon.name}</h3>
+                
+                {/* Flavor Text - LARGEST and most prominent */}
+                {deckELI5[precon.id] ? (
+                  <p className="text-sm leading-snug text-foreground line-clamp-3">
+                    {deckELI5[precon.id]}
+                  </p>
+                ) : (
+                  <p className="text-sm leading-snug text-muted-foreground italic line-clamp-3">
+                    A powerful precon deck featuring {precon.commander}. Description coming soon!
                   </p>
                 )}
 
-                {/* WHY Section - HIDDEN - Uncomment to restore AI-generated match reasons */}
-                {/* {(aiReasons[index] || (reasons && reasons.length > 0)) && (
-                  <div className="pt-2 border-t border-border bg-secondary/10 -mx-3 px-3 py-2">
-                    {isLoadingReasons ? (
-                      <p className="text-[9px] font-bold text-primary uppercase tracking-wide">Generating reasons...</p>
-                    ) : (
-                      <div className="flex items-start gap-1.5">
-                        <span className="text-[9px] font-bold text-primary uppercase tracking-wide whitespace-nowrap">WHY:</span>
-                        <div className="flex-1">
-                          {aiReasons[index] && (
-                            <p className="text-[11px] text-foreground italic">
-                              <span className="text-accent">✨</span> {aiReasons[index]}
-                            </p>
-                          )}
-                          {!aiReasons[index] && reasons && (
-                            <div className="space-y-0.5">
-                              {reasons.slice(0, 2).map((reason, idx) => (
-                                <p key={idx} className="text-[11px] text-foreground">
-                                  <span className="text-accent">•</span> {reason}
-                                </p>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                )} */}
-
-                {/* Buttons - Ultra Compact and at bottom */}
-                <div className="mt-auto pt-2">
-                  <Button
-                    variant="default"
-                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-auto py-2 text-[11px]"
-                    onClick={() => {
-                      const searchQuery = encodeURIComponent(precon.name + " commander deck");
-                      window.open(`https://www.tcgplayer.com/search/magic/product?productLineName=magic&q=${searchQuery}&view=grid`, "_blank");
-                    }}
-                  >
-                    Buy This Deck
-                  </Button>
-                </div>
+                {/* Buy Button */}
+                <Button
+                  variant="default"
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground h-auto py-2 text-xs mt-auto"
+                  onClick={() => {
+                    const searchQuery = encodeURIComponent(precon.name + " commander deck");
+                    window.open(`https://www.tcgplayer.com/search/magic/product?productLineName=magic&q=${searchQuery}&view=grid`, "_blank");
+                  }}
+                >
+                  Buy This Deck
+                </Button>
               </CardContent>
             </Card>
           );
