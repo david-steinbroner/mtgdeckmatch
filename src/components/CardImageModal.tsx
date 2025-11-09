@@ -20,12 +20,12 @@ export const CardImageModal = ({ imageUrl, cardName, deckName }: CardImageModalP
           />
         </button>
       </DialogTrigger>
-      <DialogContent className="max-w-2xl p-0 border-0 bg-transparent">
+      <DialogContent className="max-w-md p-6 border-0 bg-transparent">
         <div className="relative">
           <img
             src={imageUrl}
             alt={`${cardName} - Commander of ${deckName}`}
-            className="w-full rounded-lg"
+            className="w-full max-h-[85vh] object-contain rounded-lg"
           />
         </div>
       </DialogContent>

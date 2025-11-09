@@ -129,15 +129,13 @@ const Results = () => {
               )}
               
               {/* Clickable Commander Card Image */}
-              {commanderCard && (
-                <div className="p-4">
-                  <CardImageModal
-                    imageUrl={imageUrl}
-                    cardName={precon.commander}
-                    deckName={precon.name}
-                  />
-                </div>
-              )}
+              <div className="p-4">
+                <CardImageModal
+                  imageUrl={imageUrl}
+                  cardName={precon.commander}
+                  deckName={precon.name}
+                />
+              </div>
               
               <CardHeader className="pt-4 pb-2">
                 {/* Deck Name */}
