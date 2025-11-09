@@ -2,6 +2,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { CommanderCardImage } from "@/components/CommanderCardImage";
 import preconsData from "@/data/precons-data.json";
 import { matchPrecons } from "@/utils/matcher";
 import { deckELI5 } from "@/utils/deckDescriptions";
@@ -121,18 +122,14 @@ const Results = () => {
               )}
               
               {/* Commander Card Image */}
-              {commanderCard?.image_url && (
-                <div className="w-full h-80 overflow-hidden bg-muted relative">
-                  <img 
-                    src={commanderCard.image_url} 
-                    alt={commanderCard.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-80"></div>
-                </div>
+              {commanderCard && (
+                <CommanderCardImage 
+                  commanderCard={commanderCard}
+                  deckName={precon.name}
+                />
               )}
               
-              <CardHeader className={commanderCard?.image_url ? "-mt-16 relative z-10" : ""}>
+              <CardHeader className={commanderCard ? "-mt-16 relative z-10" : ""}>
                 <CardTitle className="text-2xl text-foreground drop-shadow-lg">{precon.name}</CardTitle>
                 <div className="space-y-2">
                   <p className="text-sm text-muted-foreground">
