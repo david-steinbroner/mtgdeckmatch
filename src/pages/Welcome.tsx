@@ -45,10 +45,13 @@ const Welcome = () => {
 
         <div className="bg-card rounded-2xl shadow-card p-6 md:p-8 border border-border/50 backdrop-blur-sm">
           <p className="text-lg md:text-xl text-foreground leading-relaxed">
-            Want to play MTG but not sure where to start? We'll help you find a pre-built deck (a "precon") that matches your style, whatever that may be.
+            Want to play Magic but not sure where to start? Just curious about what kind of decks there are? Are they all are just elves and dragons and wizards, or are there like, weird, ones too?
+          <br>
+            Yep. There sure are.
+          </br>
           </p>
           <p className="text-base md:text-lg text-muted-foreground mt-4">
-            Then we'll show you where to buy your perfect deck at the best price.
+            Get matched with a pre-built (precon) Commander Deck that fits your vibe.
           </p>
         </div>
 
@@ -60,13 +63,13 @@ const Welcome = () => {
               onClick={() => navigate("/path-selection")} 
               className="text-lg px-12 py-6 h-auto rounded-xl w-full sm:w-auto"
             >
-              Let's Find Your Deck!
+              I'm Ready To Slay!
             </Button>
           </div>
           
           <div className="flex flex-col items-center gap-3 w-full sm:w-auto">
             <Button 
-              variant="outline" 
+              variant="hero" 
               size="lg" 
               onClick={() => navigate("/results", { 
                 state: { 
@@ -78,9 +81,6 @@ const Welcome = () => {
             >
               🎲 Surprise Me!
             </Button>
-            <p className="text-sm text-muted-foreground mt-1">
-              Random decks from movies, TV & games
-            </p>
           </div>
         </div>
 
