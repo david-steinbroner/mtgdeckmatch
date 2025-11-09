@@ -1,0 +1,247 @@
+[
+  {
+    "id": "squirreled-away",
+    "name": "Squirreled Away",
+    "commander": "Hazel of the Rootbloom",
+    "year": 2024,
+    "set": "Bloomburrow",
+    "colors": ["B", "G"],
+    "color_identity": "Golgari",
+    "ip": "magic_original",
+    "ip_meta_tags": [],
+    "edhrec_url": "https://edhrec.com/precon/squirreled-away",
+    "cards": [
+      {
+        "name": "Hazel of the Rootbloom",
+        "scryfall_id": "abc123",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/...",
+        "type_line": "Legendary Creature — Squirrel Scout",
+        "oracle_text": "When Hazel of the Rootbloom enters the battlefield, create a 1/1 green Squirrel creature token. Whenever you sacrifice a token, you may pay {1}. If you do, create a Food token.",
+        "mana_cost": "{2}{B}{G}",
+        "colors": ["B", "G"],
+        "color_identity": ["B", "G"],
+        "keywords": [],
+        "creature_types": ["squirrel", "scout"]
+      },
+      {
+        "name": "Valley Mightcaller",
+        "scryfall_id": "def456",
+        "is_commander": false,
+        "image_url": "https://cards.scryfall.io/normal/front/...",
+        "type_line": "Creature — Otter Druid",
+        "oracle_text": "Trample. Other creatures you control get +1/+1 for each +1/+1 counter on Valley Mightcaller.",
+        "mana_cost": "{3}{G}",
+        "colors": ["G"],
+        "color_identity": ["G"],
+        "keywords": ["trample"],
+        "creature_types": ["otter", "druid"]
+      },
+      {
+        "name": "Chatter of the Squirrel",
+        "scryfall_id": "ghi789",
+        "is_commander": false,
+        "image_url": "https://cards.scryfall.io/normal/front/...",
+        "type_line": "Sorcery",
+        "oracle_text": "Create a 1/1 green Squirrel creature token. Flashback {1}{G}",
+        "mana_cost": "{G}",
+        "colors": ["G"],
+        "color_identity": ["G"],
+        "keywords": ["flashback"],
+        "creature_types": []
+      }
+    ],
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": ["cute", "cuddly"],
+        "secondary": ["playful", "whimsical"]
+      },
+      "creature_types": {
+        "primary": ["squirrel"],
+        "secondary": ["beast", "animals"]
+      },
+      "themes": {
+        "primary": ["tokens", "go-wide", "sacrifice"],
+        "secondary": ["treasure", "+1/+1 counters"]
+      },
+      "archetype": {
+        "primary": ["tribal", "midrange"],
+        "secondary": ["aristocrats"]
+      },
+      "play_pattern": {
+        "primary": ["grindy", "value"],
+        "secondary": ["go-wide"]
+      },
+      "flavor_setting": {
+        "primary": ["nature", "forest"],
+        "secondary": ["tribal"]
+      },
+      "tone": {
+        "primary": ["lighthearted", "playful"],
+        "secondary": ["hopeful"]
+      },
+      "power_level": 6,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    }
+  },
+  {
+    "id": "endless-punishment",
+    "name": "Endless Punishment",
+    "commander": "Valgavoth, Harvester Of Souls",
+    "year": 2024,
+    "set": "Duskmourn: House of Horror",
+    "colors": ["B", "R"],
+    "color_identity": "Rakdos",
+    "ip": "magic_original",
+    "ip_meta_tags": [],
+    "edhrec_url": "https://edhrec.com/precon/endless-punishment",
+    "cards": [
+      {
+        "name": "Valgavoth, Harvester Of Souls",
+        "scryfall_id": "xyz123",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/...",
+        "type_line": "Legendary Creature — Demon",
+        "oracle_text": "Flying. Whenever an opponent loses life during their turn, you may draw a card. This ability triggers only once each turn.",
+        "mana_cost": "{2}{B}{R}",
+        "colors": ["B", "R"],
+        "color_identity": ["B", "R"],
+        "keywords": ["flying"],
+        "creature_types": ["demon"]
+      },
+      {
+        "name": "Fate Unraveler",
+        "scryfall_id": "aaa111",
+        "is_commander": false,
+        "image_url": "https://cards.scryfall.io/normal/front/...",
+        "type_line": "Enchantment Creature — Hag",
+        "oracle_text": "Whenever an opponent draws a card, Fate Unraveler deals 1 damage to that player.",
+        "mana_cost": "{3}{B}",
+        "colors": ["B"],
+        "color_identity": ["B"],
+        "keywords": [],
+        "creature_types": ["hag"]
+      },
+      {
+        "name": "Bloodthirsty Conqueror",
+        "scryfall_id": "bbb222",
+        "is_commander": false,
+        "image_url": "https://cards.scryfall.io/normal/front/...",
+        "type_line": "Creature — Vampire Knight",
+        "oracle_text": "Flying. Whenever an opponent loses life, you gain that much life.",
+        "mana_cost": "{3}{B}{B}",
+        "colors": ["B"],
+        "color_identity": ["B"],
+        "keywords": ["flying"],
+        "creature_types": ["vampire", "knight"]
+      }
+    ],
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": ["creepy", "dark"],
+        "secondary": ["brutal", "monstrous"]
+      },
+      "creature_types": {
+        "primary": ["demon", "vampire"],
+        "secondary": ["horror"]
+      },
+      "themes": {
+        "primary": ["life loss", "card draw", "damage"],
+        "secondary": ["graveyard"]
+      },
+      "archetype": {
+        "primary": ["control", "combo"],
+        "secondary": ["midrange"]
+      },
+      "play_pattern": {
+        "primary": ["grindy", "interactive"],
+        "secondary": ["political"]
+      },
+      "flavor_setting": {
+        "primary": ["horror", "dark"],
+        "secondary": ["haunted house"]
+      },
+      "tone": {
+        "primary": ["dark", "serious"],
+        "secondary": ["aggressive", "menacing"]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    }
+  },
+  {
+    "id": "science",
+    "name": "Science!",
+    "commander": "Dr. Madison Li",
+    "year": 2024,
+    "set": "Fallout",
+    "colors": ["W", "U", "R"],
+    "color_identity": "Jeskai",
+    "ip": "fallout",
+    "ip_meta_tags": ["video game", "post-apocalyptic", "RPG", "retro-futurism"],
+    "edhrec_url": "https://edhrec.com/precon/science",
+    "cards": [
+      {
+        "name": "Dr. Madison Li",
+        "scryfall_id": "sci123",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/...",
+        "type_line": "Legendary Creature — Human Scientist",
+        "oracle_text": "Whenever you cast an artifact spell, you get {E}{E}. Whenever Dr. Madison Li attacks, you may pay {E}{E}{E}. If you do, draw a card.",
+        "mana_cost": "{2}{W}{U}",
+        "colors": ["W", "U"],
+        "color_identity": ["W", "U", "R"],
+        "keywords": [],
+        "creature_types": ["human", "scientist"]
+      },
+      {
+        "name": "Paladin Elizabeth Taggerdy",
+        "scryfall_id": "sci456",
+        "is_commander": false,
+        "image_url": "https://cards.scryfall.io/normal/front/...",
+        "type_line": "Legendary Creature — Human Knight",
+        "oracle_text": "Whenever you cast an artifact or enchantment spell, create a 2/2 white Knight creature token with vigilance.",
+        "mana_cost": "{3}{W}",
+        "colors": ["W"],
+        "color_identity": ["W"],
+        "keywords": ["vigilance"],
+        "creature_types": ["human", "knight"]
+      }
+    ],
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": ["technological", "mysterious"],
+        "secondary": ["gritty"]
+      },
+      "creature_types": {
+        "primary": ["human", "scientist"],
+        "secondary": ["artifact creatures"]
+      },
+      "themes": {
+        "primary": ["energy counters", "artifacts"],
+        "secondary": ["card draw", "proliferate"]
+      },
+      "archetype": {
+        "primary": ["midrange", "combo"],
+        "secondary": ["artifacts matter"]
+      },
+      "play_pattern": {
+        "primary": ["value", "explosive"],
+        "secondary": ["interactive"]
+      },
+      "flavor_setting": {
+        "primary": ["post-apocalyptic", "sci-fi"],
+        "secondary": ["technological", "wasteland"]
+      },
+      "tone": {
+        "primary": ["serious", "hopeful"],
+        "secondary": ["mysterious"]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": ["video game", "post-apocalyptic", "RPG", "retro-futurism", "Bethesda"]
+    }
+  }
+]
