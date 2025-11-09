@@ -75,7 +75,7 @@ export const MultiSelectCreatureQuestion = ({
       </div>
 
       {/* Creature Options Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
         {options.map((option) => {
           const isSelected = selectedCreatures.includes(option.id);
           const disabled = isDisabled(option.id);
@@ -86,9 +86,9 @@ export const MultiSelectCreatureQuestion = ({
               onClick={() => toggleCreature(option.id)}
               disabled={disabled}
               className={cn(
-                "relative bg-gradient-to-br from-card to-card/80 rounded-xl p-4",
+                "relative bg-gradient-to-br from-card to-card/80 rounded-xl p-2 md:p-4",
                 "border-2 transition-all duration-200",
-                "text-left min-h-[80px] flex items-center justify-center",
+                "text-left min-h-[60px] md:min-h-[80px] flex items-center justify-center",
                 isSelected
                   ? "border-accent shadow-card-hover bg-accent/5 scale-[1.02]"
                   : "border-border hover:border-primary/50 hover:scale-[1.01]",
@@ -105,7 +105,7 @@ export const MultiSelectCreatureQuestion = ({
 
               {/* Creature Label */}
               <span className={cn(
-                "text-sm md:text-base font-semibold text-center px-6",
+                "text-xs md:text-base font-semibold text-center px-2 md:px-6",
                 isSelected ? "text-accent" : "text-foreground"
               )}>
                 {option.label}
@@ -116,22 +116,22 @@ export const MultiSelectCreatureQuestion = ({
       </div>
 
       {/* Bottom Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-between items-center pt-4">
+      <div className="flex flex-col sm:flex-row gap-2 md:gap-4 justify-between items-center pt-2 md:pt-4">
         <Button
           variant="outline"
-          size="lg"
+          size="sm"
           onClick={handleSkip}
-          className="w-full sm:w-auto"
+          className="w-full sm:w-auto md:text-base"
         >
           Skip this question
         </Button>
 
         <Button
           variant="hero"
-          size="lg"
+          size="sm"
           onClick={handleContinue}
           disabled={!canContinue}
-          className="w-full sm:w-auto gap-2"
+          className="w-full sm:w-auto gap-2 md:text-base"
         >
           Continue
           <span className="text-lg">→</span>

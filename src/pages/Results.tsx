@@ -483,7 +483,7 @@ const Results = () => {
               
               const flavorText = deckELI5[precon.id] || `A powerful precon deck featuring ${precon.commander}. Description coming soon!`;
               const isExpanded = expandedDescriptions.has(precon.id);
-              const needsExpansion = flavorText.length > 150; // Approximate 4 lines worth
+              const needsExpansion = flavorText.length > 250; // Approximate 4 lines worth
               
               return (
             <Card
@@ -538,7 +538,7 @@ const Results = () => {
                   {matchPercentage !== null && source !== 'surprise' && (
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <div className="text-accent font-semibold text-[10px] cursor-help">
+                        <div className="text-amber-600 dark:text-amber-500 font-semibold text-[10px] cursor-help">
                           {matchPercentage}% Match
                         </div>
                       </TooltipTrigger>

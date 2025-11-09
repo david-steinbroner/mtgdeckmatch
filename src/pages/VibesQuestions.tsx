@@ -153,7 +153,7 @@ const VibesQuestions = () => {
 
           {/* Multiple Choice Options */}
           {currentQuestion.type === "multiple-choice" && currentQuestion.options && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mt-6 md:mt-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 mt-4 md:mt-12">
               {currentQuestion.options.map((option) => (
                 <OptionCard
                   key={option.id}
@@ -161,6 +161,7 @@ const VibesQuestions = () => {
                   description={option.description}
                   icon={option.icon}
                   onClick={() => handleOptionSelect(option.id)}
+                  className="p-3 md:p-6"
                 />
               ))}
             </div>
