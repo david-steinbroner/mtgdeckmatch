@@ -1,16 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ProgressIndicator } from "@/components/ProgressIndicator";
-import { Heart, Trophy, ArrowLeft } from "lucide-react";
+import { Heart, Trophy, Film, ArrowLeft } from "lucide-react";
 
 const PathSelection = () => {
   const navigate = useNavigate();
 
-  const handlePathSelect = (path: "vibes" | "power") => {
+  const handlePathSelect = (path: "vibes" | "power" | "pop_culture") => {
     if (path === "vibes") {
       navigate("/vibes-questions");
-    } else {
+    } else if (path === "power") {
       navigate("/power-questions");
+    } else if (path === "pop_culture") {
+      navigate("/ip-selection");
     }
   };
 
@@ -56,7 +58,7 @@ const PathSelection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mt-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {/* Vibes Option */}
             <button
               onClick={() => handlePathSelect("vibes")}
@@ -72,10 +74,38 @@ const PathSelection = () => {
                     VIBES
                   </h3>
                   <p className="text-lg text-foreground font-medium">
-                    I want a deck that matches my style
+                    Match my personal style
                   </p>
                   <p className="text-muted-foreground">
-                    Example: "I want a deck that's all kitties"
+                    Example: "Cute, creepy, or chaotic"
+                  </p>
+                </div>
+              </div>
+
+              <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-accent font-semibold">Choose this path →</span>
+              </div>
+            </button>
+
+            {/* Pop Culture Option */}
+            <button
+              onClick={() => handlePathSelect("pop_culture")}
+              className="group relative bg-gradient-to-br from-card to-card/80 rounded-2xl p-8 border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-card-hover text-left"
+            >
+              <div className="space-y-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300">
+                  <Film className="w-8 h-8 text-primary" />
+                </div>
+                
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    POP CULTURE
+                  </h3>
+                  <p className="text-lg text-foreground font-medium">
+                    Decks from shows, movies & games
+                  </p>
+                  <p className="text-muted-foreground">
+                    Example: "Walking Dead or Transformers"
                   </p>
                 </div>
               </div>
@@ -100,10 +130,10 @@ const PathSelection = () => {
                     POWER
                   </h3>
                   <p className="text-lg text-foreground font-medium">
-                    I want to build a competitive deck
+                    Build to win
                   </p>
                   <p className="text-muted-foreground">
-                    Example: "I'm here to win"
+                    Example: "I'm here to compete"
                   </p>
                 </div>
               </div>

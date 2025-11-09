@@ -1,7 +1,23 @@
 import { parseCustomInput } from './customInputParser';
 
 export function matchPrecons(precons, userPreferences, pathType = "vibes") {
-  const scoredPrecons = precons.map(precon => {
+  // PART 1: Filter by IP if coming from Pop Culture path
+  let filteredPrecons = precons;
+  
+  if (pathType === "pop_culture" && userPreferences.selectedIP) {
+    const selectedIP = userPreferences.selectedIP;
+    
+    // Filter to only decks matching the selected IP
+    if (selectedIP !== "magic_original" && selectedIP !== "skip") {
+      filteredPrecons = precons.filter(precon => precon.ip === selectedIP);
+      console.log(`Found ${filteredPrecons.length} decks for IP: ${selectedIP}`);
+    } else {
+      // "Magic Original" or "Skip" - show diverse magic_original decks
+      filteredPrecons = precons.filter(precon => precon.ip === "magic_original");
+    }
+  }
+  
+  const scoredPrecons = filteredPrecons.map(precon => {
     let score = 0;
     const tags = precon.tags || {};
     
@@ -114,6 +130,14 @@ export function matchPrecons(precons, userPreferences, pathType = "vibes") {
         else if (preconPower === minPower - 1 || preconPower === maxPower + 1) {
           score += 4;
         }
+      }
+    }
+    
+    // For pop_culture path, prefer power level 6-7
+    if (pathType === "pop_culture") {
+      const powerLevel = tags.power_level || 5;
+      if (powerLevel >= 6 && powerLevel <= 7) {
+        score += 5; // Bonus for ideal power level
       }
     }
     

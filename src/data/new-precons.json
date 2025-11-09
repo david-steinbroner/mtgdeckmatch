@@ -1,369 +1,21 @@
 [
   {
-    "id": "squirreled-away",
-    "name": "Bloomburrow: Squirreled Away",
-    "commander": "Hazel of the Rootbloom",
-    "year": 2024,
-    "set": "Bloomburrow",
-    "colors": [
-      "B",
-      "G"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "cute",
-          "cuddly"
-        ],
-        "secondary": [
-          "playful"
-        ]
-      },
-    "cards": [{ "name": "Negan, the Cold-Blooded", "is_commander": true, "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg", "type_line": "Legendary Creature" }],
-    "color_identity": "W-B-R"
-  },
-  // ... keep existing code (49 more new IP decks from 50_weird_precons_temp.json - Walking Dead, Stranger Things, Transformers, Street Fighter, Fortnite, Jurassic World, Doctor Who, Warhammer 40K, Monty Python, Princess Bride, Godzilla, plus new creature-themed magic_original decks with cats, dogs, bears, rats, ninjas, pirates, werewolves, phoenixes, scarecrows, oozes, spiders, skeletons, fungi, and more)
-  {
-    "id": "squirreled-away",
-    "name": "Bloomburrow: Squirreled Away",
-    "commander": "Hazel of the Rootbloom",
-    "year": 2024,
-    "set": "Bloomburrow",
-    "colors": [
-      "B",
-      "G"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "cute",
-          "cuddly"
-        ],
-        "secondary": [
-          "playful"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "squirrel"
-        ],
-        "secondary": [
-          "beast"
-        ]
-      },
-      "themes": {
-        "primary": [
-          "tokens",
-          "go-wide"
-        ],
-        "secondary": [
-          "sacrifice"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "tribal"
-        ],
-        "secondary": [
-          "midrange"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "grindy"
-        ],
-        "secondary": [
-          "value"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "nature",
-          "forest"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "lighthearted"
-        ],
-        "secondary": [
-          "playful"
-        ]
-      },
-      "power_level": 6,
-      "complexity": "moderate",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Hazel of the Rootbloom",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "B-G"
-  },
-  {
-    "id": "animated-army",
-    "name": "Bloomburrow: Animated Army",
-    "commander": "Bello, Bard of the Brambles",
-    "year": 2024,
-    "set": "Bloomburrow",
-    "colors": [
-      "R",
-      "G"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "whimsical",
-          "playful"
-        ],
-        "secondary": [
-          "cute"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "animals"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "enchantments",
-          "artifacts"
-        ],
-        "secondary": [
-          "ramp"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "midrange"
-        ],
-        "secondary": []
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "explosive"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "nature",
-          "fantasy"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "lighthearted"
-        ],
-        "secondary": []
-      },
-      "power_level": 6,
-      "complexity": "moderate",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Bello, Bard of the Brambles",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "R-G"
-  },
-  {
-    "id": "peace-offering",
-    "name": "Bloomburrow: Peace Offering",
-    "commander": "Ms. Bumbleflower",
-    "year": 2024,
-    "set": "Bloomburrow",
+    "id": "walking-dead-1",
+    "name": "The Walking Dead: Negan",
+    "commander": "Negan, the Cold-Blooded",
+    "year": 2020,
+    "set": "The Walking Dead Secret Lair",
     "colors": [
       "W",
-      "U",
-      "G"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "cute",
-          "friendly"
-        ],
-        "secondary": [
-          "playful"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "rabbit",
-          "animals"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "+1/+1 counters",
-          "group hug"
-        ],
-        "secondary": [
-          "card draw"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "group hug"
-        ],
-        "secondary": [
-          "political"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "political"
-        ],
-        "secondary": [
-          "value"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "nature",
-          "peaceful"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "lighthearted"
-        ],
-        "secondary": [
-          "hopeful"
-        ]
-      },
-      "power_level": 5,
-      "complexity": "simple",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Ms. Bumbleflower",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-G"
-  },
-  {
-    "id": "family-matters",
-    "name": "Bloomburrow: Family Matters",
-    "commander": "Zinnia, Valley's Voice",
-    "year": 2024,
-    "set": "Bloomburrow",
-    "colors": [
-      "W",
-      "U",
-      "R"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "cute",
-          "friendly"
-        ],
-        "secondary": [
-          "whimsical"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "bird",
-          "animals"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "tokens",
-          "copy"
-        ],
-        "secondary": [
-          "go-wide"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "combo"
-        ],
-        "secondary": [
-          "tokens"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "explosive"
-        ],
-        "secondary": [
-          "value"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "nature",
-          "sky"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "lighthearted"
-        ],
-        "secondary": []
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Zinnia, Valley's Voice",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-R"
-  },
-  {
-    "id": "endless-punishment",
-    "name": "Duskmourn: Endless Punishment",
-    "commander": "Valgavoth, Harvester of Souls",
-    "year": 2024,
-    "set": "Duskmourn: House of Horror",
-    "colors": [
       "B",
       "R"
     ],
-    "ip": "magic_original",
+    "ip": "walking_dead",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "creepy",
-          "dark"
+          "dark",
+          "gritty"
         ],
         "secondary": [
           "brutal"
@@ -371,273 +23,31 @@
       },
       "creature_types": {
         "primary": [
-          "demon",
-          "vampire"
-        ],
-        "secondary": [
-          "horror"
-        ]
-      },
-      "themes": {
-        "primary": [
-          "life loss",
-          "card draw"
-        ],
-        "secondary": [
-          "graveyard"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "control"
-        ],
-        "secondary": [
-          "combo"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "grindy"
-        ],
-        "secondary": [
-          "interactive"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "horror"
-        ],
-        "secondary": [
-          "dark"
-        ]
-      },
-      "tone": {
-        "primary": [
-          "dark"
-        ],
-        "secondary": [
-          "serious"
-        ]
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Valgavoth, Harvester of Souls",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "B-R"
-  },
-  {
-    "id": "jump-scare",
-    "name": "Duskmourn: Jump Scare!",
-    "commander": "Zimone, Mystery Unraveler",
-    "year": 2024,
-    "set": "Duskmourn: House of Horror",
-    "colors": [
-      "U",
-      "G"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "mysterious",
-          "creepy"
-        ],
-        "secondary": [
-          "playful"
-        ]
-      },
-      "creature_types": {
-        "primary": [],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "face-down cards",
-          "lands matter"
-        ],
-        "secondary": [
-          "card draw"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "midrange"
-        ],
-        "secondary": [
-          "ramp"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "interactive"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "horror",
-          "mystery"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "mysterious"
-        ],
-        "secondary": [
-          "playful"
-        ]
-      },
-      "power_level": 6,
-      "complexity": "moderate",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Zimone, Mystery Unraveler",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "U-G"
-  },
-  {
-    "id": "miracle-worker",
-    "name": "Duskmourn: Miracle Worker",
-    "commander": "Aminatou, Veil Piercer",
-    "year": 2024,
-    "set": "Duskmourn: House of Horror",
-    "colors": [
-      "W",
-      "U",
-      "B"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "mysterious",
-          "dark"
-        ],
-        "secondary": [
-          "elegant"
-        ]
-      },
-      "creature_types": {
-        "primary": [],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "enchantments",
-          "miracle"
-        ],
-        "secondary": [
-          "top of library"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "control"
-        ],
-        "secondary": [
-          "combo"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "interactive"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "horror",
-          "mystery"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "mysterious"
-        ],
-        "secondary": [
-          "serious"
-        ]
-      },
-      "power_level": 7,
-      "complexity": "complex",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Aminatou, Veil Piercer",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-B"
-  },
-  {
-    "id": "death-toll",
-    "name": "Duskmourn: Death Toll",
-    "commander": "Winter, Cynical Opportunist",
-    "year": 2024,
-    "set": "Duskmourn: House of Horror",
-    "colors": [
-      "B",
-      "G"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "creepy",
-          "dark"
-        ],
-        "secondary": []
-      },
-      "creature_types": {
-        "primary": [
-          "zombie",
-          "horror"
+          "human",
+          "survivor"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "graveyard",
-          "reanimator"
+          "sacrifice",
+          "treasure"
         ],
         "secondary": [
-          "mill"
+          "politics"
         ]
       },
       "archetype": {
         "primary": [
-          "reanimator"
+          "political"
         ],
         "secondary": [
-          "midrange"
+          "aristocrats"
         ]
       },
       "play_pattern": {
         "primary": [
-          "grindy"
+          "political"
         ],
         "secondary": [
           "value"
@@ -645,96 +55,14 @@
       },
       "flavor_setting": {
         "primary": [
-          "horror",
-          "graveyard"
+          "post-apocalyptic",
+          "zombie"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
           "dark"
-        ],
-        "secondary": [
-          "menacing"
-        ]
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Winter, Cynical Opportunist",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "B-G"
-  },
-  {
-    "id": "revival-trance",
-    "name": "Final Fantasy: Revival Trance",
-    "commander": "Terra, Herald of Hope",
-    "year": 2024,
-    "set": "Final Fantasy",
-    "colors": [
-      "W",
-      "B",
-      "R"
-    ],
-    "ip": "final_fantasy",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "epic",
-          "heroic"
-        ],
-        "secondary": [
-          "dark"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "human"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "reanimator",
-          "graveyard"
-        ],
-        "secondary": [
-          "small creatures"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "reanimator"
-        ],
-        "secondary": [
-          "midrange"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "grindy"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "fantasy",
-          "post-apocalyptic"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "hopeful"
         ],
         "secondary": [
           "serious"
@@ -743,15 +71,15 @@
       "power_level": 7,
       "complexity": "moderate",
       "ip_meta_tags": [
-        "video game",
-        "JRPG",
-        "Final Fantasy VI",
-        "Square Enix"
+        "TV show",
+        "zombies",
+        "AMC",
+        "post-apocalyptic"
       ]
     },
     "cards": [
       {
-        "name": "Terra, Herald of Hope",
+        "name": "Negan, the Cold-Blooded",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
@@ -760,17 +88,281 @@
     "color_identity": "W-B-R"
   },
   {
-    "id": "limit-break",
-    "name": "Final Fantasy: Limit Break",
-    "commander": "Cloud, Ex-SOLDIER",
-    "year": 2024,
-    "set": "Final Fantasy",
+    "id": "stranger-things-1",
+    "name": "Stranger Things: Mind Flayer",
+    "commander": "Mind Flayer, the Shadow",
+    "year": 2022,
+    "set": "Stranger Things Secret Lair",
+    "colors": [
+      "U",
+      "B"
+    ],
+    "ip": "stranger_things",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "creepy",
+          "mysterious"
+        ],
+        "secondary": [
+          "dark"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "horror"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "mill",
+          "control"
+        ],
+        "secondary": [
+          "upside down"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "control"
+        ],
+        "secondary": [
+          "mill"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "interactive"
+        ],
+        "secondary": [
+          "grindy"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "80s",
+          "sci-fi"
+        ],
+        "secondary": [
+          "horror"
+        ]
+      },
+      "tone": {
+        "primary": [
+          "mysterious"
+        ],
+        "secondary": [
+          "dark"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": [
+        "TV show",
+        "Netflix",
+        "80s nostalgia",
+        "sci-fi horror"
+      ]
+    },
+    "cards": [
+      {
+        "name": "Mind Flayer, the Shadow",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U-B"
+  },
+  {
+    "id": "transformers-autobots",
+    "name": "Transformers: Optimus Prime",
+    "commander": "Optimus Prime, Hero",
+    "year": 2022,
+    "set": "Transformers",
     "colors": [
       "W",
-      "R",
-      "G"
+      "U",
+      "R"
     ],
-    "ip": "final_fantasy",
+    "ip": "transformers",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "epic",
+          "technological"
+        ],
+        "secondary": [
+          "heroic"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "robot"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "artifacts",
+          "vehicles"
+        ],
+        "secondary": [
+          "convert"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "artifacts"
+        ],
+        "secondary": [
+          "midrange"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "value"
+        ],
+        "secondary": [
+          "go-tall"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "sci-fi",
+          "robots"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "heroic"
+        ],
+        "secondary": [
+          "epic"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": [
+        "toys",
+        "robots",
+        "Hasbro",
+        "80s cartoon"
+      ]
+    },
+    "cards": [
+      {
+        "name": "Optimus Prime, Hero",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "W-U-R"
+  },
+  {
+    "id": "transformers-decepticons",
+    "name": "Transformers: Megatron",
+    "commander": "Megatron, Tyrant",
+    "year": 2022,
+    "set": "Transformers",
+    "colors": [
+      "U",
+      "B",
+      "R"
+    ],
+    "ip": "transformers",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "dark",
+          "brutal"
+        ],
+        "secondary": [
+          "technological"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "robot"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "artifacts",
+          "sacrifice"
+        ],
+        "secondary": [
+          "convert"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "artifacts"
+        ],
+        "secondary": [
+          "control"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "value"
+        ],
+        "secondary": [
+          "interactive"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "sci-fi",
+          "robots"
+        ],
+        "secondary": [
+          "dark"
+        ]
+      },
+      "tone": {
+        "primary": [
+          "menacing"
+        ],
+        "secondary": [
+          "brutal"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": [
+        "toys",
+        "robots",
+        "Hasbro",
+        "80s cartoon",
+        "villains"
+      ]
+    },
+    "cards": [
+      {
+        "name": "Megatron, Tyrant",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U-B-R"
+  },
+  {
+    "id": "street-fighter-1",
+    "name": "Street Fighter: Chun-Li",
+    "commander": "Chun-Li, Countless Kicks",
+    "year": 2022,
+    "set": "Street Fighter Secret Lair",
+    "colors": [
+      "W",
+      "U"
+    ],
+    "ip": "street_fighter",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
@@ -784,17 +376,17 @@
       "creature_types": {
         "primary": [
           "human",
-          "soldier"
+          "warrior"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "equipment",
-          "voltron"
+          "combat",
+          "multiple attacks"
         ],
         "secondary": [
-          "7+ power matters"
+          "prowess"
         ]
       },
       "archetype": {
@@ -807,191 +399,103 @@
       },
       "play_pattern": {
         "primary": [
-          "go-tall"
+          "aggressive"
         ],
         "secondary": [
-          "aggressive"
+          "go-tall"
         ]
       },
       "flavor_setting": {
         "primary": [
-          "fantasy",
-          "steampunk"
+          "martial arts",
+          "fighting game"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "triumphant"
+          "heroic"
+        ],
+        "secondary": [
+          "powerful"
+        ]
+      },
+      "power_level": 6,
+      "complexity": "simple",
+      "ip_meta_tags": [
+        "video game",
+        "fighting game",
+        "Capcom",
+        "90s"
+      ]
+    },
+    "cards": [
+      {
+        "name": "Chun-Li, Countless Kicks",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "W-U"
+  },
+  {
+    "id": "street-fighter-2",
+    "name": "Street Fighter: Ryu",
+    "commander": "Ryu, World Warrior",
+    "year": 2022,
+    "set": "Street Fighter Secret Lair",
+    "colors": [
+      "W",
+      "R"
+    ],
+    "ip": "street_fighter",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "epic",
+          "powerful"
         ],
         "secondary": [
           "heroic"
         ]
       },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": [
-        "video game",
-        "JRPG",
-        "Final Fantasy VII",
-        "Square Enix"
-      ]
-    },
-    "cards": [
-      {
-        "name": "Cloud, Ex-SOLDIER",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-R-G"
-  },
-  {
-    "id": "counter-blitz",
-    "name": "Final Fantasy: Counter Blitz",
-    "commander": "Tidus, Yuna's Guardian",
-    "year": 2024,
-    "set": "Final Fantasy",
-    "colors": [
-      "W",
-      "U",
-      "G"
-    ],
-    "ip": "final_fantasy",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "epic",
-          "whimsical"
-        ],
-        "secondary": [
-          "playful"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "human"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "+1/+1 counters",
-          "moving counters"
-        ],
-        "secondary": [
-          "proliferate"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "midrange"
-        ],
-        "secondary": [
-          "combo"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "explosive"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "fantasy",
-          "tropical"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "hopeful"
-        ],
-        "secondary": [
-          "playful"
-        ]
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": [
-        "video game",
-        "JRPG",
-        "Final Fantasy X",
-        "Square Enix"
-      ]
-    },
-    "cards": [
-      {
-        "name": "Tidus, Yuna's Guardian",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-G"
-  },
-  {
-    "id": "scions-and-spellcraft",
-    "name": "Final Fantasy: Scions & Spellcraft",
-    "commander": "Y'shtola, Night's Blessed",
-    "year": 2024,
-    "set": "Final Fantasy",
-    "colors": [
-      "W",
-      "U",
-      "B"
-    ],
-    "ip": "final_fantasy",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "mysterious",
-          "elegant"
-        ],
-        "secondary": [
-          "dark"
-        ]
-      },
       "creature_types": {
         "primary": [
           "human",
-          "cat"
+          "warrior"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "card draw",
-          "control"
+          "combat",
+          "training"
         ],
         "secondary": [
-          "life gain"
+          "prowess"
         ]
       },
       "archetype": {
         "primary": [
-          "control"
+          "voltron"
         ],
         "secondary": [
-          "midrange"
+          "aggro"
         ]
       },
       "play_pattern": {
         "primary": [
-          "interactive"
+          "aggressive"
         ],
         "secondary": [
-          "value"
+          "go-tall"
         ]
       },
       "flavor_setting": {
         "primary": [
-          "fantasy",
-          "magical"
+          "martial arts",
+          "fighting game"
         ],
         "secondary": []
       },
@@ -1000,39 +504,40 @@
           "serious"
         ],
         "secondary": [
-          "mysterious"
+          "heroic"
         ]
       },
-      "power_level": 7,
-      "complexity": "moderate",
+      "power_level": 6,
+      "complexity": "simple",
       "ip_meta_tags": [
         "video game",
-        "MMORPG",
-        "Final Fantasy XIV",
-        "Square Enix"
+        "fighting game",
+        "Capcom",
+        "90s"
       ]
     },
     "cards": [
       {
-        "name": "Y'shtola, Night's Blessed",
+        "name": "Ryu, World Warrior",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "W-U-B"
+    "color_identity": "W-R"
   },
   {
-    "id": "quick-draw",
-    "name": "Outlaws of Thunder Junction: Quick Draw",
-    "commander": "Stella, Wild Card",
+    "id": "fortnite-1",
+    "name": "Fortnite: Battle Royale",
+    "commander": "Drift, the Navigator",
     "year": 2024,
-    "set": "Outlaws of Thunder Junction",
+    "set": "Fortnite Secret Lair",
     "colors": [
       "U",
-      "R"
+      "R",
+      "G"
     ],
-    "ip": "magic_original",
+    "ip": "fortnite",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
@@ -1051,74 +556,164 @@
       },
       "themes": {
         "primary": [
-          "spellslinging",
-          "multiple spells"
+          "treasure",
+          "equipment"
         ],
         "secondary": [
-          "card draw"
+          "combat"
         ]
       },
       "archetype": {
         "primary": [
-          "storm"
+          "midrange"
         ],
         "secondary": [
-          "combo"
+          "voltron"
         ]
       },
       "play_pattern": {
         "primary": [
-          "explosive"
+          "value"
         ],
         "secondary": [
-          "interactive"
+          "aggressive"
         ]
       },
       "flavor_setting": {
         "primary": [
-          "western",
-          "frontier"
+          "battle royale",
+          "modern"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "chaotic"
+          "playful"
         ],
         "secondary": [
-          "playful"
+          "chaotic"
         ]
       },
-      "power_level": 8,
-      "complexity": "complex",
-      "ip_meta_tags": []
+      "power_level": 6,
+      "complexity": "simple",
+      "ip_meta_tags": [
+        "video game",
+        "battle royale",
+        "Epic Games",
+        "modern"
+      ]
     },
     "cards": [
       {
-        "name": "Stella, Wild Card",
+        "name": "Drift, the Navigator",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "U-R"
+    "color_identity": "U-R-G"
   },
   {
-    "id": "grand-larceny",
-    "name": "Outlaws of Thunder Junction: Grand Larceny",
-    "commander": "Gonti, Canny Acquisitor",
-    "year": 2024,
-    "set": "Outlaws of Thunder Junction",
+    "id": "jurassic-world-1",
+    "name": "Jurassic World: Velociraptor Pack",
+    "commander": "Blue, Loyal Raptor",
+    "year": 2023,
+    "set": "Jurassic World Secret Lair",
     "colors": [
-      "U",
-      "B",
+      "R",
       "G"
     ],
-    "ip": "magic_original",
+    "ip": "jurassic_world",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "sneaky",
+          "epic",
+          "primal"
+        ],
+        "secondary": [
+          "powerful"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "dinosaur"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "tribal",
+          "tokens"
+        ],
+        "secondary": [
+          "combat"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "tribal"
+        ],
+        "secondary": [
+          "aggro"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "aggressive"
+        ],
+        "secondary": [
+          "go-wide"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "prehistoric",
+          "sci-fi"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "epic"
+        ],
+        "secondary": [
+          "powerful"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "simple",
+      "ip_meta_tags": [
+        "movie",
+        "dinosaurs",
+        "Jurassic Park",
+        "sci-fi"
+      ]
+    },
+    "cards": [
+      {
+        "name": "Blue, Loyal Raptor",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "R-G"
+  },
+  {
+    "id": "monty-python-1",
+    "name": "Monty Python: The Black Knight",
+    "commander": "The Black Knight",
+    "year": 2023,
+    "set": "Monty Python Secret Lair",
+    "colors": [
+      "W",
+      "B"
+    ],
+    "ip": "monty_python",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "chaotic",
           "playful"
         ],
         "secondary": [
@@ -1127,39 +722,37 @@
       },
       "creature_types": {
         "primary": [
-          "rogue"
+          "knight"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "stealing cards",
-          "opponents' cards"
+          "indestructible",
+          "combat"
         ],
-        "secondary": [
-          "card draw"
-        ]
+        "secondary": []
       },
       "archetype": {
         "primary": [
-          "control"
+          "voltron"
         ],
         "secondary": [
-          "combo"
+          "aggro"
         ]
       },
       "play_pattern": {
         "primary": [
-          "interactive"
+          "aggressive"
         ],
         "secondary": [
-          "value"
+          "chaotic"
         ]
       },
       "flavor_setting": {
         "primary": [
-          "western",
-          "crime"
+          "medieval",
+          "comedy"
         ],
         "secondary": []
       },
@@ -1168,58 +761,152 @@
           "playful"
         ],
         "secondary": [
-          "mysterious"
+          "chaotic"
         ]
       },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": []
+      "power_level": 6,
+      "complexity": "simple",
+      "ip_meta_tags": [
+        "movie",
+        "comedy",
+        "British",
+        "cult classic"
+      ]
     },
     "cards": [
       {
-        "name": "Gonti, Canny Acquisitor",
+        "name": "The Black Knight",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "U-B-G"
+    "color_identity": "W-B"
   },
   {
-    "id": "desert-bloom",
-    "name": "Outlaws of Thunder Junction: Desert Bloom",
-    "commander": "Yuma, Proud Protector",
-    "year": 2024,
-    "set": "Outlaws of Thunder Junction",
+    "id": "princess-bride-1",
+    "name": "The Princess Bride: Inigo Montoya",
+    "commander": "Inigo Montoya, Vengeful Duelist",
+    "year": 2023,
+    "set": "The Princess Bride Secret Lair",
     "colors": [
       "W",
-      "R",
-      "G"
+      "R"
     ],
-    "ip": "magic_original",
+    "ip": "princess_bride",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "nature",
-          "epic"
+          "epic",
+          "whimsical"
         ],
         "secondary": [
-          "powerful"
+          "heroic"
         ]
       },
       "creature_types": {
         "primary": [
-          "plant"
+          "human",
+          "warrior"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "lands matter",
-          "deserts"
+          "equipment",
+          "combat"
         ],
         "secondary": [
-          "tokens"
+          "revenge"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "voltron"
+        ],
+        "secondary": [
+          "aggro"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "aggressive"
+        ],
+        "secondary": [
+          "go-tall"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "fantasy",
+          "medieval"
+        ],
+        "secondary": [
+          "comedy"
+        ]
+      },
+      "tone": {
+        "primary": [
+          "playful"
+        ],
+        "secondary": [
+          "heroic"
+        ]
+      },
+      "power_level": 6,
+      "complexity": "simple",
+      "ip_meta_tags": [
+        "movie",
+        "fantasy",
+        "cult classic",
+        "romance"
+      ]
+    },
+    "cards": [
+      {
+        "name": "Inigo Montoya, Vengeful Duelist",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "W-R"
+  },
+  {
+    "id": "godzilla-1",
+    "name": "Godzilla: King of Monsters",
+    "commander": "Godzilla, King of the Monsters",
+    "year": 2020,
+    "set": "Ikoria: Lair of Behemoths",
+    "colors": [
+      "B",
+      "G"
+    ],
+    "ip": "godzilla",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "epic",
+          "powerful"
+        ],
+        "secondary": [
+          "destructive"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "dinosaur",
+          "mutant"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "+1/+1 counters",
+          "mutation"
+        ],
+        "secondary": [
+          "go-tall"
         ]
       },
       "archetype": {
@@ -1232,47 +919,52 @@
       },
       "play_pattern": {
         "primary": [
-          "value"
+          "go-tall"
         ],
         "secondary": [
-          "go-wide"
+          "value"
         ]
       },
       "flavor_setting": {
         "primary": [
-          "western",
-          "desert"
-        ],
-        "secondary": [
-          "nature"
-        ]
-      },
-      "tone": {
-        "primary": [
-          "triumphant"
+          "kaiju",
+          "monster movie"
         ],
         "secondary": []
       },
+      "tone": {
+        "primary": [
+          "epic"
+        ],
+        "secondary": [
+          "destructive"
+        ]
+      },
       "power_level": 7,
       "complexity": "moderate",
-      "ip_meta_tags": []
+      "ip_meta_tags": [
+        "movie",
+        "kaiju",
+        "monster",
+        "Japanese cinema"
+      ]
     },
     "cards": [
       {
-        "name": "Yuma, Proud Protector",
+        "name": "Godzilla, King of the Monsters",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "W-R-G"
+    "color_identity": "B-G"
   },
   {
-    "id": "most-wanted",
-    "name": "Outlaws of Thunder Junction: Most Wanted",
-    "commander": "Olivia, Opulent Outlaw",
-    "year": 2024,
-    "set": "Outlaws of Thunder Junction",
+    "id": "party-time",
+    "name": "Adventures in the Forgotten Realms: Party Time",
+    "commander": "Nalia de'Arnise",
+    "year": 2022,
+    "set": "Commander Legends: Battle for Baldur's Gate",
     "colors": [
       "W",
       "B",
@@ -1282,385 +974,37 @@
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "elegant",
-          "dark"
+          "epic",
+          "playful"
         ],
         "secondary": [
-          "powerful"
+          "whimsical"
         ]
       },
       "creature_types": {
         "primary": [
-          "vampire",
-          "outlaw"
-        ],
-        "secondary": [
+          "cleric",
           "rogue",
-          "assassin"
-        ]
-      },
-      "themes": {
-        "primary": [
-          "treasure",
-          "outlaws"
-        ],
-        "secondary": [
-          "sacrifice"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "midrange"
-        ],
-        "secondary": [
-          "aristocrats"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "grindy"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "western",
-          "crime"
-        ],
-        "secondary": [
-          "gothic"
-        ]
-      },
-      "tone": {
-        "primary": [
-          "dark"
-        ],
-        "secondary": [
-          "elegant"
-        ]
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Olivia, Opulent Outlaw",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-B-R"
-  },
-  {
-    "id": "science",
-    "name": "Fallout: Science!",
-    "commander": "Dr. Madison Li",
-    "year": 2024,
-    "set": "Fallout",
-    "colors": [
-      "W",
-      "U",
-      "R"
-    ],
-    "ip": "fallout",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "mysterious",
-          "technological"
-        ],
-        "secondary": [
-          "gritty"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "human"
+          "warrior",
+          "wizard"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "energy counters",
-          "artifacts"
+          "party",
+          "tribal"
         ],
         "secondary": [
-          "card draw"
+          "dungeon"
         ]
       },
       "archetype": {
         "primary": [
-          "combo"
+          "tribal"
         ],
         "secondary": [
           "midrange"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "explosive"
-        ],
-        "secondary": [
-          "value"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "post-apocalyptic",
-          "sci-fi"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "serious"
-        ],
-        "secondary": [
-          "hopeful"
-        ]
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": [
-        "video game",
-        "post-apocalyptic",
-        "RPG",
-        "Bethesda"
-      ]
-    },
-    "cards": [
-      {
-        "name": "Dr. Madison Li",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-R"
-  },
-  {
-    "id": "mutant-menace",
-    "name": "Fallout: Mutant Menace",
-    "commander": "The Wise Mothman",
-    "year": 2024,
-    "set": "Fallout",
-    "colors": [
-      "U",
-      "B",
-      "G"
-    ],
-    "ip": "fallout",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "creepy",
-          "mysterious"
-        ],
-        "secondary": [
-          "gritty"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "mutant"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "mill",
-          "rad counters"
-        ],
-        "secondary": [
-          "graveyard"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "mill"
-        ],
-        "secondary": [
-          "control"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "grindy"
-        ],
-        "secondary": [
-          "interactive"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "post-apocalyptic"
-        ],
-        "secondary": [
-          "horror"
-        ]
-      },
-      "tone": {
-        "primary": [
-          "dark"
-        ],
-        "secondary": [
-          "mysterious"
-        ]
-      },
-      "power_level": 6,
-      "complexity": "moderate",
-      "ip_meta_tags": [
-        "video game",
-        "post-apocalyptic",
-        "RPG",
-        "Bethesda"
-      ]
-    },
-    "cards": [
-      {
-        "name": "The Wise Mothman",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "U-B-G"
-  },
-  {
-    "id": "scrappy-survivors",
-    "name": "Fallout: Scrappy Survivors",
-    "commander": "Dogmeat, Ever Loyal",
-    "year": 2024,
-    "set": "Fallout",
-    "colors": [
-      "W",
-      "R",
-      "G"
-    ],
-    "ip": "fallout",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "gritty",
-          "heroic"
-        ],
-        "secondary": [
-          "cute"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "dog",
-          "human"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "equipment",
-          "auras"
-        ],
-        "secondary": [
-          "junk tokens"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "voltron"
-        ],
-        "secondary": [
-          "midrange"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "go-tall"
-        ],
-        "secondary": [
-          "value"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "post-apocalyptic"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "hopeful"
-        ],
-        "secondary": [
-          "heroic"
-        ]
-      },
-      "power_level": 6,
-      "complexity": "simple",
-      "ip_meta_tags": [
-        "video game",
-        "post-apocalyptic",
-        "RPG",
-        "Bethesda"
-      ]
-    },
-    "cards": [
-      {
-        "name": "Dogmeat, Ever Loyal",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-R-G"
-  },
-  {
-    "id": "hail-caesar",
-    "name": "Fallout: Hail, Caesar",
-    "commander": "Caesar, Legion's Emperor",
-    "year": 2024,
-    "set": "Fallout",
-    "colors": [
-      "W",
-      "B",
-      "R"
-    ],
-    "ip": "fallout",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "brutal",
-          "epic"
-        ],
-        "secondary": [
-          "dark"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "human",
-          "soldier"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "sacrifice",
-          "tokens"
-        ],
-        "secondary": [
-          "aristocrats"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "aristocrats"
-        ],
-        "secondary": [
-          "tokens"
         ]
       },
       "play_pattern": {
@@ -1673,32 +1017,26 @@
       },
       "flavor_setting": {
         "primary": [
-          "post-apocalyptic"
+          "fantasy",
+          "D&D"
         ],
-        "secondary": [
-          "ancient Rome"
-        ]
+        "secondary": []
       },
       "tone": {
         "primary": [
-          "serious"
+          "playful"
         ],
         "secondary": [
-          "brutal"
+          "epic"
         ]
       },
-      "power_level": 7,
+      "power_level": 6,
       "complexity": "moderate",
-      "ip_meta_tags": [
-        "video game",
-        "post-apocalyptic",
-        "RPG",
-        "Bethesda"
-      ]
+      "ip_meta_tags": []
     },
     "cards": [
       {
-        "name": "Caesar, Legion's Emperor",
+        "name": "Nalia de'Arnise",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
@@ -1707,117 +1045,29 @@
     "color_identity": "W-B-R"
   },
   {
-    "id": "food-and-fellowship",
-    "name": "The Lord of the Rings: Food and Fellowship",
-    "commander": "Frodo, Adventurous Hobbit",
-    "year": 2023,
-    "set": "The Lord of the Rings",
+    "id": "feline-ferocity",
+    "name": "Commander 2017: Feline Ferocity",
+    "commander": "Arahbo, Roar of the World",
+    "year": 2017,
+    "set": "Commander 2017",
     "colors": [
       "W",
       "G"
     ],
-    "ip": "lord_of_the_rings",
+    "ip": "magic_original",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
           "cute",
-          "friendly"
+          "powerful"
         ],
         "secondary": [
-          "whimsical"
+          "nature"
         ]
       },
       "creature_types": {
         "primary": [
-          "hobbit"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "food tokens",
-          "life gain"
-        ],
-        "secondary": [
-          "sacrifice"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "midrange"
-        ],
-        "secondary": [
-          "lifegain"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "grindy"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "fantasy",
-          "medieval"
-        ],
-        "secondary": [
-          "peaceful"
-        ]
-      },
-      "tone": {
-        "primary": [
-          "lighthearted"
-        ],
-        "secondary": [
-          "hopeful"
-        ]
-      },
-      "power_level": 6,
-      "complexity": "simple",
-      "ip_meta_tags": [
-        "movie",
-        "fantasy",
-        "LOTR",
-        "Tolkien",
-        "book"
-      ]
-    },
-    "cards": [
-      {
-        "name": "Frodo, Adventurous Hobbit",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-G"
-  },
-  {
-    "id": "riders-of-rohan",
-    "name": "The Lord of the Rings: Riders of Rohan",
-    "commander": "Éowyn, Shieldmaiden",
-    "year": 2023,
-    "set": "The Lord of the Rings",
-    "colors": [
-      "R",
-      "W"
-    ],
-    "ip": "lord_of_the_rings",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "epic",
-          "heroic"
-        ],
-        "secondary": []
-      },
-      "creature_types": {
-        "primary": [
-          "human",
-          "knight"
+          "cat"
         ],
         "secondary": []
       },
@@ -1832,10 +1082,10 @@
       },
       "archetype": {
         "primary": [
-          "aggro"
+          "tribal"
         ],
         "secondary": [
-          "tribal"
+          "voltron"
         ]
       },
       "play_pattern": {
@@ -1843,173 +1093,75 @@
           "aggressive"
         ],
         "secondary": [
-          "go-wide"
+          "go-tall"
         ]
       },
       "flavor_setting": {
         "primary": [
-          "fantasy",
-          "medieval"
+          "nature",
+          "savanna"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "triumphant"
+          "powerful"
         ],
-        "secondary": [
-          "heroic"
-        ]
+        "secondary": []
       },
       "power_level": 6,
       "complexity": "simple",
-      "ip_meta_tags": [
-        "movie",
-        "fantasy",
-        "LOTR",
-        "Tolkien",
-        "book"
-      ]
+      "ip_meta_tags": []
     },
     "cards": [
       {
-        "name": "Éowyn, Shieldmaiden",
+        "name": "Arahbo, Roar of the World",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "R-W"
+    "color_identity": "W-G"
   },
   {
-    "id": "elven-council",
-    "name": "The Lord of the Rings: Elven Council",
-    "commander": "Galadriel, Elven-Queen",
-    "year": 2023,
-    "set": "The Lord of the Rings",
+    "id": "ninja-strike",
+    "name": "Kamigawa Neon Dynasty: Ninja Strike",
+    "commander": "Kaito Shizuki",
+    "year": 2022,
+    "set": "Kamigawa: Neon Dynasty",
     "colors": [
-      "W",
       "U",
-      "G"
+      "B"
     ],
-    "ip": "lord_of_the_rings",
+    "ip": "magic_original",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "whimsical",
-          "elegant"
-        ],
-        "secondary": [
-          "epic"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "elf"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "scrying",
-          "card draw"
-        ],
-        "secondary": [
-          "tokens"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "tribal"
-        ],
-        "secondary": [
-          "midrange"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "interactive"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "fantasy",
-          "forest"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "hopeful"
+          "sneaky",
+          "technological"
         ],
         "secondary": [
           "mysterious"
         ]
       },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": [
-        "movie",
-        "fantasy",
-        "LOTR",
-        "Tolkien",
-        "book"
-      ]
-    },
-    "cards": [
-      {
-        "name": "Galadriel, Elven-Queen",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-G"
-  },
-  {
-    "id": "hosts-of-mordor",
-    "name": "The Lord of the Rings: Hosts of Mordor",
-    "commander": "Sauron, Lord of the Rings",
-    "year": 2023,
-    "set": "The Lord of the Rings",
-    "colors": [
-      "U",
-      "B",
-      "R"
-    ],
-    "ip": "lord_of_the_rings",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "dark",
-          "epic"
-        ],
-        "secondary": [
-          "menacing"
-        ]
-      },
       "creature_types": {
         "primary": [
-          "orc",
-          "demon"
+          "ninja"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "amass",
-          "tokens"
+          "ninjutsu",
+          "unblockable"
         ],
         "secondary": [
-          "sacrifice"
+          "draw"
         ]
       },
       "archetype": {
         "primary": [
-          "tokens"
+          "tempo"
         ],
         "secondary": [
           "control"
@@ -2017,7 +1169,89 @@
       },
       "play_pattern": {
         "primary": [
-          "go-wide"
+          "evasive"
+        ],
+        "secondary": [
+          "interactive"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "cyberpunk",
+          "Japanese"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "mysterious"
+        ],
+        "secondary": [
+          "sneaky"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Kaito Shizuki",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U-B"
+  },
+  {
+    "id": "plunder-the-graves",
+    "name": "Commander 2017: Plunder the Graves",
+    "commander": "Admiral Beckett Brass",
+    "year": 2017,
+    "set": "Commander 2017",
+    "colors": [
+      "U",
+      "B",
+      "R"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "chaotic",
+          "playful"
+        ],
+        "secondary": [
+          "dark"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "pirate"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "tribal",
+          "treasure"
+        ],
+        "secondary": [
+          "stealing"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "tribal"
+        ],
+        "secondary": [
+          "tempo"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "aggressive"
         ],
         "secondary": [
           "value"
@@ -2025,32 +1259,26 @@
       },
       "flavor_setting": {
         "primary": [
-          "fantasy",
-          "dark"
+          "pirates",
+          "ocean"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "dark"
+          "playful"
         ],
         "secondary": [
-          "menacing"
+          "chaotic"
         ]
       },
-      "power_level": 7,
+      "power_level": 6,
       "complexity": "moderate",
-      "ip_meta_tags": [
-        "movie",
-        "fantasy",
-        "LOTR",
-        "Tolkien",
-        "book"
-      ]
+      "ip_meta_tags": []
     },
     "cards": [
       {
-        "name": "Sauron, Lord of the Rings",
+        "name": "Admiral Beckett Brass",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
@@ -2059,131 +1287,131 @@
     "color_identity": "U-B-R"
   },
   {
-    "id": "eldrazi-incursion",
-    "name": "Modern Horizons 3: Eldrazi Incursion",
-    "commander": "Ulalek, Fused Atrocity",
-    "year": 2024,
-    "set": "Modern Horizons 3",
+    "id": "phyrexian-swarm",
+    "name": "Phyrexia: All Will Be One: Rebellion Rising",
+    "commander": "Neyali, Suns' Vanguard",
+    "year": 2023,
+    "set": "Phyrexia: All Will Be One",
     "colors": [
-      "W",
-      "U",
-      "B",
       "R",
-      "G"
+      "W"
     ],
     "ip": "magic_original",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "creepy",
-          "alien"
+          "epic",
+          "heroic"
         ],
         "secondary": [
-          "epic"
+          "technological"
         ]
       },
       "creature_types": {
         "primary": [
-          "eldrazi"
+          "human",
+          "rebel"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "eldrazi",
-          "colorless"
+          "tokens",
+          "equipment"
         ],
         "secondary": [
-          "ramp"
+          "go-wide"
         ]
       },
       "archetype": {
         "primary": [
-          "tribal"
+          "tokens"
         ],
         "secondary": [
-          "ramp"
+          "aggro"
         ]
       },
       "play_pattern": {
         "primary": [
-          "explosive"
+          "go-wide"
         ],
         "secondary": [
-          "go-tall"
+          "aggressive"
         ]
       },
       "flavor_setting": {
         "primary": [
-          "cosmic",
-          "alien"
+          "sci-fi",
+          "resistance"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "menacing"
+          "heroic"
         ],
         "secondary": [
-          "mysterious"
+          "hopeful"
         ]
       },
-      "power_level": 8,
-      "complexity": "complex",
+      "power_level": 7,
+      "complexity": "moderate",
       "ip_meta_tags": []
     },
     "cards": [
       {
-        "name": "Ulalek, Fused Atrocity",
+        "name": "Neyali, Suns' Vanguard",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "W-U-B-R-G"
+    "color_identity": "R-W"
   },
   {
-    "id": "creative-energy",
-    "name": "Modern Horizons 3: Creative Energy",
-    "commander": "Satya, Aetherflux Genius",
-    "year": 2024,
-    "set": "Modern Horizons 3",
+    "id": "tinker-time",
+    "name": "The Brothers' War: Urza's Iron Alliance",
+    "commander": "Urza, Chief Artificer",
+    "year": 2022,
+    "set": "The Brothers' War",
     "colors": [
       "W",
       "U",
-      "R"
+      "B"
     ],
     "ip": "magic_original",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
           "technological",
-          "elegant"
+          "epic"
         ],
-        "secondary": []
+        "secondary": [
+          "mysterious"
+        ]
       },
       "creature_types": {
         "primary": [
-          "human",
-          "artificer"
+          "artificer",
+          "soldier"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "energy counters",
-          "artifacts"
+          "artifacts",
+          "tokens"
         ],
         "secondary": [
-          "copy"
+          "sacrifice"
         ]
       },
       "archetype": {
         "primary": [
-          "combo"
+          "artifacts"
         ],
         "secondary": [
-          "artifacts"
+          "combo"
         ]
       },
       "play_pattern": {
@@ -2197,23 +1425,280 @@
       "flavor_setting": {
         "primary": [
           "steampunk",
-          "technological"
+          "war"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "hopeful"
+          "serious"
+        ],
+        "secondary": [
+          "epic"
+        ]
+      },
+      "power_level": 8,
+      "complexity": "complex",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Urza, Chief Artificer",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "W-U-B"
+  },
+  {
+    "id": "carnival-of-souls",
+    "name": "Unfinity: Carnival of Souls",
+    "commander": "Myra the Magnificent",
+    "year": 2022,
+    "set": "Unfinity",
+    "colors": [
+      "W",
+      "U",
+      "B",
+      "R"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "whimsical",
+          "chaotic"
+        ],
+        "secondary": [
+          "playful"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "performer",
+          "clown"
         ],
         "secondary": []
       },
-      "power_level": 7,
+      "themes": {
+        "primary": [
+          "tickets",
+          "attractions"
+        ],
+        "secondary": [
+          "chaos"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "chaos"
+        ],
+        "secondary": [
+          "combo"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "chaotic"
+        ],
+        "secondary": [
+          "value"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "carnival",
+          "circus"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "playful"
+        ],
+        "secondary": [
+          "chaotic"
+        ]
+      },
+      "power_level": 5,
+      "complexity": "complex",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Myra the Magnificent",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "W-U-B-R"
+  },
+  {
+    "id": "heavenly-host",
+    "name": "Commander 2014: Heavenly Inferno",
+    "commander": "Kaalia of the Vast",
+    "year": 2014,
+    "set": "Commander 2014",
+    "colors": [
+      "W",
+      "B",
+      "R"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "epic",
+          "dark"
+        ],
+        "secondary": [
+          "powerful"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "angel",
+          "demon",
+          "dragon"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "cheating mana",
+          "big creatures"
+        ],
+        "secondary": [
+          "combat"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "reanimator"
+        ],
+        "secondary": [
+          "aggro"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "explosive"
+        ],
+        "secondary": [
+          "go-tall"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "cosmic",
+          "divine"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "epic"
+        ],
+        "secondary": [
+          "powerful"
+        ]
+      },
+      "power_level": 8,
       "complexity": "moderate",
       "ip_meta_tags": []
     },
     "cards": [
       {
-        "name": "Satya, Aetherflux Genius",
+        "name": "Kaalia of the Vast",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "W-B-R"
+  },
+  {
+    "id": "doctor-who-paradox",
+    "name": "Doctor Who: Paradox Power",
+    "commander": "The Thirteenth Doctor",
+    "year": 2023,
+    "set": "Doctor Who",
+    "colors": [
+      "W",
+      "U",
+      "R"
+    ],
+    "ip": "doctor_who",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "whimsical",
+          "technological"
+        ],
+        "secondary": [
+          "mysterious"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "time lord"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "historic spells",
+          "artifacts"
+        ],
+        "secondary": [
+          "time travel"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "artifacts"
+        ],
+        "secondary": [
+          "combo"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "value"
+        ],
+        "secondary": [
+          "explosive"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "sci-fi",
+          "time travel"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "playful"
+        ],
+        "secondary": [
+          "mysterious"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": [
+        "TV show",
+        "sci-fi",
+        "British",
+        "BBC"
+      ]
+    },
+    "cards": [
+      {
+        "name": "The Thirteenth Doctor",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
@@ -2222,210 +1707,147 @@
     "color_identity": "W-U-R"
   },
   {
-    "id": "graveyard-overdrive",
-    "name": "Modern Horizons 3: Graveyard Overdrive",
-    "commander": "Disa the Restless",
-    "year": 2024,
-    "set": "Modern Horizons 3",
+    "id": "doctor-who-masters",
+    "name": "Doctor Who: Masters of Evil",
+    "commander": "The Master, Formed Anew",
+    "year": 2023,
+    "set": "Doctor Who",
     "colors": [
+      "U",
       "B",
-      "R",
-      "G"
+      "R"
     ],
-    "ip": "magic_original",
+    "ip": "doctor_who",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
           "dark",
           "chaotic"
         ],
-        "secondary": []
-      },
-      "creature_types": {
-        "primary": [
-          "lhurgoyf"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "graveyard",
-          "self-mill"
-        ],
         "secondary": [
-          "recursion"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "graveyard"
-        ],
-        "secondary": [
-          "midrange"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "grindy"
-        ],
-        "secondary": [
-          "value"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "dark"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "chaotic"
-        ],
-        "secondary": []
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Disa the Restless",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "B-R-G"
-  },
-  {
-    "id": "tricky-terrain",
-    "name": "Modern Horizons 3: Tricky Terrain",
-    "commander": "Omo, Queen of Vesuva",
-    "year": 2024,
-    "set": "Modern Horizons 3",
-    "colors": [
-      "U",
-      "G"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "whimsical",
           "mysterious"
-        ],
-        "secondary": []
+        ]
       },
       "creature_types": {
         "primary": [
-          "shapeshifter"
+          "time lord",
+          "villain"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "lands matter",
-          "ramp"
-        ],
-        "secondary": [
-          "card draw"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "ramp"
-        ],
-        "secondary": [
-          "midrange"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "grindy"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "nature"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "playful"
-        ],
-        "secondary": []
-      },
-      "power_level": 6,
-      "complexity": "moderate",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Omo, Queen of Vesuva",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "U-G"
-  },
-  {
-    "id": "forces-of-the-imperium",
-    "name": "Warhammer 40,000: Forces of the Imperium",
-    "commander": "Inquisitor Greyfax",
-    "year": 2022,
-    "set": "Warhammer 40,000",
-    "colors": [
-      "W",
-      "U",
-      "B"
-    ],
-    "ip": "warhammer_40k",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "epic",
-          "serious"
-        ],
-        "secondary": [
-          "dark"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "human",
-          "soldier"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "artifacts",
-          "tokens"
-        ],
-        "secondary": [
-          "investigate"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "artifacts"
+          "villains",
+          "sacrifice"
         ],
         "secondary": [
           "control"
         ]
       },
-      "play_pattern": {
+      "archetype": {
         "primary": [
-          "value"
+          "control"
         ],
         "secondary": [
+          "aristocrats"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
           "interactive"
+        ],
+        "secondary": [
+          "value"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "sci-fi",
+          "time travel"
+        ],
+        "secondary": [
+          "dark"
+        ]
+      },
+      "tone": {
+        "primary": [
+          "menacing"
+        ],
+        "secondary": [
+          "chaotic"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": [
+        "TV show",
+        "sci-fi",
+        "British",
+        "BBC",
+        "villains"
+      ]
+    },
+    "cards": [
+      {
+        "name": "The Master, Formed Anew",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U-B-R"
+  },
+  {
+    "id": "warhammer-orks",
+    "name": "Warhammer 40K: Orks",
+    "commander": "Ghazghkull Thraka",
+    "year": 2022,
+    "set": "Warhammer 40,000",
+    "colors": [
+      "B",
+      "R",
+      "G"
+    ],
+    "ip": "warhammer_40k",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "chaotic",
+          "brutal"
+        ],
+        "secondary": [
+          "playful"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "ork"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "tokens",
+          "combat"
+        ],
+        "secondary": [
+          "sacrifice"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "aggro"
+        ],
+        "secondary": [
+          "tokens"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "go-wide"
+        ],
+        "secondary": [
+          "aggressive"
         ]
       },
       "flavor_setting": {
@@ -2437,182 +1859,12 @@
       },
       "tone": {
         "primary": [
-          "serious"
-        ],
-        "secondary": [
-          "dark"
-        ]
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": [
-        "tabletop game",
-        "sci-fi",
-        "grimdark",
-        "Games Workshop"
-      ]
-    },
-    "cards": [
-      {
-        "name": "Inquisitor Greyfax",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-B"
-  },
-  {
-    "id": "the-ruinous-powers",
-    "name": "Warhammer 40,000: The Ruinous Powers",
-    "commander": "Abaddon the Despoiler",
-    "year": 2022,
-    "set": "Warhammer 40,000",
-    "colors": [
-      "U",
-      "B",
-      "R"
-    ],
-    "ip": "warhammer_40k",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "dark",
           "chaotic"
         ],
         "secondary": [
           "brutal"
         ]
       },
-      "creature_types": {
-        "primary": [
-          "demon",
-          "chaos"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "cascade",
-          "demons"
-        ],
-        "secondary": [
-          "sacrifice"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "chaos"
-        ],
-        "secondary": [
-          "combo"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "explosive"
-        ],
-        "secondary": [
-          "chaotic"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "sci-fi",
-          "horror"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "dark"
-        ],
-        "secondary": [
-          "chaotic"
-        ]
-      },
-      "power_level": 8,
-      "complexity": "complex",
-      "ip_meta_tags": [
-        "tabletop game",
-        "sci-fi",
-        "grimdark",
-        "Games Workshop"
-      ]
-    },
-    "cards": [
-      {
-        "name": "Abaddon the Despoiler",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "U-B-R"
-  },
-  {
-    "id": "tyranid-swarm",
-    "name": "Warhammer 40,000: Tyranid Swarm",
-    "commander": "The Swarmlord",
-    "year": 2022,
-    "set": "Warhammer 40,000",
-    "colors": [
-      "U",
-      "G"
-    ],
-    "ip": "warhammer_40k",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "creepy",
-          "alien"
-        ],
-        "secondary": []
-      },
-      "creature_types": {
-        "primary": [
-          "tyranid"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "+1/+1 counters",
-          "tokens"
-        ],
-        "secondary": [
-          "proliferate"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "counters"
-        ],
-        "secondary": [
-          "go-wide"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "explosive"
-        ],
-        "secondary": [
-          "value"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "sci-fi",
-          "alien"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "menacing"
-        ],
-        "secondary": []
-      },
       "power_level": 7,
       "complexity": "moderate",
       "ip_meta_tags": [
@@ -2624,386 +1876,49 @@
     },
     "cards": [
       {
-        "name": "The Swarmlord",
+        "name": "Ghazghkull Thraka",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "U-G"
+    "color_identity": "B-R-G"
   },
   {
-    "id": "necron-dynasties",
-    "name": "Warhammer 40,000: Necron Dynasties",
-    "commander": "Szarekh, the Silent King",
-    "year": 2022,
-    "set": "Warhammer 40,000",
-    "colors": [
-      "W",
-      "U",
-      "B"
-    ],
-    "ip": "warhammer_40k",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "dark",
-          "creepy"
-        ],
-        "secondary": [
-          "technological"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "necron"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "artifacts",
-          "unearth"
-        ],
-        "secondary": [
-          "recursion"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "artifacts"
-        ],
-        "secondary": [
-          "reanimator"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "grindy"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "sci-fi",
-          "ancient"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "dark"
-        ],
-        "secondary": [
-          "mysterious"
-        ]
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": [
-        "tabletop game",
-        "sci-fi",
-        "grimdark",
-        "Games Workshop"
-      ]
-    },
-    "cards": [
-      {
-        "name": "Szarekh, the Silent King",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-B"
-  },
-  {
-    "id": "timey-wimey",
-    "name": "Doctor Who: Timey-Wimey",
-    "commander": "The Tenth Doctor",
-    "year": 2023,
-    "set": "Doctor Who",
-    "colors": [
-      "W",
-      "U",
-      "R"
-    ],
-    "ip": "doctor_who",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "whimsical",
-          "mysterious"
-        ],
-        "secondary": [
-          "playful"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "time lord"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "time counters",
-          "suspend"
-        ],
-        "secondary": [
-          "card draw"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "control"
-        ],
-        "secondary": [
-          "combo"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "interactive"
-        ],
-        "secondary": [
-          "value"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "sci-fi",
-          "time travel"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "playful"
-        ],
-        "secondary": [
-          "mysterious"
-        ]
-      },
-      "power_level": 7,
-      "complexity": "complex",
-      "ip_meta_tags": [
-        "TV show",
-        "sci-fi",
-        "British",
-        "BBC"
-      ]
-    },
-    "cards": [
-      {
-        "name": "The Tenth Doctor",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-R"
-  },
-  {
-    "id": "blast-from-the-past",
-    "name": "Doctor Who: Blast from the Past",
-    "commander": "The Fourth Doctor",
-    "year": 2023,
-    "set": "Doctor Who",
-    "colors": [
-      "U",
-      "R",
-      "G"
-    ],
-    "ip": "doctor_who",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "whimsical",
-          "chaotic"
-        ],
-        "secondary": []
-      },
-      "creature_types": {
-        "primary": [
-          "time lord"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "graveyard",
-          "flashback"
-        ],
-        "secondary": [
-          "card draw"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "graveyard"
-        ],
-        "secondary": [
-          "control"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "interactive"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "sci-fi",
-          "time travel"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "playful"
-        ],
-        "secondary": []
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": [
-        "TV show",
-        "sci-fi",
-        "British",
-        "BBC"
-      ]
-    },
-    "cards": [
-      {
-        "name": "The Fourth Doctor",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "U-R-G"
-  },
-  {
-    "id": "vampiric-bloodline",
-    "name": "Innistrad Crimson Vow: Vampiric Bloodline",
-    "commander": "Strefan, Maurer Progenitor",
-    "year": 2021,
-    "set": "Innistrad: Crimson Vow",
-    "colors": [
-      "B",
-      "R"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "dark",
-          "elegant"
-        ],
-        "secondary": [
-          "creepy"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "vampire"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "tribal",
-          "blood tokens"
-        ],
-        "secondary": [
-          "sacrifice"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "tribal"
-        ],
-        "secondary": [
-          "aggro"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "aggressive"
-        ],
-        "secondary": [
-          "value"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "horror",
-          "gothic"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "dark"
-        ],
-        "secondary": [
-          "elegant"
-        ]
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Strefan, Maurer Progenitor",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "B-R"
-  },
-  {
-    "id": "draconic-rage",
-    "name": "Adventures in the Forgotten Realms: Draconic Rage",
-    "commander": "Vrondiss, Rage of Ancients",
-    "year": 2021,
-    "set": "Adventures in the Forgotten Realms",
+    "id": "dinosaur-empire",
+    "name": "Ixalan: Dinosaur Empire",
+    "commander": "Gishath, Sun's Avatar",
+    "year": 2017,
+    "set": "Ixalan",
     "colors": [
       "R",
-      "G"
+      "G",
+      "W"
     ],
     "ip": "magic_original",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
           "epic",
-          "powerful"
+          "primal"
         ],
         "secondary": [
-          "chaotic"
+          "powerful"
         ]
       },
       "creature_types": {
         "primary": [
-          "dragon"
+          "dinosaur"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "dragons",
-          "damage"
+          "tribal",
+          "ramp"
         ],
         "secondary": [
-          "tokens"
+          "big creatures"
         ]
       },
       "archetype": {
@@ -3011,7 +1926,7 @@
           "tribal"
         ],
         "secondary": [
-          "aggro"
+          "midrange"
         ]
       },
       "play_pattern": {
@@ -3024,65 +1939,66 @@
       },
       "flavor_setting": {
         "primary": [
-          "fantasy",
-          "medieval"
+          "prehistoric",
+          "jungle"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "triumphant"
+          "epic"
         ],
-        "secondary": []
+        "secondary": [
+          "powerful"
+        ]
       },
-      "power_level": 6,
-      "complexity": "moderate",
+      "power_level": 7,
+      "complexity": "simple",
       "ip_meta_tags": []
     },
     "cards": [
       {
-        "name": "Vrondiss, Rage of Ancients",
+        "name": "Gishath, Sun's Avatar",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "R-G"
+    "color_identity": "R-G-W"
   },
   {
-    "id": "spirit-squadron",
-    "name": "Innistrad Midnight Hunt: Spirit Squadron",
-    "commander": "Millicent, Restless Revenant",
-    "year": 2021,
-    "set": "Innistrad: Midnight Hunt",
+    "id": "snake-basket",
+    "name": "Kamigawa: Snake's Path",
+    "commander": "Seshiro the Anointed",
+    "year": 2022,
+    "set": "Kamigawa: Neon Dynasty",
     "colors": [
-      "W",
-      "U"
+      "G"
     ],
     "ip": "magic_original",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "creepy",
-          "mysterious"
+          "mysterious",
+          "nature"
         ],
         "secondary": [
-          "elegant"
+          "sneaky"
         ]
       },
       "creature_types": {
         "primary": [
-          "spirit"
+          "snake"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
           "tribal",
-          "flying"
+          "card draw"
         ],
         "secondary": [
-          "tokens"
+          "combat"
         ]
       },
       "archetype": {
@@ -3090,12 +2006,12 @@
           "tribal"
         ],
         "secondary": [
-          "tempo"
+          "midrange"
         ]
       },
       "play_pattern": {
         "primary": [
-          "evasive"
+          "value"
         ],
         "secondary": [
           "go-wide"
@@ -3103,8 +2019,8 @@
       },
       "flavor_setting": {
         "primary": [
-          "horror",
-          "gothic"
+          "nature",
+          "Japanese"
         ],
         "secondary": []
       },
@@ -3120,22 +2036,181 @@
     },
     "cards": [
       {
-        "name": "Millicent, Restless Revenant",
+        "name": "Seshiro the Anointed",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "W-U"
+    "color_identity": "G"
   },
   {
-    "id": "undead-unleashed",
-    "name": "Innistrad Midnight Hunt: Undead Unleashed",
-    "commander": "Wilhelt, the Rotcleaver",
-    "year": 2021,
-    "set": "Innistrad: Midnight Hunt",
+    "id": "merfolk-seaside",
+    "name": "Ixalan: Merfolk Tide",
+    "commander": "Kumena, Tyrant of Orazca",
+    "year": 2017,
+    "set": "Ixalan",
     "colors": [
       "U",
+      "G"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "whimsical",
+          "mysterious"
+        ],
+        "secondary": [
+          "nature"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "merfolk"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "tribal",
+          "+1/+1 counters"
+        ],
+        "secondary": [
+          "tap abilities"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "tribal"
+        ],
+        "secondary": [
+          "tempo"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "go-wide"
+        ],
+        "secondary": [
+          "value"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "underwater",
+          "tropical"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "mysterious"
+        ],
+        "secondary": [
+          "whimsical"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Kumena, Tyrant of Orazca",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U-G"
+  },
+  {
+    "id": "squirrel-mob",
+    "name": "Modern Horizons 2: Squirrel Mob",
+    "commander": "Chatterfang, Squirrel General",
+    "year": 2021,
+    "set": "Modern Horizons 2",
+    "colors": [
+      "B",
+      "G"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "cute",
+          "playful"
+        ],
+        "secondary": [
+          "dark"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "squirrel"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "tokens",
+          "sacrifice"
+        ],
+        "secondary": [
+          "aristocrats"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "tokens"
+        ],
+        "secondary": [
+          "aristocrats"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "go-wide"
+        ],
+        "secondary": [
+          "value"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "nature",
+          "forest"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "playful"
+        ],
+        "secondary": []
+      },
+      "power_level": 8,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Chatterfang, Squirrel General",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "B-G"
+  },
+  {
+    "id": "rat-colony",
+    "name": "Kamigawa: Rat Colony",
+    "commander": "Marrow-Gnawer",
+    "year": 2022,
+    "set": "Kamigawa: Neon Dynasty",
+    "colors": [
       "B"
     ],
     "ip": "magic_original",
@@ -3145,21 +2220,23 @@
           "creepy",
           "dark"
         ],
-        "secondary": []
+        "secondary": [
+          "sneaky"
+        ]
       },
       "creature_types": {
         "primary": [
-          "zombie"
+          "rat"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
           "tribal",
-          "sacrifice"
+          "tokens"
         ],
         "secondary": [
-          "tokens"
+          "sacrifice"
         ]
       },
       "archetype": {
@@ -3172,15 +2249,16 @@
       },
       "play_pattern": {
         "primary": [
-          "value"
+          "go-wide"
         ],
         "secondary": [
-          "go-wide"
+          "value"
         ]
       },
       "flavor_setting": {
         "primary": [
-          "horror"
+          "urban",
+          "sewer"
         ],
         "secondary": []
       },
@@ -3188,59 +2266,62 @@
         "primary": [
           "dark"
         ],
-        "secondary": []
+        "secondary": [
+          "sneaky"
+        ]
       },
-      "power_level": 7,
-      "complexity": "moderate",
+      "power_level": 6,
+      "complexity": "simple",
       "ip_meta_tags": []
     },
     "cards": [
       {
-        "name": "Wilhelt, the Rotcleaver",
+        "name": "Marrow-Gnawer",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "U-B"
+    "color_identity": "B"
   },
   {
-    "id": "lorehold-legacies",
-    "name": "Strixhaven: Lorehold Legacies",
-    "commander": "Osgir, the Reconstructor",
+    "id": "bear-force-one",
+    "name": "Kaldheim: Bear Force One",
+    "commander": "Ayula, Queen Among Bears",
     "year": 2021,
-    "set": "Strixhaven",
+    "set": "Modern Horizons",
     "colors": [
-      "R",
-      "W"
+      "G"
     ],
     "ip": "magic_original",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "epic",
-          "mysterious"
+          "cute",
+          "powerful"
         ],
-        "secondary": []
+        "secondary": [
+          "nature"
+        ]
       },
       "creature_types": {
         "primary": [
-          "giant"
+          "bear"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "artifacts",
-          "graveyard"
+          "tribal",
+          "fight"
         ],
         "secondary": [
-          "copy"
+          "+1/+1 counters"
         ]
       },
       "archetype": {
         "primary": [
-          "artifacts"
+          "tribal"
         ],
         "secondary": [
           "midrange"
@@ -3248,24 +2329,267 @@
       },
       "play_pattern": {
         "primary": [
-          "value"
+          "aggressive"
         ],
         "secondary": [
-          "grindy"
+          "value"
         ]
       },
       "flavor_setting": {
         "primary": [
-          "magical",
-          "ancient"
+          "nature",
+          "forest"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "mysterious"
+          "powerful"
+        ],
+        "secondary": [
+          "playful"
+        ]
+      },
+      "power_level": 6,
+      "complexity": "simple",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Ayula, Queen Among Bears",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "G"
+  },
+  {
+    "id": "servo-city",
+    "name": "Kaladesh: Servo Exhibition",
+    "commander": "Breya, Etherium Shaper",
+    "year": 2016,
+    "set": "Commander 2016",
+    "colors": [
+      "W",
+      "U",
+      "B",
+      "R"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "technological",
+          "elegant"
         ],
         "secondary": []
+      },
+      "creature_types": {
+        "primary": [
+          "artificer",
+          "thopter"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "artifacts",
+          "tokens"
+        ],
+        "secondary": [
+          "sacrifice"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "artifacts"
+        ],
+        "secondary": [
+          "aristocrats"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "value"
+        ],
+        "secondary": [
+          "combo"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "steampunk",
+          "technological"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "elegant"
+        ],
+        "secondary": []
+      },
+      "power_level": 8,
+      "complexity": "complex",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Breya, Etherium Shaper",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "W-U-B-R"
+  },
+  {
+    "id": "minotaur-herd",
+    "name": "Theros: Minotaur Herd",
+    "commander": "Neheb, the Worthy",
+    "year": 2017,
+    "set": "Amonkhet",
+    "colors": [
+      "B",
+      "R"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "brutal",
+          "epic"
+        ],
+        "secondary": [
+          "dark"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "minotaur"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "tribal",
+          "discard"
+        ],
+        "secondary": [
+          "combat"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "tribal"
+        ],
+        "secondary": [
+          "aggro"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "aggressive"
+        ],
+        "secondary": [
+          "go-wide"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "ancient",
+          "desert"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "brutal"
+        ],
+        "secondary": []
+      },
+      "power_level": 6,
+      "complexity": "simple",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Neheb, the Worthy",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "B-R"
+  },
+  {
+    "id": "werewolf-pack",
+    "name": "Innistrad: Werewolf Pack Hunt",
+    "commander": "Tovolar, Dire Overlord",
+    "year": 2021,
+    "set": "Innistrad: Midnight Hunt",
+    "colors": [
+      "R",
+      "G"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "creepy",
+          "primal"
+        ],
+        "secondary": [
+          "dark"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "werewolf",
+          "wolf"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "tribal",
+          "day/night"
+        ],
+        "secondary": [
+          "transform"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "tribal"
+        ],
+        "secondary": [
+          "aggro"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "aggressive"
+        ],
+        "secondary": [
+          "go-wide"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "horror",
+          "forest"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "dark"
+        ],
+        "secondary": [
+          "primal"
+        ]
       },
       "power_level": 7,
       "complexity": "moderate",
@@ -3273,20 +2597,101 @@
     },
     "cards": [
       {
-        "name": "Osgir, the Reconstructor",
+        "name": "Tovolar, Dire Overlord",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "R-W"
+    "color_identity": "R-G"
   },
   {
-    "id": "symbiotic-swarm",
-    "name": "Ikoria: Symbiotic Swarm",
-    "commander": "Kathril, Aspect Warper",
-    "year": 2020,
-    "set": "Ikoria: Lair of Behemoths",
+    "id": "insect-swarm",
+    "name": "Amonkhet: Locust God",
+    "commander": "The Locust God",
+    "year": 2017,
+    "set": "Hour of Devastation",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "creepy",
+          "chaotic"
+        ],
+        "secondary": [
+          "mysterious"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "insect"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "tokens",
+          "card draw"
+        ],
+        "secondary": [
+          "wheel effects"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "combo"
+        ],
+        "secondary": [
+          "tokens"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "explosive"
+        ],
+        "secondary": [
+          "go-wide"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "desert",
+          "plague"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "chaotic"
+        ],
+        "secondary": [
+          "menacing"
+        ]
+      },
+      "power_level": 8,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "The Locust God",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U-R"
+  },
+  {
+    "id": "treefolk-grove",
+    "name": "Lorwyn: Treefolk Grove",
+    "commander": "Doran, the Siege Tower",
+    "year": 2017,
+    "set": "Commander 2017",
     "colors": [
       "W",
       "B",
@@ -3296,38 +2701,39 @@
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "mysterious",
+          "nature",
           "powerful"
         ],
-        "secondary": []
+        "secondary": [
+          "mysterious"
+        ]
       },
       "creature_types": {
         "primary": [
-          "nightmare",
-          "insect"
+          "treefolk"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "+1/+1 counters",
-          "keyword counters"
+          "tribal",
+          "high toughness"
         ],
         "secondary": [
-          "graveyard"
+          "defender"
         ]
       },
       "archetype": {
         "primary": [
-          "counters"
+          "tribal"
         ],
         "secondary": [
-          "midrange"
+          "control"
         ]
       },
       "play_pattern": {
         "primary": [
-          "value"
+          "grindy"
         ],
         "secondary": [
           "go-tall"
@@ -3336,15 +2742,17 @@
       "flavor_setting": {
         "primary": [
           "nature",
-          "mutant"
+          "forest"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "mysterious"
+          "powerful"
         ],
-        "secondary": []
+        "secondary": [
+          "mysterious"
+        ]
       },
       "power_level": 6,
       "complexity": "moderate",
@@ -3352,7 +2760,7 @@
     },
     "cards": [
       {
-        "name": "Kathril, Aspect Warper",
+        "name": "Doran, the Siege Tower",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
@@ -3361,109 +2769,26 @@
     "color_identity": "W-B-G"
   },
   {
-    "id": "arcane-maelstrom",
-    "name": "Ikoria: Arcane Maelstrom",
-    "commander": "Kalamax, the Stormsire",
-    "year": 2020,
-    "set": "Ikoria: Lair of Behemoths",
+    "id": "goblin-gang",
+    "name": "Modern Horizons 2: Goblin Gang",
+    "commander": "Krenko, Mob Boss",
+    "year": 2021,
+    "set": "Modern Horizons 2",
     "colors": [
-      "U",
-      "R",
-      "G"
+      "R"
     ],
     "ip": "magic_original",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "epic",
-          "powerful"
-        ],
-        "secondary": [
-          "chaotic"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "dinosaur"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "spellslinging",
-          "copy spells"
-        ],
-        "secondary": [
-          "+1/+1 counters"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "combo"
-        ],
-        "secondary": [
-          "control"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "explosive"
-        ],
-        "secondary": [
-          "interactive"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "primal",
-          "nature"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "triumphant"
-        ],
-        "secondary": []
-      },
-      "power_level": 7,
-      "complexity": "complex",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Kalamax, the Stormsire",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "U-R-G"
-  },
-  {
-    "id": "ruthless-regiment",
-    "name": "Ikoria: Ruthless Regiment",
-    "commander": "Jirina Kudro",
-    "year": 2020,
-    "set": "Ikoria: Lair of Behemoths",
-    "colors": [
-      "R",
-      "W",
-      "B"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "epic",
-          "serious"
+          "chaotic",
+          "playful"
         ],
         "secondary": []
       },
       "creature_types": {
         "primary": [
-          "human",
-          "soldier"
+          "goblin"
         ],
         "secondary": []
       },
@@ -3481,87 +2806,6 @@
           "tribal"
         ],
         "secondary": [
-          "aggro"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "go-wide"
-        ],
-        "secondary": [
-          "aggressive"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "military"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "serious"
-        ],
-        "secondary": []
-      },
-      "power_level": 6,
-      "complexity": "simple",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Jirina Kudro",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "R-W-B"
-  },
-  {
-    "id": "sliver-swarm",
-    "name": "Commander Masters: Sliver Swarm",
-    "commander": "Sliver Gravemother",
-    "year": 2023,
-    "set": "Commander Masters",
-    "colors": [
-      "W",
-      "U",
-      "B",
-      "R",
-      "G"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "creepy",
-          "alien"
-        ],
-        "secondary": [
-          "chaotic"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "sliver"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "tribal",
-          "graveyard"
-        ],
-        "secondary": [
-          "tokens"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "tribal"
-        ],
-        "secondary": [
           "combo"
         ]
       },
@@ -3575,195 +2819,39 @@
       },
       "flavor_setting": {
         "primary": [
-          "alien",
-          "cosmic"
+          "chaotic",
+          "mountain"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "menacing"
+          "playful"
         ],
-        "secondary": []
+        "secondary": [
+          "chaotic"
+        ]
       },
       "power_level": 8,
-      "complexity": "complex",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Sliver Gravemother",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-B-R-G"
-  },
-  {
-    "id": "planeswalker-party",
-    "name": "Commander Masters: Planeswalker Party",
-    "commander": "Commodore Guff",
-    "year": 2023,
-    "set": "Commander Masters",
-    "colors": [
-      "W",
-      "U",
-      "R"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "whimsical",
-          "epic"
-        ],
-        "secondary": [
-          "playful"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "human"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "planeswalkers",
-          "superfriends"
-        ],
-        "secondary": [
-          "proliferate"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "superfriends"
-        ],
-        "secondary": [
-          "control"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "interactive"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "magical",
-          "multiverse"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "playful"
-        ],
-        "secondary": []
-      },
-      "power_level": 7,
-      "complexity": "complex",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Commodore Guff",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-R"
-  },
-  {
-    "id": "blame-game",
-    "name": "Murders at Karlov Manor: Blame Game",
-    "commander": "Nelly Borca, Impulsive Accuser",
-    "year": 2024,
-    "set": "Murders at Karlov Manor",
-    "colors": [
-      "W",
-      "R"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "playful",
-          "chaotic"
-        ],
-        "secondary": []
-      },
-      "creature_types": {
-        "primary": [
-          "human",
-          "detective"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "goad",
-          "politics"
-        ],
-        "secondary": [
-          "card draw"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "political"
-        ],
-        "secondary": [
-          "control"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "political"
-        ],
-        "secondary": [
-          "chaotic"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "mystery",
-          "urban"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "playful"
-        ],
-        "secondary": []
-      },
-      "power_level": 6,
       "complexity": "moderate",
       "ip_meta_tags": []
     },
     "cards": [
       {
-        "name": "Nelly Borca, Impulsive Accuser",
+        "name": "Krenko, Mob Boss",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "W-R"
+    "color_identity": "R"
   },
   {
-    "id": "revenant-recon",
-    "name": "Murders at Karlov Manor: Revenant Recon",
-    "commander": "Mirko, Obsessive Theorist",
-    "year": 2024,
-    "set": "Murders at Karlov Manor",
+    "id": "faerie-schemes",
+    "name": "Lorwyn: Faerie Schemes",
+    "commander": "Oona, Queen of the Fae",
+    "year": 2017,
+    "set": "Commander 2017",
     "colors": [
       "U",
       "B"
@@ -3772,30 +2860,190 @@
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "mysterious",
-          "dark"
+          "whimsical",
+          "sneaky"
         ],
-        "secondary": []
+        "secondary": [
+          "dark"
+        ]
       },
       "creature_types": {
         "primary": [
-          "vampire",
-          "detective"
+          "faerie"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "surveil",
-          "reanimator"
+          "tribal",
+          "flash"
         ],
         "secondary": [
-          "graveyard"
+          "mill"
         ]
       },
       "archetype": {
         "primary": [
-          "reanimator"
+          "tribal"
+        ],
+        "secondary": [
+          "control"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "interactive"
+        ],
+        "secondary": [
+          "evasive"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "fantasy",
+          "forest"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "playful"
+        ],
+        "secondary": [
+          "sneaky"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Oona, Queen of the Fae",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U-B"
+  },
+  {
+    "id": "phoenix-rebirth",
+    "name": "Modern Horizons: Phoenix Rebirth",
+    "commander": "Purphoros, Bronze-Blooded",
+    "year": 2020,
+    "set": "Theros Beyond Death",
+    "colors": [
+      "R"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "epic",
+          "powerful"
+        ],
+        "secondary": [
+          "mysterious"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "phoenix"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "recursion",
+          "graveyard"
+        ],
+        "secondary": [
+          "hasty"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "midrange"
+        ],
+        "secondary": [
+          "aggro"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "value"
+        ],
+        "secondary": [
+          "aggressive"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "fire",
+          "rebirth"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "epic"
+        ],
+        "secondary": []
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Purphoros, Bronze-Blooded",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "R"
+  },
+  {
+    "id": "fortress-defense",
+    "name": "Modern Horizons: Fortified Defense",
+    "commander": "Arcades, the Strategist",
+    "year": 2018,
+    "set": "Core Set 2019",
+    "colors": [
+      "W",
+      "U",
+      "G"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "playful",
+          "defensive"
+        ],
+        "secondary": []
+      },
+      "creature_types": {
+        "primary": [
+          "wall",
+          "defender"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "defender",
+          "card draw"
+        ],
+        "secondary": [
+          "high toughness"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "combo"
         ],
         "secondary": [
           "control"
@@ -3811,77 +3059,77 @@
       },
       "flavor_setting": {
         "primary": [
-          "mystery",
-          "gothic"
+          "fortress",
+          "defense"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "mysterious"
+          "playful"
         ],
         "secondary": []
       },
       "power_level": 7,
-      "complexity": "moderate",
+      "complexity": "simple",
       "ip_meta_tags": []
     },
     "cards": [
       {
-        "name": "Mirko, Obsessive Theorist",
+        "name": "Arcades, the Strategist",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "U-B"
+    "color_identity": "W-U-G"
   },
   {
-    "id": "deadly-disguise",
-    "name": "Murders at Karlov Manor: Deadly Disguise",
-    "commander": "Kaust, Eyes of the Glade",
-    "year": 2024,
-    "set": "Murders at Karlov Manor",
+    "id": "vehicle-squadron",
+    "name": "Kaladesh: Vehicle Squadron",
+    "commander": "Depala, Pilot Exemplar",
+    "year": 2016,
+    "set": "Kaladesh",
     "colors": [
-      "W",
       "R",
-      "G"
+      "W"
     ],
     "ip": "magic_original",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "mysterious",
-          "sneaky"
+          "technological",
+          "epic"
         ],
         "secondary": []
       },
       "creature_types": {
         "primary": [
-          "cat"
+          "dwarf",
+          "pilot"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "face-down cards",
-          "morph"
+          "vehicles",
+          "artifacts"
         ],
         "secondary": [
-          "surprise"
+          "crew"
         ]
       },
       "archetype": {
         "primary": [
-          "midrange"
+          "artifacts"
         ],
         "secondary": [
-          "tempo"
+          "aggro"
         ]
       },
       "play_pattern": {
         "primary": [
-          "interactive"
+          "aggressive"
         ],
         "secondary": [
           "value"
@@ -3889,16 +3137,256 @@
       },
       "flavor_setting": {
         "primary": [
-          "mystery",
-          "forest"
+          "steampunk",
+          "racing"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "mysterious"
+          "epic"
         ],
         "secondary": []
+      },
+      "power_level": 6,
+      "complexity": "simple",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Depala, Pilot Exemplar",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "R-W"
+  },
+  {
+    "id": "hydra-growth",
+    "name": "Theros: Hydra Growth",
+    "commander": "Gargos, Vicious Watcher",
+    "year": 2020,
+    "set": "Core Set 2020",
+    "colors": [
+      "G"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "epic",
+          "powerful"
+        ],
+        "secondary": [
+          "primal"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "hydra"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "+1/+1 counters",
+          "big creatures"
+        ],
+        "secondary": [
+          "protection"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "midrange"
+        ],
+        "secondary": [
+          "ramp"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "go-tall"
+        ],
+        "secondary": [
+          "value"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "nature",
+          "mythical"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "powerful"
+        ],
+        "secondary": []
+      },
+      "power_level": 7,
+      "complexity": "simple",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Gargos, Vicious Watcher",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "G"
+  },
+  {
+    "id": "elemental-fury",
+    "name": "Modern Horizons: Elemental Fury",
+    "commander": "Omnath, Locus of Creation",
+    "year": 2020,
+    "set": "Zendikar Rising",
+    "colors": [
+      "W",
+      "U",
+      "R",
+      "G"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "epic",
+          "primal"
+        ],
+        "secondary": [
+          "powerful"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "elemental"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "landfall",
+          "ramp"
+        ],
+        "secondary": [
+          "card draw"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "ramp"
+        ],
+        "secondary": [
+          "midrange"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "explosive"
+        ],
+        "secondary": [
+          "value"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "nature",
+          "primal"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "epic"
+        ],
+        "secondary": []
+      },
+      "power_level": 9,
+      "complexity": "complex",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Omnath, Locus of Creation",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "W-U-R-G"
+  },
+  {
+    "id": "atog-feast",
+    "name": "Time Spiral: Atog Feast",
+    "commander": "Asmoranomardicadaistinaculdacar",
+    "year": 2021,
+    "set": "Modern Horizons 2",
+    "colors": [
+      "B",
+      "R"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "weird",
+          "chaotic"
+        ],
+        "secondary": [
+          "playful"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "atog"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "sacrifice",
+          "artifacts"
+        ],
+        "secondary": [
+          "food"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "aristocrats"
+        ],
+        "secondary": [
+          "combo"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "value"
+        ],
+        "secondary": [
+          "explosive"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "weird",
+          "culinary"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "playful"
+        ],
+        "secondary": [
+          "chaotic"
+        ]
       },
       "power_level": 6,
       "complexity": "moderate",
@@ -3906,22 +3394,21 @@
     },
     "cards": [
       {
-        "name": "Kaust, Eyes of the Glade",
+        "name": "Asmoranomardicadaistinaculdacar",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "W-R-G"
+    "color_identity": "B-R"
   },
   {
-    "id": "deep-clue-sea",
-    "name": "Murders at Karlov Manor: Deep Clue Sea",
-    "commander": "Morska, Undersea Sleuth",
-    "year": 2024,
-    "set": "Murders at Karlov Manor",
+    "id": "shapeshifter-swarm",
+    "name": "Kaldheim: Shapeshifter Swarm",
+    "commander": "Moritte of the Frost",
+    "year": 2021,
+    "set": "Kaldheim",
     "colors": [
-      "W",
       "U",
       "G"
     ],
@@ -3936,26 +3423,25 @@
       },
       "creature_types": {
         "primary": [
-          "merfolk",
-          "detective"
+          "shapeshifter"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "clue tokens",
-          "card draw"
+          "clone",
+          "copy"
         ],
         "secondary": [
-          "investigate"
+          "snow"
         ]
       },
       "archetype": {
         "primary": [
-          "midrange"
+          "combo"
         ],
         "secondary": [
-          "value"
+          "midrange"
         ]
       },
       "play_pattern": {
@@ -3963,71 +3449,71 @@
           "value"
         ],
         "secondary": [
-          "interactive"
+          "chaotic"
         ]
       },
       "flavor_setting": {
         "primary": [
-          "mystery",
-          "underwater"
+          "ice",
+          "trickster"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "mysterious"
+          "playful"
         ],
-        "secondary": []
+        "secondary": [
+          "mysterious"
+        ]
       },
-      "power_level": 6,
-      "complexity": "simple",
+      "power_level": 7,
+      "complexity": "moderate",
       "ip_meta_tags": []
     },
     "cards": [
       {
-        "name": "Morska, Undersea Sleuth",
+        "name": "Moritte of the Frost",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "W-U-G"
+    "color_identity": "U-G"
   },
   {
-    "id": "eternal-might",
-    "name": "Aetherdrift: Eternal Might",
-    "commander": "Temmet, Naktamun's Will",
-    "year": 2025,
-    "set": "Aetherdrift",
+    "id": "sphinx-wisdom",
+    "name": "Theros: Sphinx Wisdom",
+    "commander": "Unesh, Criosphinx Sovereign",
+    "year": 2017,
+    "set": "Hour of Devastation",
     "colors": [
-      "W",
-      "U",
-      "B"
+      "U"
     ],
     "ip": "magic_original",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "epic",
-          "mysterious"
+          "mysterious",
+          "elegant"
         ],
         "secondary": [
-          "dark"
+          "powerful"
         ]
       },
       "creature_types": {
         "primary": [
-          "zombie"
+          "sphinx"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "looting",
-          "zombies"
+          "tribal",
+          "card draw"
         ],
         "secondary": [
-          "tokens"
+          "flying"
         ]
       },
       "archetype": {
@@ -4043,13 +3529,13 @@
           "value"
         ],
         "secondary": [
-          "grindy"
+          "evasive"
         ]
       },
       "flavor_setting": {
         "primary": [
           "ancient",
-          "desert"
+          "wisdom"
         ],
         "secondary": []
       },
@@ -4059,28 +3545,277 @@
         ],
         "secondary": []
       },
+      "power_level": 6,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Unesh, Criosphinx Sovereign",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U"
+  },
+  {
+    "id": "horse-parade",
+    "name": "Throne of Eldraine: Equestrian Parade",
+    "commander": "Syr Gwyn, Hero of Ashvale",
+    "year": 2019,
+    "set": "Throne of Eldraine",
+    "colors": [
+      "W",
+      "B",
+      "R"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "epic",
+          "whimsical"
+        ],
+        "secondary": [
+          "heroic"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "knight",
+          "horse"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "equipment",
+          "tribal"
+        ],
+        "secondary": [
+          "voltron"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "voltron"
+        ],
+        "secondary": [
+          "tribal"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "go-tall"
+        ],
+        "secondary": [
+          "aggressive"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "fairy tale",
+          "medieval"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "heroic"
+        ],
+        "secondary": [
+          "whimsical"
+        ]
+      },
       "power_level": 7,
       "complexity": "moderate",
       "ip_meta_tags": []
     },
     "cards": [
       {
-        "name": "Temmet, Naktamun's Will",
+        "name": "Syr Gwyn, Hero of Ashvale",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "W-U-B"
+    "color_identity": "W-B-R"
   },
   {
-    "id": "living-energy",
-    "name": "Aetherdrift: Living Energy",
-    "commander": "Saheeli, Radiant Creator",
-    "year": 2025,
-    "set": "Aetherdrift",
+    "id": "fungus-forest",
+    "name": "Dominaria: Fungal Forest",
+    "commander": "Slimefoot, the Stowaway",
+    "year": 2018,
+    "set": "Dominaria",
+    "colors": [
+      "B",
+      "G"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "weird",
+          "nature"
+        ],
+        "secondary": [
+          "creepy"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "fungus",
+          "saproling"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "tokens",
+          "sacrifice"
+        ],
+        "secondary": [
+          "aristocrats"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "aristocrats"
+        ],
+        "secondary": [
+          "tokens"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "value"
+        ],
+        "secondary": [
+          "go-wide"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "nature",
+          "decay"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "playful"
+        ],
+        "secondary": [
+          "weird"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Slimefoot, the Stowaway",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "B-G"
+  },
+  {
+    "id": "ooze-experiment",
+    "name": "Modern Horizons: Ooze Experiment",
+    "commander": "The Mimeoplasm",
+    "year": 2020,
+    "set": "Commander 2020",
     "colors": [
       "U",
+      "B",
+      "G"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "weird",
+          "creepy"
+        ],
+        "secondary": [
+          "mysterious"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "ooze"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "graveyard",
+          "+1/+1 counters"
+        ],
+        "secondary": [
+          "mill"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "reanimator"
+        ],
+        "secondary": [
+          "control"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "value"
+        ],
+        "secondary": [
+          "grindy"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "laboratory",
+          "mutation"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "weird"
+        ],
+        "secondary": [
+          "mysterious"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "The Mimeoplasm",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U-B-G"
+  },
+  {
+    "id": "scarecrow-reaper",
+    "name": "Shadowmoor: Scarecrow Reaper",
+    "commander": "Reaper King",
+    "year": 2018,
+    "set": "Shadowmoor",
+    "colors": [
+      "W",
+      "U",
+      "B",
       "R",
       "G"
     ],
@@ -4088,24 +3823,186 @@
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "technological",
-          "elegant"
+          "creepy",
+          "weird"
         ],
-        "secondary": []
+        "secondary": [
+          "mysterious"
+        ]
       },
       "creature_types": {
         "primary": [
-          "artificer"
+          "scarecrow"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "energy counters",
-          "artifacts"
+          "tribal",
+          "destroy"
         ],
         "secondary": [
-          "proliferate"
+          "changelings"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "tribal"
+        ],
+        "secondary": [
+          "control"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "value"
+        ],
+        "secondary": [
+          "interactive"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "farmland",
+          "horror"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "creepy"
+        ],
+        "secondary": [
+          "weird"
+        ]
+      },
+      "power_level": 7,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Reaper King",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "Five-color"
+  },
+  {
+    "id": "skeleton-crew",
+    "name": "Modern Horizons: Skeleton Crew",
+    "commander": "Skeleton Ship",
+    "year": 2020,
+    "set": "Modern Horizons",
+    "colors": [
+      "U",
+      "B"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "creepy",
+          "playful"
+        ],
+        "secondary": [
+          "dark"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "skeleton"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "recursion",
+          "graveyard"
+        ],
+        "secondary": [
+          "-1/-1 counters"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "midrange"
+        ],
+        "secondary": [
+          "control"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "grindy"
+        ],
+        "secondary": [
+          "value"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "pirate",
+          "undead"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "playful"
+        ],
+        "secondary": [
+          "creepy"
+        ]
+      },
+      "power_level": 6,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Skeleton Ship",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U-B"
+  },
+  {
+    "id": "myr-matrix",
+    "name": "Mirrodin: Myr Matrix",
+    "commander": "Brudiclad, Telchor Engineer",
+    "year": 2018,
+    "set": "Commander 2018",
+    "colors": [
+      "U",
+      "R"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "technological",
+          "cute"
+        ],
+        "secondary": []
+      },
+      "creature_types": {
+        "primary": [
+          "myr"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "artifacts",
+          "tokens"
+        ],
+        "secondary": [
+          "copy"
         ]
       },
       "archetype": {
@@ -4121,19 +4018,19 @@
           "explosive"
         ],
         "secondary": [
-          "value"
+          "go-wide"
         ]
       },
       "flavor_setting": {
         "primary": [
-          "steampunk",
+          "sci-fi",
           "technological"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "hopeful"
+          "playful"
         ],
         "secondary": []
       },
@@ -4143,235 +4040,154 @@
     },
     "cards": [
       {
-        "name": "Saheeli, Radiant Creator",
+        "name": "Brudiclad, Telchor Engineer",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "U-R-G"
+    "color_identity": "U-R"
   },
   {
-    "id": "aura-of-courage",
-    "name": "Adventures in the Forgotten Realms: Aura of Courage",
-    "commander": "Galea, Kindler of Hope",
-    "year": 2021,
-    "set": "Adventures in the Forgotten Realms",
-    "colors": [
-      "W",
-      "U",
-      "G"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "epic",
-          "heroic"
-        ],
-        "secondary": []
-      },
-      "creature_types": {
-        "primary": [
-          "elf",
-          "knight"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "equipment",
-          "auras"
-        ],
-        "secondary": [
-          "voltron"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "voltron"
-        ],
-        "secondary": [
-          "midrange"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "go-tall"
-        ],
-        "secondary": [
-          "value"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "fantasy",
-          "medieval"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "heroic"
-        ],
-        "secondary": []
-      },
-      "power_level": 7,
-      "complexity": "moderate",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Galea, Kindler of Hope",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "W-U-G"
-  },
-  {
-    "id": "prosper-tome-bound",
-    "name": "Adventures in the Forgotten Realms: Planar Portal",
-    "commander": "Prosper, Tome-Bound",
-    "year": 2021,
-    "set": "Adventures in the Forgotten Realms",
-    "colors": [
-      "B",
-      "R"
-    ],
-    "ip": "magic_original",
-    "tags": {
-      "aesthetic_vibe": {
-        "primary": [
-          "dark",
-          "mysterious"
-        ],
-        "secondary": [
-          "elegant"
-        ]
-      },
-      "creature_types": {
-        "primary": [
-          "tiefling",
-          "warlock"
-        ],
-        "secondary": []
-      },
-      "themes": {
-        "primary": [
-          "exile matters",
-          "treasure"
-        ],
-        "secondary": [
-          "card advantage"
-        ]
-      },
-      "archetype": {
-        "primary": [
-          "midrange"
-        ],
-        "secondary": [
-          "value"
-        ]
-      },
-      "play_pattern": {
-        "primary": [
-          "value"
-        ],
-        "secondary": [
-          "grindy"
-        ]
-      },
-      "flavor_setting": {
-        "primary": [
-          "fantasy",
-          "dark"
-        ],
-        "secondary": []
-      },
-      "tone": {
-        "primary": [
-          "mysterious"
-        ],
-        "secondary": []
-      },
-      "power_level": 8,
-      "complexity": "complex",
-      "ip_meta_tags": []
-    },
-    "cards": [
-      {
-        "name": "Prosper, Tome-Bound",
-        "is_commander": true,
-        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
-        "type_line": "Legendary Creature"
-      }
-    ],
-    "color_identity": "B-R"
-  },
-  {
-    "id": "reap-the-tides",
-    "name": "Commander Legends: Reap the Tides",
-    "commander": "Aesi, Tyrant of Gyre Strait",
+    "id": "cephalid-experiment",
+    "name": "Odyssey: Cephalid Experiment",
+    "commander": "Aboshan, Cephalid Emperor",
     "year": 2020,
-    "set": "Commander Legends",
+    "set": "Odyssey",
     "colors": [
-      "U",
-      "G"
+      "U"
     ],
     "ip": "magic_original",
     "tags": {
       "aesthetic_vibe": {
         "primary": [
-          "epic",
-          "powerful"
+          "weird",
+          "mysterious"
         ],
         "secondary": [
-          "mysterious"
+          "creepy"
         ]
       },
       "creature_types": {
         "primary": [
-          "serpent"
+          "cephalid"
         ],
         "secondary": []
       },
       "themes": {
         "primary": [
-          "lands matter",
-          "ramp"
+          "tribal",
+          "tap/untap"
         ],
         "secondary": [
-          "card draw"
+          "control"
         ]
       },
       "archetype": {
         "primary": [
-          "ramp"
+          "control"
         ],
         "secondary": [
-          "midrange"
+          "tribal"
         ]
       },
       "play_pattern": {
         "primary": [
-          "value"
+          "interactive"
         ],
         "secondary": [
-          "explosive"
+          "value"
         ]
       },
       "flavor_setting": {
         "primary": [
           "underwater",
-          "primal"
+          "alien"
         ],
         "secondary": []
       },
       "tone": {
         "primary": [
-          "powerful"
+          "weird"
+        ],
+        "secondary": [
+          "mysterious"
+        ]
+      },
+      "power_level": 5,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Aboshan, Cephalid Emperor",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U"
+  },
+  {
+    "id": "spider-web",
+    "name": "Theros: Spider Web",
+    "commander": "Ishkanah, Grafwidow",
+    "year": 2016,
+    "set": "Eldritch Moon",
+    "colors": [
+      "B",
+      "G"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "creepy",
+          "nature"
+        ],
+        "secondary": []
+      },
+      "creature_types": {
+        "primary": [
+          "spider"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "tribal",
+          "reach"
+        ],
+        "secondary": [
+          "tokens"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "tribal"
+        ],
+        "secondary": [
+          "control"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "grindy"
+        ],
+        "secondary": [
+          "go-wide"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "nature",
+          "web"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "creepy"
         ],
         "secondary": []
       },
@@ -4381,12 +4197,172 @@
     },
     "cards": [
       {
-        "name": "Aesi, Tyrant of Gyre Strait",
+        "name": "Ishkanah, Grafwidow",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
         "type_line": "Legendary Creature"
       }
     ],
-    "color_identity": "U-G"
+    "color_identity": "B-G"
+  },
+  {
+    "id": "moonfolk-ascension",
+    "name": "Kamigawa: Moonfolk Ascension",
+    "commander": "Patron of the Moon",
+    "year": 2022,
+    "set": "Kamigawa: Neon Dynasty",
+    "colors": [
+      "U"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "whimsical",
+          "mysterious"
+        ],
+        "secondary": [
+          "elegant"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "moonfolk"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "lands matter",
+          "bounce"
+        ],
+        "secondary": [
+          "flying"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "combo"
+        ],
+        "secondary": [
+          "control"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "value"
+        ],
+        "secondary": [
+          "interactive"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "sky",
+          "moon"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "mysterious"
+        ],
+        "secondary": [
+          "whimsical"
+        ]
+      },
+      "power_level": 6,
+      "complexity": "moderate",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Patron of the Moon",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "U"
+  },
+  {
+    "id": "kithkin-community",
+    "name": "Lorwyn: Kithkin Community",
+    "commander": "Brigid, Hero of Kinsbaile",
+    "year": 2017,
+    "set": "Lorwyn",
+    "colors": [
+      "W"
+    ],
+    "ip": "magic_original",
+    "tags": {
+      "aesthetic_vibe": {
+        "primary": [
+          "cute",
+          "friendly"
+        ],
+        "secondary": [
+          "weird"
+        ]
+      },
+      "creature_types": {
+        "primary": [
+          "kithkin"
+        ],
+        "secondary": []
+      },
+      "themes": {
+        "primary": [
+          "tribal",
+          "go-wide"
+        ],
+        "secondary": [
+          "tap abilities"
+        ]
+      },
+      "archetype": {
+        "primary": [
+          "tribal"
+        ],
+        "secondary": [
+          "aggro"
+        ]
+      },
+      "play_pattern": {
+        "primary": [
+          "go-wide"
+        ],
+        "secondary": [
+          "aggressive"
+        ]
+      },
+      "flavor_setting": {
+        "primary": [
+          "community",
+          "village"
+        ],
+        "secondary": []
+      },
+      "tone": {
+        "primary": [
+          "friendly"
+        ],
+        "secondary": [
+          "playful"
+        ]
+      },
+      "power_level": 5,
+      "complexity": "simple",
+      "ip_meta_tags": []
+    },
+    "cards": [
+      {
+        "name": "Brigid, Hero of Kinsbaile",
+        "is_commander": true,
+        "image_url": "https://cards.scryfall.io/normal/front/x/x/placeholder.jpg",
+        "type_line": "Legendary Creature"
+      }
+    ],
+    "color_identity": "W"
   }
 ]

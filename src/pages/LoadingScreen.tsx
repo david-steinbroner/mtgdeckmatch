@@ -7,8 +7,8 @@ import { vibeQuestion, creatureTypeQuestions } from "@/data/vibes-questions";
 const LoadingScreen = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const answers = location.state?.answers || [];
-  const pathType = location.state?.path || "vibes";
+  const { answers = [], path = "vibes", selectedIP } = location.state || {};
+  const pathType = path;
   const [interpretation, setInterpretation] = useState("");
   const [customText, setCustomText] = useState("");
   const [isCustomInput, setIsCustomInput] = useState(false);
@@ -18,7 +18,11 @@ const LoadingScreen = () => {
     let detectedCustomText = "";
     let hasCustomInput = false;
 
-    if (pathType === "vibes") {
+    if (pathType === "pop_culture" && selectedIP) {
+      // Pop culture path - use IP name
+      hasCustomInput = false;
+      detectedCustomText = "";
+    } else if (pathType === "vibes") {
       const creatureAnswer = answers.find((a: any) => a.questionId === "creature-types");
       if (creatureAnswer) {
         const vibeAnswer = answers.find((a: any) => a.questionId === "vibe");
@@ -41,9 +45,30 @@ const LoadingScreen = () => {
     setCustomText(detectedCustomText);
     setIsCustomInput(hasCustomInput);
 
-    // Generate interpretation for custom text
+    // Generate interpretation for custom text or IP
     const generateInterpretation = async () => {
-      if (hasCustomInput && detectedCustomText) {
+      if (pathType === "pop_culture" && selectedIP) {
+        const ipNames: Record<string, string> = {
+          walking_dead: "Walking Dead",
+          stranger_things: "Stranger Things",
+          transformers: "Transformers",
+          street_fighter: "Street Fighter",
+          fortnite: "Fortnite",
+          jurassic_world: "Jurassic World",
+          doctor_who: "Doctor Who",
+          warhammer_40k: "Warhammer 40K",
+          lord_of_the_rings: "Lord of the Rings",
+          final_fantasy: "Final Fantasy",
+          fallout: "Fallout",
+          godzilla: "Godzilla",
+          monty_python: "Monty Python",
+          princess_bride: "Princess Bride",
+          magic_original: "Classic Magic",
+        };
+        
+        const ipName = ipNames[selectedIP] || selectedIP;
+        setInterpretation(`Finding the best ${ipName} decks...`);
+      } else if (hasCustomInput && detectedCustomText) {
         try {
           const { data } = await supabase.functions.invoke('generate-loading-interpretation', {
             body: { customText: detectedCustomText }
@@ -67,7 +92,8 @@ const LoadingScreen = () => {
           answers, 
           path: pathType,
           customText: detectedCustomText,
-          isCustomInput: hasCustomInput
+          isCustomInput: hasCustomInput,
+          selectedIP
         } 
       });
     }, 2000);
@@ -80,7 +106,18 @@ const LoadingScreen = () => {
       <div className="max-w-md w-full text-center space-y-6 animate-fade-in">
         <div className="text-6xl mb-4">🔍</div>
         
-        {isCustomInput && customText ? (
+        {pathType === "pop_culture" && selectedIP ? (
+          <>
+            <h2 className="text-2xl font-bold text-foreground">
+              Searching for...
+            </h2>
+            {interpretation && (
+              <p className="text-lg text-muted-foreground">
+                {interpretation}
+              </p>
+            )}
+          </>
+        ) : isCustomInput && customText ? (
           <>
             <h2 className="text-2xl font-bold text-foreground">
               Searching for...

@@ -1,4 +1,4 @@
-export type PathType = "vibes" | "power";
+export type PathType = "vibes" | "power" | "pop_culture";
 
 export interface VibeOption {
   id: string;

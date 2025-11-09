@@ -21,13 +21,19 @@ const Results = () => {
   const pathType = location.state?.path || "vibes";
   const customText = location.state?.customText || "";
   const isCustomInput = location.state?.isCustomInput || false;
+  const selectedIP = location.state?.selectedIP || null;
   const [aiIntros, setAiIntros] = useState<string[]>([]);
   const [isLoadingIntros, setIsLoadingIntros] = useState(true);
 
   // Convert answers array to preferences object based on path
-  let userPreferences = {};
+  let userPreferences: any = {};
   
-  if (pathType === "vibes") {
+  if (pathType === "pop_culture") {
+    // Pop Culture path: only need selectedIP
+    userPreferences = {
+      selectedIP: selectedIP || "magic_original"
+    };
+  } else if (pathType === "vibes") {
     const vibeAnswer = answers.find(a => a.questionId === "vibe")?.answerId || null;
     const creatureAnswer = answers.find(a => a.questionId === "creature-types")?.answerId || null;
     
@@ -102,6 +108,27 @@ const Results = () => {
 
   // Get user's input for personalization
   const getUserInputBullet = () => {
+    if (pathType === "pop_culture" && selectedIP) {
+      const ipNames: Record<string, string> = {
+        walking_dead: "Walking Dead",
+        stranger_things: "Stranger Things",
+        transformers: "Transformers",
+        street_fighter: "Street Fighter",
+        fortnite: "Fortnite",
+        jurassic_world: "Jurassic World",
+        doctor_who: "Doctor Who",
+        warhammer_40k: "Warhammer 40K",
+        lord_of_the_rings: "Lord of the Rings",
+        final_fantasy: "Final Fantasy",
+        fallout: "Fallout",
+        godzilla: "Godzilla",
+        monty_python: "Monty Python",
+        princess_bride: "Princess Bride",
+        magic_original: "Classic Magic",
+      };
+      return `IP Universe: ${ipNames[selectedIP] || selectedIP}`;
+    }
+    
     if (pathType === "vibes") {
       const vibeAnswer = answers.find(a => a.questionId === "vibe");
       const creatureAnswer = answers.find(a => a.questionId === "creature-types");
