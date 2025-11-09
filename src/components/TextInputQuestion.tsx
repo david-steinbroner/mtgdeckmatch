@@ -58,16 +58,20 @@ export const TextInputQuestion = ({ placeholder, quickSelects, onSubmit }: TextI
         <div className="space-y-3">
           <p className="text-center text-sm text-muted-foreground">Or choose from these:</p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {quickSelects.map((option) => (
-              <Button
-                key={option}
-                onClick={() => handleQuickSelect(option)}
-                variant={option === "Skip this question" ? "outline" : "secondary"}
-                className="h-auto py-4"
-              >
-                {option}
-              </Button>
-            ))}
+            {quickSelects.map((option) => {
+              // Extract just the main part (before parentheses) for display
+              const displayText = option.split(" (")[0];
+              return (
+                <Button
+                  key={option}
+                  onClick={() => handleQuickSelect(option)}
+                  variant={option === "Skip this question" ? "outline" : "secondary"}
+                  className="h-auto py-3 px-4 text-sm"
+                >
+                  {displayText}
+                </Button>
+              );
+            })}
           </div>
         </div>
       )}

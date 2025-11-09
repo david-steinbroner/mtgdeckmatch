@@ -14,17 +14,16 @@ const Welcome = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">
-            Find Your Perfect Commander Deck
+            Find Your Perfect Magic: The Gathering Deck
           </h1>
         </div>
 
         <div className="bg-card rounded-2xl shadow-card p-6 md:p-8 border border-border/50 backdrop-blur-sm">
           <p className="text-lg md:text-xl text-foreground leading-relaxed">
-            Want to play Magic but not sure where to start? We'll help you find a deck that matches your style.
+            Want to play Magic but not sure where to start? We'll help you find a pre-built deck (called a "precon") that matches your style.
           </p>
           <p className="text-base md:text-lg text-muted-foreground mt-4">
-            Commander is a fun format where you build around a legendary creature.{" "}
-            <span className="text-accent font-semibold">Don't worry - we'll make it easy!</span>
+            <span className="text-accent font-semibold">No need to buy hundreds of cards</span> - these ready-to-play decks have everything you need!
           </p>
         </div>
 
@@ -34,7 +33,7 @@ const Welcome = () => {
           onClick={() => navigate("/path-selection")}
           className="text-lg px-12 py-6 h-auto rounded-xl"
         >
-          Find My Deck
+          Let's Find Your Deck!
         </Button>
 
         <p className="text-sm text-muted-foreground">
