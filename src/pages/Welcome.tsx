@@ -46,9 +46,8 @@ const Welcome = () => {
         <div className="bg-card rounded-2xl shadow-card p-6 md:p-8 border border-border/50 backdrop-blur-sm">
           <p className="text-lg md:text-xl text-foreground leading-relaxed">
             Want to play Magic but not sure where to start? Just curious about what kind of decks there are? Are they all are just elves and dragons and wizards, or are there like, weird, ones too?
-          <br>
+            <br /><br />
             Yep. There sure are.
-          </br>
           </p>
           <p className="text-base md:text-lg text-muted-foreground mt-4">
             Get matched with a pre-built (precon) Commander Deck that fits your vibe.
