@@ -72,10 +72,10 @@ const PowerQuestions = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-2 md:p-4">
-      <div className="max-w-6xl mx-auto pt-[10vh] md:pt-[5vh]">
+    <div className="min-h-[100dvh] bg-gradient-to-br from-background via-background to-muted p-2 md:p-4 flex flex-col">
+      <div className="max-w-6xl mx-auto w-full flex-1 flex flex-col py-2 md:py-4">
         {/* Header */}
-        <div className="flex items-center justify-between py-1.5 md:py-6">
+        <div className="flex items-center justify-between py-1 md:py-2 shrink-0">
           <Button
             variant="ghost"
             size="sm"
@@ -97,26 +97,30 @@ const PowerQuestions = () => {
         </div>
 
         {/* Progress */}
-        <ProgressIndicator 
-          currentStep={currentQuestionIndex} 
-          totalSteps={totalQuestions}
-          onStepClick={handleStepClick}
-        />
+        <div className="py-2 md:py-3 shrink-0">
+          <ProgressIndicator 
+            currentStep={currentQuestionIndex} 
+            totalSteps={totalQuestions}
+            onStepClick={handleStepClick}
+          />
+        </div>
 
         {/* Question Content */}
-        <div className="mt-4 md:mt-8 space-y-2 md:space-y-8 animate-fade-in">
-          <div className="text-center space-y-0.5 md:space-y-2">
-            <h2 className="text-lg md:text-4xl font-bold text-foreground">
+        <div className="flex-1 flex flex-col justify-center space-y-2 md:space-y-4 animate-fade-in min-h-0">
+          <div className="text-center space-y-0.5 md:space-y-1 shrink-0">
+            <h2 className="text-base md:text-3xl font-bold text-foreground">
               {currentQuestion.question}
             </h2>
-            <p className="text-muted-foreground text-xs md:text-lg">
-              Choose your playstyle
-            </p>
+            {currentQuestion.type === "multiple-choice" && (
+              <p className="text-muted-foreground text-xs md:text-base">
+                Choose your playstyle
+              </p>
+            )}
           </div>
 
           {/* Options Grid */}
           {currentQuestion.type === "multiple-choice" && currentQuestion.options && (
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 mt-2 md:mt-12 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 max-w-5xl mx-auto w-full">
               {currentQuestion.options.map((option) => (
                 <OptionCard
                   key={option.id}
@@ -131,7 +135,7 @@ const PowerQuestions = () => {
 
           {/* Color Preference Question */}
           {currentQuestion.type === "color-preference" && currentQuestion.colorOptions && (
-            <div className="mt-2 md:mt-12">
+            <div className="w-full">
               <ColorCheckboxQuestion
                 colorOptions={currentQuestion.colorOptions}
                 onSubmit={handleAnswer}

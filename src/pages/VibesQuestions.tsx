@@ -103,10 +103,10 @@ const VibesQuestions = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-2 md:p-4 pb-20 md:pb-4">
-      <div className="max-w-6xl mx-auto pt-[10vh] md:pt-[5vh]">
+    <div className="min-h-[100dvh] bg-gradient-to-br from-background via-background to-muted p-2 md:p-4 flex flex-col">
+      <div className="max-w-6xl mx-auto w-full flex-1 flex flex-col py-2 md:py-4">
         {/* Header */}
-        <div className="flex items-center justify-between py-1.5 md:py-6">
+        <div className="flex items-center justify-between py-1 md:py-2 shrink-0">
           <Button
             variant="ghost"
             size="sm"
@@ -128,25 +128,27 @@ const VibesQuestions = () => {
         </div>
 
         {/* Progress */}
-        <ProgressIndicator 
-          currentStep={currentQuestionIndex} 
-          totalSteps={totalQuestions}
-          onStepClick={handleStepClick}
-        />
+        <div className="py-2 md:py-3 shrink-0">
+          <ProgressIndicator 
+            currentStep={currentQuestionIndex} 
+            totalSteps={totalQuestions}
+            onStepClick={handleStepClick}
+          />
+        </div>
 
         {/* Question Content */}
-        <div className="mt-4 md:mt-8 space-y-2 md:space-y-8 animate-fade-in">
-          <div className="text-center space-y-0.5 md:space-y-2">
-            <h2 className="text-lg md:text-4xl font-bold text-foreground">
+        <div className="flex-1 flex flex-col justify-center space-y-2 md:space-y-4 animate-fade-in min-h-0">
+          <div className="text-center space-y-0.5 md:space-y-1 shrink-0">
+            <h2 className="text-base md:text-3xl font-bold text-foreground">
               {currentQuestion.question}
             </h2>
             {currentQuestion.type === "multiple-choice" && (
-              <p className="text-muted-foreground text-xs md:text-lg">
+              <p className="text-muted-foreground text-xs md:text-base">
                 Choose the one that speaks to you most
               </p>
             )}
             {currentQuestion.type === "checkbox" && (
-              <p className="text-muted-foreground text-xs md:text-lg">
+              <p className="text-muted-foreground text-xs md:text-base">
                 Select up to 3 creature types
               </p>
             )}
@@ -154,7 +156,7 @@ const VibesQuestions = () => {
 
           {/* Multiple Choice Options */}
           {currentQuestion.type === "multiple-choice" && currentQuestion.options && (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 mt-4 md:mt-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
               {currentQuestion.options.map((option) => (
                 <OptionCard
                   key={option.id}
