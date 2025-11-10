@@ -73,7 +73,7 @@ const PowerQuestions = () => {
 
   return (
     <div className="min-h-[100dvh] bg-gradient-to-br from-background via-background to-muted p-2 md:p-4 flex flex-col">
-      <div className="max-w-6xl mx-auto w-full flex-1 flex flex-col py-2 md:py-4">
+      <div className="max-w-6xl mx-auto w-full flex-1 flex flex-col py-2 md:py-4 md:pt-12">
         {/* Header */}
         <div className="flex items-center justify-between py-1 md:py-2 shrink-0">
           <Button

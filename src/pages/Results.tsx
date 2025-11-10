@@ -367,7 +367,7 @@ const Results = () => {
   return (
     <TooltipProvider>
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted p-1 py-1">
-      <div className="max-w-7xl mx-auto space-y-1">
+      <div className="max-w-7xl mx-auto space-y-1 md:pt-12">
         {/* Surprise Me Header */}
         {source === 'surprise' && topMatches.length > 0 && (
           <Card className="border-2 border-primary/30 bg-gradient-to-r from-primary/10 to-secondary/10 animate-fade-in">
