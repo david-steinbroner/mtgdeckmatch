@@ -10,7 +10,7 @@ import { matchPrecons } from "@/utils/matcher";
 import { deckELI5 } from "@/utils/deckDescriptions";
 import { deckDifficulty } from "@/utils/deckDifficulty";
 import { getScryfallImageUrl, isPlaceholderUrl } from "@/utils/cardImageUtils";
-import { Sparkles, X, ChevronDown, ChevronUp } from "lucide-react";
+import { Sparkles, X, ChevronDown, ChevronUp, Info } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
@@ -540,12 +540,13 @@ const Results = () => {
                   {matchPercentage !== null && source !== 'surprise' && (
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <div className="text-amber-600 dark:text-amber-500 font-semibold text-[10px] cursor-help">
+                        <div className="text-amber-600 dark:text-amber-500 font-semibold text-[10px] cursor-help flex items-center gap-1">
                           {matchPercentage}% Match
+                          <Info className="w-3 h-3" />
                         </div>
                       </TooltipTrigger>
                       <TooltipContent className="max-w-xs">
-                        <p className="text-xs">This deck has the highest weighted match based on your requests and available decks, according to our matching logic and analysis.</p>
+                        <p className="text-xs">This deck has the highest weighted match based on your preferences and our scoring system. We match vibes, creature types, themes, and power levels to find your perfect deck!</p>
                       </TooltipContent>
                     </Tooltip>
                   )}
