@@ -124,7 +124,7 @@ const Results = () => {
       setDisplayedDecks(matchedResults.slice(0, 6));
       setBackupDecks(matchedResults.slice(6));
     }
-  }, [matchedResults.length]);
+  }, [matchedResults.length, surpriseDecks]);
 
   const topMatches = displayedDecks;
 
