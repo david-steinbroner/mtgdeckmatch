@@ -325,39 +325,38 @@ const Results = () => {
   };
 
   const handleGoBack = () => {
-    // Check pathType first for pop_culture, then fall back to source
-    if (pathType === 'pop_culture') {
+    // Determine prior flow: prefer explicit source, else infer from pathType
+    const prior = source || pathType;
+
+    if (prior === 'pop_culture') {
       navigate('/ip-selection');
       return;
     }
-    
-    switch (source) {
-      case 'vibes':
-        // Navigate back to vibes questions with current answers to skip loading page
-        navigate('/vibes-questions', { 
-          state: { 
-            fromResults: true, 
-            answers: answers.slice(0, -1), // Remove last answer so user can redo it
-            currentQuestionIndex: answers.length - 1 
-          } 
-        });
-        break;
-      case 'power':
-        // Navigate back to power questions with current answers to skip loading page
-        navigate('/power-questions', { 
-          state: { 
-            fromResults: true, 
-            answers: answers.slice(0, -1), // Remove last answer so user can redo it
-            currentQuestionIndex: answers.length - 1 
-          } 
-        });
-        break;
-      case 'surprise':
-      case 'search':
-      default:
-        navigate('/');
-        break;
+
+    if (prior === 'vibes') {
+      navigate('/vibes-questions', {
+        state: {
+          fromResults: true,
+          answers: answers.slice(0, -1), // Remove last answer so user can redo it
+          currentQuestionIndex: Math.max(answers.length - 1, 0),
+        },
+      });
+      return;
     }
+
+    if (prior === 'power') {
+      navigate('/power-questions', {
+        state: {
+          fromResults: true,
+          answers: answers.slice(0, -1), // Remove last answer so user can redo it
+          currentQuestionIndex: Math.max(answers.length - 1, 0),
+        },
+      });
+      return;
+    }
+
+    // Fallback for surprise/search/unknown
+    navigate('/');
   };
 
   return (
