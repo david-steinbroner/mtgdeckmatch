@@ -8,11 +8,18 @@ export interface QuestionOption {
   tags: string[];
 }
 
+export interface ColorOption {
+  id: string;
+  name: string;
+  symbol: string;
+}
+
 export interface Question {
   id: string;
   question: string;
-  type: "multiple-choice";
+  type: "multiple-choice" | "color-preference";
   options?: QuestionOption[];
+  colorOptions?: ColorOption[];
 }
 
 export const powerQuestions: Question[] = [
@@ -83,6 +90,43 @@ export const powerQuestions: Question[] = [
         description: "Bring on the challenge (Power 9-10)",
         icon: Zap,
         tags: ["9", "10"],
+      },
+    ],
+  },
+  {
+    id: "color-preference",
+    type: "color-preference",
+    question: "Do you prefer specific colors?",
+    colorOptions: [
+      {
+        id: "W",
+        name: "White",
+        symbol: "⚪",
+      },
+      {
+        id: "U",
+        name: "Blue",
+        symbol: "🔵",
+      },
+      {
+        id: "B",
+        name: "Black",
+        symbol: "⚫",
+      },
+      {
+        id: "R",
+        name: "Red",
+        symbol: "🔴",
+      },
+      {
+        id: "G",
+        name: "Green",
+        symbol: "🟢",
+      },
+      {
+        id: "C",
+        name: "Colorless",
+        symbol: "◇",
       },
     ],
   },

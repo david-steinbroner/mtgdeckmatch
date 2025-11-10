@@ -148,6 +148,26 @@ export function matchPrecons(precons, userPreferences, pathType = "vibes") {
           score += 4;
         }
       }
+      
+      // COLOR PREFERENCE MATCHING
+      if (userPreferences.colorPreference && Array.isArray(userPreferences.colorPreference) && userPreferences.colorPreference.length > 0) {
+        const preferredColors = userPreferences.colorPreference;
+        const deckColors = precon.colors || [];
+        
+        // Check if deck contains any of the preferred colors
+        const matchingColors = deckColors.filter(color => preferredColors.includes(color));
+        
+        if (matchingColors.length > 0) {
+          // Score based on how many colors match
+          score += matchingColors.length * 3;
+          
+          // Bonus if deck only uses preferred colors
+          const allColorsMatch = deckColors.every(color => preferredColors.includes(color));
+          if (allColorsMatch && deckColors.length > 0) {
+            score += 5;
+          }
+        }
+      }
     }
     
     // For pop_culture path, prefer power level 6-7

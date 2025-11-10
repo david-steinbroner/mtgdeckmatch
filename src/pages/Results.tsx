@@ -93,6 +93,7 @@ const Results = () => {
   } else if (pathType === "power") {
     const archetypeAnswer = answers.find(a => a.questionId === "archetype")?.answerId;
     const powerLevelAnswer = answers.find(a => a.questionId === "power-level")?.answerId;
+    const colorPreferenceAnswer = answers.find(a => a.questionId === "color-preference")?.answerId;
     
     // Map power level answer to range
     const powerLevelRanges: Record<string, [number, number]> = {
@@ -104,6 +105,7 @@ const Results = () => {
     userPreferences = {
       archetype: archetypeAnswer || null,
       powerLevelRange: powerLevelAnswer ? powerLevelRanges[powerLevelAnswer as string] : null,
+      colorPreference: Array.isArray(colorPreferenceAnswer) && colorPreferenceAnswer.length > 0 ? colorPreferenceAnswer : null,
     };
   }
 

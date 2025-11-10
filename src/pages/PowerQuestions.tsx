@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ProgressIndicator } from "@/components/ProgressIndicator";
 import { OptionCard } from "@/components/OptionCard";
+import { ColorCheckboxQuestion } from "@/components/ColorCheckboxQuestion";
 import { powerQuestions } from "@/data/power-questions";
 import { ArrowLeft } from "lucide-react";
 import { QuizAnswer } from "@/types/quiz";
@@ -125,6 +126,16 @@ const PowerQuestions = () => {
                   onClick={() => handleOptionSelect(option.id)}
                 />
               ))}
+            </div>
+          )}
+
+          {/* Color Preference Question */}
+          {currentQuestion.type === "color-preference" && currentQuestion.colorOptions && (
+            <div className="mt-2 md:mt-12">
+              <ColorCheckboxQuestion
+                colorOptions={currentQuestion.colorOptions}
+                onSubmit={handleAnswer}
+              />
             </div>
           )}
         </div>
