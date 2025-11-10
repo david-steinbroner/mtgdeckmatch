@@ -1,4 +1,20 @@
 import { parseCustomInput } from './customInputParser';
+import { 
+  doCreatureTypesMatch,
+  doVibesMatch,
+  doArchetypesMatch 
+} from './synonymMapper';
+
+/**
+ * SCORING WEIGHTS:
+ * - Primary match: 10 points (deck strongly focuses on this)
+ * - Secondary match: 7 points (deck has this as a theme, increased from 5)
+ * - Both primary + secondary match: +3 bonus (20 total)
+ * 
+ * RATIONALE: Secondary tags were undervalued at 5 points (50% of primary).
+ * Many great decks have the user's preference as a secondary theme.
+ * New scoring: 7 points (70% of primary) + bonus for comprehensive coverage.
+ */
 
 export function matchPrecons(precons, userPreferences, pathType = "vibes") {
   // PART 1: Filter by IP if coming from Pop Culture path
@@ -35,27 +51,55 @@ export function matchPrecons(precons, userPreferences, pathType = "vibes") {
       
       // CUSTOM TEXT MATCHING
       if (isCustomInput && parsedInput) {
-        // Match vibes from custom text
+        // Match vibes from custom text - WITH SYNONYM SUPPORT
         parsedInput.vibes.forEach(vibe => {
-          const primaryVibes = (tags.aesthetic_vibe?.primary || []).map(v => v.toLowerCase());
-          const secondaryVibes = (tags.aesthetic_vibe?.secondary || []).map(v => v.toLowerCase());
+          const primaryVibes = (tags.aesthetic_vibe?.primary || []);
+          const secondaryVibes = (tags.aesthetic_vibe?.secondary || []);
           
-          if (primaryVibes.includes(vibe.toLowerCase())) {
+          let primaryMatched = false;
+          let secondaryMatched = false;
+          
+          // Check primary vibes with synonym matching
+          if (primaryVibes.some(v => doVibesMatch(vibe, v))) {
             score += 10;
-          } else if (secondaryVibes.includes(vibe.toLowerCase())) {
-            score += 5;
+            primaryMatched = true;
+          }
+          
+          // Check secondary vibes with synonym matching
+          if (secondaryVibes.some(v => doVibesMatch(vibe, v))) {
+            score += 7; // Increased from 5 to 7
+            secondaryMatched = true;
+          }
+          
+          // Bonus: Deck has this vibe in BOTH primary AND secondary
+          if (primaryMatched && secondaryMatched) {
+            score += 3; // Total: 10 + 7 + 3 = 20 points
           }
         });
         
-        // Match creature types from custom text
+        // Match creature types from custom text - WITH SYNONYM SUPPORT
         parsedInput.creatureTypes.forEach(type => {
-          const primaryTypes = (tags.creature_types?.primary || []).map(t => t.toLowerCase());
-          const secondaryTypes = (tags.creature_types?.secondary || []).map(t => t.toLowerCase());
+          const primaryTypes = (tags.creature_types?.primary || []);
+          const secondaryTypes = (tags.creature_types?.secondary || []);
           
-          if (primaryTypes.includes(type.toLowerCase())) {
+          let primaryMatched = false;
+          let secondaryMatched = false;
+          
+          // Check primary types with synonym matching
+          if (primaryTypes.some(t => doCreatureTypesMatch(type, t))) {
             score += 10;
-          } else if (secondaryTypes.includes(type.toLowerCase())) {
-            score += 5;
+            primaryMatched = true;
+          }
+          
+          // Check secondary types with synonym matching
+          if (secondaryTypes.some(t => doCreatureTypesMatch(type, t))) {
+            score += 7; // Increased from 5 to 7
+            secondaryMatched = true;
+          }
+          
+          // Bonus: Deck has this creature type in BOTH primary AND secondary
+          if (primaryMatched && secondaryMatched) {
+            score += 3; // Total: 10 + 7 + 3 = 20 points
           }
         });
         
@@ -74,20 +118,34 @@ export function matchPrecons(precons, userPreferences, pathType = "vibes") {
           }
         });
       } else {
-        // VIBE MATCHING (high weight) - button selections
+        // VIBE MATCHING (high weight) - button selections WITH SYNONYM SUPPORT
         if (userPreferences.vibe) {
-          const vibe = userPreferences.vibe.toLowerCase();
-          const primaryVibes = (tags.aesthetic_vibe?.primary || []).map(v => v.toLowerCase());
-          const secondaryVibes = (tags.aesthetic_vibe?.secondary || []).map(v => v.toLowerCase());
+          const vibe = userPreferences.vibe;
+          const primaryVibes = (tags.aesthetic_vibe?.primary || []);
+          const secondaryVibes = (tags.aesthetic_vibe?.secondary || []);
           
-          if (primaryVibes.includes(vibe)) {
+          let primaryMatched = false;
+          let secondaryMatched = false;
+          
+          // Check primary vibes with synonym matching
+          if (primaryVibes.some(v => doVibesMatch(vibe, v))) {
             score += 10; // Primary match
-          } else if (secondaryVibes.includes(vibe)) {
-            score += 5; // Secondary match
+            primaryMatched = true;
+          }
+          
+          // Check secondary vibes with synonym matching
+          if (secondaryVibes.some(v => doVibesMatch(vibe, v))) {
+            score += 7; // Secondary match (increased from 5)
+            secondaryMatched = true;
+          }
+          
+          // Bonus: Deck has this vibe in BOTH primary AND secondary
+          if (primaryMatched && secondaryMatched) {
+            score += 3;
           }
         }
         
-        // CREATURE TYPE MATCHING - handle multiple selections (array)
+        // CREATURE TYPE MATCHING - handle multiple selections (array) WITH SYNONYM SUPPORT
         if (userPreferences.creatureType) {
           const creatureTypes = Array.isArray(userPreferences.creatureType) 
             ? userPreferences.creatureType 
@@ -95,18 +153,55 @@ export function matchPrecons(precons, userPreferences, pathType = "vibes") {
           
           let matchCount = 0;
           creatureTypes.forEach(type => {
-            const normalizedType = type.toLowerCase();
-            const primaryTypes = (tags.creature_types?.primary || []).map(t => t.toLowerCase());
-            const secondaryTypes = (tags.creature_types?.secondary || []).map(t => t.toLowerCase());
+            const primaryTypes = (tags.creature_types?.primary || []);
+            const secondaryTypes = (tags.creature_types?.secondary || []);
             
-            if (primaryTypes.includes(normalizedType)) {
+            let primaryMatched = false;
+            let secondaryMatched = false;
+            
+            // Check primary types with synonym matching
+            if (primaryTypes.some(t => doCreatureTypesMatch(type, t))) {
               score += 10;
               matchCount++;
-            } else if (secondaryTypes.includes(normalizedType)) {
-              score += 5;
+              primaryMatched = true;
+            }
+            
+            // Check secondary types with synonym matching
+            if (secondaryTypes.some(t => doCreatureTypesMatch(type, t))) {
+              score += 7; // Increased from 5 to 7
               matchCount++;
+              secondaryMatched = true;
+            }
+            
+            // Bonus: Deck has this creature type in BOTH primary AND secondary
+            if (primaryMatched && secondaryMatched) {
+              score += 3;
             }
           });
+          
+          // Fuzzy matching fallback after exact + synonym matching
+          // Only apply if we got zero matches
+          if (matchCount === 0) {
+            creatureTypes.forEach(type => {
+              const primaryTypes = (tags.creature_types?.primary || []);
+              const secondaryTypes = (tags.creature_types?.secondary || []);
+              
+              // Fuzzy string matching with 80% similarity threshold
+              primaryTypes.forEach(deckType => {
+                if (calculateStringSimilarity(type, deckType) >= 0.8) {
+                  score += 5; // Lower score for fuzzy match
+                  matchCount++;
+                }
+              });
+              
+              secondaryTypes.forEach(deckType => {
+                if (calculateStringSimilarity(type, deckType) >= 0.8) {
+                  score += 3;
+                  matchCount++;
+                }
+              });
+            });
+          }
           
           // Bonus for matching multiple creature types
           if (matchCount >= 2) {
@@ -121,16 +216,39 @@ export function matchPrecons(precons, userPreferences, pathType = "vibes") {
     } else if (pathType === "power") {
       // POWER PATH SCORING
       
-      // ARCHETYPE MATCHING
+      // ARCHETYPE MATCHING WITH SYNONYM SUPPORT
       if (userPreferences.archetype) {
-        const archetype = userPreferences.archetype.toLowerCase();
-        const primaryArchetypes = (tags.archetype?.primary || []).map(a => a.toLowerCase());
-        const secondaryArchetypes = (tags.archetype?.secondary || []).map(a => a.toLowerCase());
+        const archetype = userPreferences.archetype;
+        const primaryArchetypes = (tags.archetype?.primary || []);
+        const secondaryArchetypes = (tags.archetype?.secondary || []);
         
-        if (primaryArchetypes.includes(archetype)) {
+        let primaryMatched = false;
+        let secondaryMatched = false;
+        
+        // Check primary archetypes with synonym matching
+        if (primaryArchetypes.some(a => doArchetypesMatch(archetype, a))) {
           score += 10; // Primary match
-        } else if (secondaryArchetypes.includes(archetype)) {
-          score += 5; // Secondary match
+          primaryMatched = true;
+        }
+        
+        // Check secondary archetypes with synonym matching
+        if (secondaryArchetypes.some(a => doArchetypesMatch(archetype, a))) {
+          score += 7; // Secondary match (increased from 5)
+          secondaryMatched = true;
+        }
+        
+        // Bonus: Deck has this archetype in BOTH primary AND secondary
+        if (primaryMatched && secondaryMatched) {
+          score += 3;
+        }
+        
+        // Fuzzy matching fallback for archetypes
+        if (!primaryMatched && !secondaryMatched) {
+          [...primaryArchetypes, ...secondaryArchetypes].forEach(deckArchetype => {
+            if (calculateStringSimilarity(archetype, deckArchetype) >= 0.8) {
+              score += 4; // Lower score for fuzzy match
+            }
+          });
         }
       }
       
@@ -178,13 +296,14 @@ export function matchPrecons(precons, userPreferences, pathType = "vibes") {
       }
     }
     
-    // Generate match reasons
+    // Generate match reasons (using normalized comparisons)
     const reasons = [];
     
     if (pathType === "vibes") {
       if (userPreferences.vibe) {
-        const vibe = userPreferences.vibe.toLowerCase();
-        if ((tags.aesthetic_vibe?.primary || []).map(v => v.toLowerCase()).includes(vibe)) {
+        const vibe = userPreferences.vibe;
+        const primaryVibes = (tags.aesthetic_vibe?.primary || []);
+        if (primaryVibes.some(v => doVibesMatch(vibe, v))) {
           reasons.push(`Perfect ${vibe} vibe`);
         }
       }
@@ -194,16 +313,17 @@ export function matchPrecons(precons, userPreferences, pathType = "vibes") {
           : [userPreferences.creatureType];
         
         creatureTypes.forEach(type => {
-          const normalizedType = type.toLowerCase();
-          if ((tags.creature_types?.primary || []).map(t => t.toLowerCase()).includes(normalizedType)) {
+          const primaryTypes = (tags.creature_types?.primary || []);
+          if (primaryTypes.some(t => doCreatureTypesMatch(type, t))) {
             reasons.push(`Focuses on ${type}s`);
           }
         });
       }
     } else if (pathType === "power") {
       if (userPreferences.archetype) {
-        const archetype = userPreferences.archetype.toLowerCase();
-        if ((tags.archetype?.primary || []).map(a => a.toLowerCase()).includes(archetype)) {
+        const archetype = userPreferences.archetype;
+        const primaryArchetypes = (tags.archetype?.primary || []);
+        if (primaryArchetypes.some(a => doArchetypesMatch(archetype, a))) {
           reasons.push(`${archetype.charAt(0).toUpperCase() + archetype.slice(1)} strategy`);
         }
       }
@@ -250,4 +370,49 @@ export function matchPrecons(precons, userPreferences, pathType = "vibes") {
   
   // Return top 15 results for better replacement options
   return scoredPrecons.slice(0, 15);
+}
+
+/**
+ * Calculate string similarity (Levenshtein distance based)
+ * Returns value between 0 and 1 (1 = exact match)
+ */
+function calculateStringSimilarity(str1, str2) {
+  const longer = str1.length > str2.length ? str1 : str2;
+  const shorter = str1.length > str2.length ? str2 : str1;
+  
+  if (longer.length === 0) return 1.0;
+  
+  const editDistance = levenshteinDistance(longer.toLowerCase(), shorter.toLowerCase());
+  return (longer.length - editDistance) / longer.length;
+}
+
+/**
+ * Calculate Levenshtein distance between two strings
+ */
+function levenshteinDistance(str1, str2) {
+  const matrix = [];
+  
+  for (let i = 0; i <= str2.length; i++) {
+    matrix[i] = [i];
+  }
+  
+  for (let j = 0; j <= str1.length; j++) {
+    matrix[0][j] = j;
+  }
+  
+  for (let i = 1; i <= str2.length; i++) {
+    for (let j = 1; j <= str1.length; j++) {
+      if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j] + 1
+        );
+      }
+    }
+  }
+  
+  return matrix[str2.length][str1.length];
 }

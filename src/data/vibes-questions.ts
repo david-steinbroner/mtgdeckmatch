@@ -76,18 +76,21 @@ export const creatureTypeQuestions: Record<string, Question> = {
     type: "checkbox",
     question: "What kind of cute are you into?",
     options: [
-      { id: "squirrels", title: "Squirrels", description: "", icon: Heart, tags: ["squirrels"] },
-      { id: "rabbits", title: "Rabbits", description: "", icon: Heart, tags: ["rabbits"] },
-      { id: "dogs", title: "Dogs", description: "", icon: Heart, tags: ["dogs"] },
-      { id: "cats", title: "Cats", description: "", icon: Heart, tags: ["cats"] },
-      { id: "otters", title: "Otters", description: "", icon: Heart, tags: ["otters"] },
-      { id: "bears", title: "Bears", description: "", icon: Heart, tags: ["bears"] },
-      { id: "mice", title: "Mice", description: "", icon: Heart, tags: ["mice"] },
-      { id: "foxes", title: "Foxes", description: "", icon: Heart, tags: ["foxes"] },
-      { id: "hedgehogs", title: "Hedgehogs", description: "", icon: Heart, tags: ["hedgehogs"] },
-      { id: "beavers", title: "Beavers", description: "", icon: Heart, tags: ["beavers"] },
-      { id: "sloths", title: "Sloths", description: "", icon: Heart, tags: ["sloths"] },
-      { id: "raccoons", title: "Raccoons", description: "", icon: Heart, tags: ["raccoons"] },
+      // VALIDATED OPTIONS - All have matching decks in precons-data.json
+      { id: "squirrel", title: "Squirrels", description: "", icon: Heart, tags: ["squirrel"] },
+      { id: "rabbit", title: "Rabbits", description: "", icon: Heart, tags: ["rabbit"] },
+      { id: "dog", title: "Dogs", description: "", icon: Heart, tags: ["dog"] },
+      { id: "cat", title: "Cats", description: "", icon: Heart, tags: ["cat"] },
+      { id: "bear", title: "Bears", description: "", icon: Heart, tags: ["bear"] },
+      
+      // REMOVED - NO MATCHING DECKS:
+      // { id: "mice", title: "Mice" } - zero decks have mice/mouse creature type
+      // { id: "foxes", title: "Foxes" } - zero decks have fox creature type  
+      // { id: "hedgehogs", title: "Hedgehogs" } - zero decks have hedgehog creature type
+      // { id: "beavers", title: "Beavers" } - zero decks have beaver creature type
+      // { id: "sloths", title: "Sloths" } - zero decks have sloth creature type
+      // { id: "raccoons", title: "Raccoons" } - zero decks have raccoon creature type
+      // { id: "otters", title: "Otters" } - zero decks have otter creature type
     ],
   },
   creepy: {
