@@ -554,7 +554,7 @@ const Results = () => {
                         </DialogTrigger>
                         <DialogContent className="max-w-[280px] p-4">
                           <p className="text-xs leading-relaxed">
-                            Matches are based on your inputs compared to 143 available MTG Commander decks. Each deck is weighted by how closely it matches what you're looking for.
+                            Matches are based on your inputs compared to <a href="https://cardgamebase.com/commander-precons/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">143 available Magic: The Gathering Commander Decks</a>. Each deck is weighted by how closely it matches what you're looking for.
                           </p>
                           <p className="text-xs leading-relaxed mt-2">
                             The top result is always 100% - meaning it's the closest match available, not necessarily perfect. Dismiss any deck to see the next best option!
