@@ -279,14 +279,16 @@ const Results = () => {
     return symbols[colorCode] || colorCode;
   };
 
-  // Calculate relative match percentage
-  const getMatchPercentage = (score: number, index: number) => {
+  // Calculate relative match percentage based on RAW scores (before tiebreakers)
+  const getMatchPercentage = (rawScore: number, index: number) => {
     if (matchedResults.length === 0 || source === 'surprise') return null;
     
-    const bestScore = matchedResults[0]?.score || 1;
-    if (bestScore === 0) return null;
+    // Use rawScore from the best match (before tiebreakers)
+    const bestRawScore = matchedResults[0]?.rawScore || 1;
+    if (bestRawScore === 0) return null;
     
-    const percentage = Math.round((score / bestScore) * 100);
+    // Calculate percentage - will never exceed 100%
+    const percentage = Math.round((rawScore / bestRawScore) * 100);
     return percentage;
   };
 
@@ -472,13 +474,13 @@ const Results = () => {
         {/* Deck Cards - Only show if we have matches */}
         {topMatches.length > 0 && (
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2">
-            {topMatches.map(({ precon, score, reasons }, index) => {
+            {topMatches.map(({ precon, score, rawScore, reasons }, index) => {
               const commanderCard = getCommanderCard(precon);
               const difficultyInfo = deckDifficulty[precon.id];
               const imageUrl = commanderCard?.image_url && !isPlaceholderUrl(commanderCard.image_url)
                 ? commanderCard.image_url
                 : getScryfallImageUrl(precon.commander);
-              const matchPercentage = getMatchPercentage(score, index);
+              const matchPercentage = getMatchPercentage(rawScore || score, index);
               const originalIndex = matchedResults.findIndex(m => m.precon.id === precon.id);
               
               const flavorText = deckELI5[precon.id] || `A powerful precon deck featuring ${precon.commander}. Description coming soon!`;
