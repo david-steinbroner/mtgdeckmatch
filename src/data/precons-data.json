@@ -76,7 +76,8 @@
         "name": "Inspirit, Flagship Vessel",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/4/6/46900ec7-eb18-45c4-8e90-a48b665cfdee.jpg?1754673464",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 8+.)\nSTATION 1+\nAt the beginning of combat on your turn, put your choice of a +1/+1 counter or two charge counters on up to one other target artifact.\nSTATION 8+\nFlying\nOther artifacts you control have hexproof and indestructible."
       }
     ],
     "color_identity": "W-U-R"
@@ -158,7 +159,8 @@
         "name": "Hearthhull, the Worldseed",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/6/b/6b913e79-a9f6-44d4-bb37-c4f6f66b8151.jpg?1754673442",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft. Station only as a sorcery. It's an artifact creature at 8+.)\nSTATION 2+\n{1}, {T}, Sacrifice a land: Draw two cards. You may play an additional land this turn.\nSTATION 8+\nFlying, vigilance, haste\nWhenever you sacrifice a land, each opponent loses 2 life."
       }
     ],
     "color_identity": "B-R-G"
@@ -238,7 +240,8 @@
         "name": "Temmet, Naktamun's Will",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/c/0/c0629894-0b72-4abe-9771-03becfdb241c.jpg?1747231842",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Vigilance, menace\nWhenever you attack, draw a card, then discard a card.\nWhenever you draw a card, Zombies you control get +1/+1 until end of turn."
       }
     ],
     "color_identity": "W-U-B"
@@ -316,7 +319,8 @@
         "name": "Saheeli, Radiant Creator",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/f/5fea0781-e933-47ef-9414-92c8652a7778.jpg?1747231838",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever you cast an Artificer or artifact spell, you get {E} (an energy counter).\nAt the beginning of combat on your turn, you may pay {E}{E}{E}. When you do, create a token that's a copy of target permanent you control, except it's a 5/5 artifact creature in addition to its other types and has haste. Sacrifice it at the beginning of the next end step."
       }
     ],
     "color_identity": "U-R-G"
@@ -397,7 +401,8 @@
         "name": "Bello, Bard of the Brambles",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/3/1/31e4b7a1-b377-49d2-a92e-4bcb0db35f16.jpg?1721428130",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "During your turn, each non-Equipment artifact and non-Aura enchantment you control with mana value 4 or greater is a 4/4 Elemental creature in addition to its other types and has indestructible, haste, and \"Whenever this creature deals combat damage to a player, draw a card.\""
       }
     ],
     "color_identity": "R-G"
@@ -475,7 +480,8 @@
         "name": "Nelly Borca, Impulsive Accuser",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/e/2ef59aa9-f5e1-413a-869b-d287db95efd0.jpg?1706448880",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Vigilance\nWhenever Nelly Borca attacks, suspect target creature. Then goad all suspected creatures. (A suspected creature has menace and can't block.)\nWhenever one or more creatures an opponent controls deal combat damage to one or more of your opponents, you and the controller of those creatures each draw a card."
       }
     ],
     "color_identity": "W-R"
@@ -562,7 +568,8 @@
         "name": "Tidus, Yuna's Guardian",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/c/2cfd4494-346c-4cbc-8072-e267254cefcc.jpg?1752052930",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "At the beginning of combat on your turn, you may move a counter from target creature you control onto a second target creature you control.\nCheer — Whenever one or more creatures you control with counters on them deal combat damage to a player, you may draw a card and proliferate. Do this only once each turn."
       }
     ],
     "color_identity": "W-U-G"
@@ -641,7 +648,8 @@
         "name": "Satya, Aetherflux Genius",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/3/b/3b964bbe-54cc-425c-9cc6-c877f82af7ba.jpg?1727175658",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Menace, haste\nWhenever Satya attacks, create a tapped and attacking token that's a copy of up to one other target nontoken creature you control. You get {E}{E} (two energy counters). At the beginning of the next end step, sacrifice that token unless you pay an amount of {E} equal to its mana value."
       }
     ],
     "color_identity": "W-U-R"
@@ -719,7 +727,8 @@
         "name": "Kaust, Eyes of the Glade",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/6/4/648c15d1-a2a2-4f59-9b0a-5448be3e990f.jpg?1706448869",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever a creature you control that was turned face up this turn deals combat damage to a player, draw a card.\n{T}: Turn target face-down attacking creature you control face up."
       }
     ],
     "color_identity": "W-R-G"
@@ -799,7 +808,8 @@
         "name": "Winter, Cynical Opportunist",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/9/4/94dc35e4-a492-4019-afcd-cbef6f59a512.jpg?1726596850",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Deathtouch\nWhenever Winter attacks, mill three cards.\nDelirium — At the beginning of your end step, you may exile any number of cards from your graveyard with four or more card types among them. If you do, put a permanent card from among them onto the battlefield with a finality counter on it."
       }
     ],
     "color_identity": "B-G"
@@ -878,7 +888,8 @@
         "name": "Morska, Undersea Sleuth",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/a/e/ae9ccfec-05c6-469e-b1dd-dfbafa1e927f.jpg?1706448877",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "You have no maximum hand size.\nAt the beginning of your upkeep, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\nWhenever you draw your second card each turn, put two +1/+1 counters on Morska."
       }
     ],
     "color_identity": "W-U-G"
@@ -960,7 +971,8 @@
         "name": "Yuma, Proud Protector",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/1/8/18df72be-07d2-4412-b36d-a45119763db3.jpg?1714110413",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "This spell costs {1} less to cast for each land card in your graveyard.\nWhenever Yuma enters or attacks, you may sacrifice a land. If you do, draw a card.\nWhenever a Desert card is put into your graveyard from anywhere, create a 4/2 green Plant Warrior creature token with reach."
       }
     ],
     "color_identity": "W-R-G"
@@ -1044,7 +1056,8 @@
         "name": "Ulalek, Fused Atrocity",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/f/d/fdad1b0e-d3cc-4d76-ae7e-fee12558cf2c.jpg?1735676761",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Devoid (This card has no color.)\nWhenever you cast an Eldrazi spell, you may pay {C}{C}. If you do, copy all spells you control, then copy all other activated and triggered abilities you control. You may choose new targets for the copies. (Mana abilities can't be copied.)"
       }
     ],
     "color_identity": "W-U-B-R-G"
@@ -1129,7 +1142,8 @@
         "name": "Valgavoth, Harvester of Souls",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/7/7/7740ff55-67bb-409e-90f7-2c2c8b8c770a.jpg?1726286296",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying, lifelink\nWard—Sacrifice three nonland permanents.\nIf a card you didn't control would be put into an opponent's graveyard from anywhere, exile it instead.\nDuring your turn, you may play cards exiled with Valgavoth. If you cast a spell this way, pay life equal to its mana value rather than pay its mana cost."
       }
     ],
     "color_identity": "B-R"
@@ -1213,7 +1227,8 @@
         "name": "Zinnia, Valley's Voice",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/d/f/dfe36901-5841-4942-8b61-c273111f715e.jpg?1721428146",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying\nZinnia gets +X/+0, where X is the number of other creatures you control with base power 1.\nCreature spells you cast have offspring {2}. (You may pay an additional {2} as you cast a creature spell. If you do, when that creature enters, create a 1/1 token copy of it.)"
       }
     ],
     "color_identity": "W-U-R"
@@ -1382,7 +1397,8 @@
         "name": "Gonti, Canny Acquisitor",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/0/3/03a7e79f-625a-49ac-9cb1-e1fe5f51f5a0.jpg?1714110365",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Spells you cast but don't own cost {1} less to cast.\nWhenever one or more creatures you control deal combat damage to a player, look at the top card of that player's library, then exile it face down. You may play that card for as long as it remains exiled, and mana of any type can be spent to cast that spell."
       }
     ],
     "color_identity": "U-B-G"
@@ -1459,7 +1475,8 @@
         "name": "Disa the Restless",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/c/9/c976edeb-0fa1-4647-a16c-870d8a3c30c6.jpg?1727175653",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever a Lhurgoyf permanent card is put into your graveyard from anywhere other than the battlefield, put it onto the battlefield.\nWhenever one or more creatures you control deal combat damage to a player, create a Tarmogoyf token."
       }
     ],
     "color_identity": "B-R-G"
@@ -1548,7 +1565,8 @@
         "name": "Caesar, Legion's Emperor",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/4/246a7176-98bc-4f54-aa61-38747420f178.jpg?1710673450",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever you attack, you may sacrifice another creature. When you do, choose two —\n• Create two 1/1 red and white Soldier creature tokens with haste that are tapped and attacking.\n• You draw a card and you lose 1 life.\n• Caesar deals damage equal to the number of creature tokens you control to target opponent."
       }
     ],
     "color_identity": "W-B-R"
@@ -1632,7 +1650,8 @@
         "name": "Zimone, Mystery Unraveler",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/3/0/30f23588-5064-48d9-a271-039df757f8d2.jpg?1726596680",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Landfall — Whenever a land you control enters, manifest dread if this is the first time this ability has resolved this turn. Otherwise, you may turn a permanent you control face up. (To manifest dread, look at the top two cards of your library. Put one onto the battlefield face down as a 2/2 creature and the other into your graveyard. Turn it face up any time for its mana cost if it's a creature card.)"
       }
     ],
     "color_identity": "U-G"
@@ -1720,7 +1739,8 @@
         "name": "Cloud, Ex-SOLDIER",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/0/7/07b4e4f8-6a31-4533-be51-668ce3ddc84f.jpg?1752052926",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Haste\nWhen Cloud enters, attach up to one target Equipment you control to it.\nWhenever Cloud attacks, draw a card for each equipped attacking creature you control. Then if Cloud has power 7 or greater, create two Treasure tokens."
       }
     ],
     "color_identity": "W-R-G"
@@ -1805,7 +1825,8 @@
         "name": "Aminatou, Veil Piercer",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/9/f/9f868023-6035-403d-ba91-7a4840c6c392.jpg?1726596831",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "At the beginning of your upkeep, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)\nEach enchantment card in your hand has miracle. Its miracle cost is equal to its mana cost reduced by {4}. (You may cast a card for its miracle cost when you draw it if it's the first card you drew this turn.)"
       }
     ],
     "color_identity": "W-U-B"
@@ -1893,7 +1914,8 @@
         "name": "Olivia, Opulent Outlaw",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/5/55e6c31b-f9e9-4e42-a875-985d99300d9d.jpg?1714110406",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying, lifelink\nWhenever one or more outlaws you control deal combat damage to a player, create a Treasure token. (Assassins, Mercenaries, Pirates, Rogues, and Warlocks are outlaws.)\n{3}, Sacrifice two Treasures: Put two +1/+1 counters on each creature you control. Activate only as a sorcery."
       }
     ],
     "color_identity": "W-B-R"
@@ -1981,7 +2003,8 @@
         "name": "The Wise Mothman",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/3/d/3d6d6944-a364-41c2-b824-7a1bf6ad0d1e.jpg?1710673435",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying\nWhenever The Wise Mothman enters or attacks, each player gets a rad counter.\nWhenever one or more nonland cards are milled, put a +1/+1 counter on each of up to X target creatures, where X is the number of nonland cards milled this way."
       }
     ],
     "color_identity": "U-B-G"
@@ -2067,7 +2090,8 @@
         "name": "Ms. Bumbleflower",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/4/2/42bbedc1-6b83-46b4-8b3b-a4e05ce77d87.jpg?1721428140",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Vigilance\nWhenever you cast a spell, target opponent draws a card. Put a +1/+1 counter on target creature. It gains flying until end of turn. If this is the second time this ability has resolved this turn, you draw two cards."
       }
     ],
     "color_identity": "W-U-G"
@@ -2148,7 +2172,8 @@
         "name": "Stella, Wild Card",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/a/2a8a7696-b5d9-4378-9d5c-2c9007e4df63.jpg?1714110409",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever you cast your second spell each turn, exile the top card of your library. Until the end of your next turn, you may play that card.\n{T}: Copy target instant or sorcery spell you control. You may choose new targets for the copy. Activate only if you've cast three or more spells this turn."
       }
     ],
     "color_identity": "U-R"
@@ -2226,7 +2251,8 @@
         "name": "Mirko, Obsessive Theorist",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/6/9/690acbbf-5e92-4323-b939-31bdb07f9905.jpg?1706448873",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying, vigilance\nWhenever you surveil, put a +1/+1 counter on Mirko.\nAt the beginning of your end step, you may return target creature card with power less than Mirko's from your graveyard to the battlefield with a finality counter on it. (If it would die, exile it instead.)"
       }
     ],
     "color_identity": "U-B"
@@ -2313,7 +2339,8 @@
         "name": "Terra, Herald of Hope",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/a/5aa1a2d7-6133-41a9-9662-9008d1309935.jpg?1752052929",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Trance — At the beginning of combat on your turn, mill two cards. Terra gains flying until end of turn.\nWhenever Terra deals combat damage to a player, you may pay {2}. When you do, return target creature card with power 3 or less from your graveyard to the battlefield tapped."
       }
     ],
     "color_identity": "W-B-R"
@@ -2400,7 +2427,8 @@
         "name": "Dr. Madison Li",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/9/5/95af426d-a8af-4314-9ad0-ac61935e8e8e.jpg?1710673440",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever you cast an artifact spell, you get {E} (an energy counter).\n{T}, Pay {E}: Target creature gets +1/+0 and gains trample and haste until end of turn.\n{T}, Pay {E}{E}{E}: Draw a card.\n{T}, Pay {E}{E}{E}{E}{E}: Return target artifact card from your graveyard to the battlefield tapped."
       }
     ],
     "color_identity": "W-U-R"
@@ -2488,7 +2516,8 @@
         "name": "Y'shtola, Night's Blessed",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/c/7/c7f2c2d5-e052-49e8-b5de-712858c2ea78.jpg?1752052932",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Vigilance\nAt the beginning of each end step, if a player lost 4 or more life this turn, you draw a card.\nWhenever you cast a noncreature spell with mana value 3 or greater, Y'shtola deals 2 damage to each opponent and you gain 2 life."
       }
     ],
     "color_identity": "W-U-B"
@@ -2575,7 +2604,8 @@
         "name": "Dogmeat, Ever Loyal",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/6/86b45e3e-8460-4678-87d1-d74479936c83.jpg?1710673445",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "When Dogmeat enters, mill five cards, then return an Aura or Equipment card from your graveyard to your hand.\nWhenever a creature you control that's enchanted or equipped attacks, create a Junk token. (It's an artifact with \"{T}, Sacrifice this token: Exile the top card of your library. You may play that card this turn. Activate only as a sorcery.\")"
       }
     ],
     "color_identity": "W-R-G"
@@ -2658,7 +2688,8 @@
         "name": "Hazel of the Rootbloom",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/1/2/1269ca79-907e-4932-9e77-a9a5d2929060.jpg?1721428131",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "{T}, Pay 2 life, Tap X untapped tokens you control: Add X mana in any combination of colors.\nAt the beginning of your end step, create a token that's a copy of target token you control. If that token is a Squirrel, instead create two tokens that are copies of it."
       }
     ],
     "color_identity": "B-G"
@@ -2738,7 +2769,8 @@
         "name": "Felothar the Steadfast",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/c/2c3549f6-25df-4ea7-84ad-922ccd4af6b2.jpg?1745970956",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Each creature you control assigns combat damage equal to its toughness rather than its power.\nCreatures you control can attack as though they didn't have defender.\n{3}, {T}, Sacrifice another creature: Draw cards equal to the sacrificed creature's toughness, then discard cards equal to its power."
       }
     ],
     "color_identity": "W-B-G"
@@ -2818,7 +2850,8 @@
         "name": "Shiko and Narset, Unified",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/a/5a42fc7d-52ac-4e95-9e04-8f8fa7f687c8.jpg?1745970975",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying, vigilance\nFlurry — Whenever you cast your second spell each turn, copy that spell if it targets a permanent or player, and you may choose new targets for the copy. If you don't copy a spell this way, draw a card."
       }
     ],
     "color_identity": "W-U-R"
@@ -2898,7 +2931,8 @@
         "name": "Zurgo Stormrender",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/d/c/dc8eb325-75c9-4331-830d-3f7d62d77290.jpg?1745970988",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Mobilize 1 (Whenever this creature attacks, create a tapped and attacking 1/1 red Warrior creature token. Sacrifice it at the beginning of the next end step.)\nWhenever a creature token you control leaves the battlefield, draw a card if it was attacking. Otherwise, each opponent loses 1 life."
       }
     ],
     "color_identity": "W-B-R"
@@ -2978,7 +3012,8 @@
         "name": "Eshki, Temur's Roar",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/f/f/ff9aa863-8773-452d-946c-ae334c632e11.jpg?1745970953",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever you cast a creature spell, put a +1/+1 counter on Eshki. If that spell's power is 4 or greater, draw a card. If that spell's power is 6 or greater, Eshki deals damage equal to Eshki's power to each opponent."
       }
     ],
     "color_identity": "U-R-G"
@@ -3054,7 +3089,8 @@
         "name": "Omo, Queen of Vesuva",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/e/5/e5d1c814-4c22-4917-95ae-dffaf491db32.jpg?1727175657",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever Omo enters or attacks, put an everything counter on each of up to one target land and up to one target creature.\nEach land with an everything counter on it is every land type in addition to its other types.\nEach nonland creature with an everything counter on it is every creature type."
       }
     ],
     "color_identity": "U-G"
@@ -3137,7 +3173,8 @@
         "name": "The Fourth Doctor",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/c/8/c84ea0fd-efc7-4614-9f8f-41a3c71fceaa.jpg?1696636503",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "You may look at the top card of your library any time.\nWould You Like A...? — Once each turn, you may play a historic land or cast a historic spell from the top of your library. When you do, create a Food token. (Artifacts, legendaries, and Sagas are historic.)"
       }
     ],
     "color_identity": "U-R-G"
@@ -3228,7 +3265,8 @@
         "name": "The Master, Formed Anew",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/a/8/a85edffb-37ce-45ca-b8d2-ddbbbee3b571.jpg?1696636738",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Body Thief — When you cast this spell, you may exile a creature you control and put a takeover counter on it.\nYou may have The Master enter as a copy of a creature card in exile with a takeover counter on it."
       }
     ],
     "color_identity": "U-B-R"
@@ -3315,7 +3353,8 @@
         "name": "The Thirteenth Doctor",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/0/d/0dc4ec90-1650-4b98-9350-66341394cf0b.jpg?1696636504",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Paradox — Whenever you cast a spell from anywhere other than your hand, put a +1/+1 counter on target creature.\nTeam TARDIS — At the beginning of your end step, untap each creature you control with a counter on it."
       }
     ],
     "color_identity": "W-U-R"
@@ -3403,7 +3442,8 @@
         "name": "Galadriel, Elven-Queen",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/f/8fa46d54-563d-4b5c-9c69-5ab37dd529b3.jpg?1686963714",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Will of the council — At the beginning of combat on your turn, if another Elf entered the battlefield under your control this turn, starting with you, each player votes for dominion or guidance. If dominion gets more votes, the Ring tempts you, then you put a +1/+1 counter on your Ring-bearer. If guidance gets more votes or the vote is tied, draw a card."
       }
     ],
     "color_identity": "W-U-G"
@@ -3492,7 +3532,8 @@
         "name": "Frodo, Adventurous Hobbit",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/3/2/328df403-7428-4b17-bdd1-9759fc0f32d8.jpg?1686963703",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Partner with Sam, Loyal Attendant\nVigilance\nWhenever Frodo attacks, if you gained 3 or more life this turn, the Ring tempts you. Then if Frodo is your Ring-bearer and the Ring has tempted you two or more times this game, draw a card."
       }
     ],
     "color_identity": "W-G"
@@ -3581,7 +3622,8 @@
         "name": "Sauron, Lord of the Rings",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/f/c/fc53dec0-79fe-4f6f-9d5b-cf298588e808.jpg?1686963724",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "When you cast this spell, amass Orcs 5, mill five cards, then return a creature card from your graveyard to the battlefield.\nTrample\nWhenever a commander an opponent controls dies, the Ring tempts you."
       }
     ],
     "color_identity": "U-B-R"
@@ -3667,7 +3709,8 @@
         "name": "Blue, Loyal Raptor",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/0/a/0a764ec9-6a30-4df3-91b4-c64fd8e32fa0.jpg?1698988752",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Partner with Owen Grady, Raptor Trainer (When this creature enters, target player may put Owen into their hand from their library, then shuffle.)\nFor each kind of counter on Blue, Loyal Raptor, each other Dinosaur you control enters with a counter of that kind on it."
       }
     ],
     "color_identity": "R-G"
@@ -3751,7 +3794,8 @@
         "name": "The Black Knight",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/0/c/0c198d94-248c-4f81-b8d5-e1b5a0623ee7.jpg?1562450477",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nProtection from white (This creature can't be blocked, targeted, dealt damage, or enchanted by anything white.)"
       }
     ],
     "color_identity": "W-B"
@@ -3833,7 +3877,8 @@
         "name": "Neyali, Suns' Vanguard",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/b/2b5df03d-2463-468b-b444-d946eeb1c96d.jpg?1738281219",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Attacking tokens you control have double strike.\nWhenever one or more tokens you control attack a player, exile the top card of your library. During any turn you attacked with a token, you may play that card."
       }
     ],
     "color_identity": "R-W"
@@ -3913,7 +3958,8 @@
         "name": "Commodore Guff",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/9/2/92870fc6-a6bc-4198-bb31-397e07e0e835.jpg?1691500696",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "At the beginning of your end step, put a loyalty counter on another target planeswalker you control.\n+1: Create a 1/1 red Wizard creature token with \"{T}: Add {R}. Spend this mana only to cast a planeswalker spell.\"\n−3: You draw X cards and Commodore Guff deals X damage to each opponent, where X is the number of planeswalkers you control.\nCommodore Guff can be your commander."
       }
     ],
     "color_identity": "W-U-R"
@@ -3999,7 +4045,8 @@
         "name": "Éowyn, Shieldmaiden",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/d/d/dd4a00ff-2206-4e12-a0ab-61ed82c9e6c5.jpg?1686963690",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "First strike\nAt the beginning of combat on your turn, if another Human entered the battlefield under your control this turn, create two 2/2 red Human Knight creature tokens with trample and haste. Then if you control six or more Humans, draw a card."
       }
     ],
     "color_identity": "R-W"
@@ -4081,7 +4128,8 @@
         "name": "Sliver Gravemother",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/9/f/9f5d253e-9eb2-423c-90ee-68f27ec6bf88.jpg?1691500699",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "The \"legend rule\" doesn't apply to Slivers you control.\nEach Sliver creature card in your graveyard has encore {X}, where X is its mana value.\nEncore {5} ({5}, Exile this card from your graveyard: For each opponent, create a token copy that attacks that opponent this turn if able. They gain haste. Sacrifice them at the beginning of the next end step. Activate only as a sorcery.)"
       }
     ],
     "color_identity": "W-U-B-R-G"
@@ -4257,7 +4305,8 @@
         "name": "The Tenth Doctor",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/f/1/f1499f49-793b-4265-9ad0-883a431941ab.jpg?1696636503",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Allons-y! — Whenever you attack, exile cards from the top of your library until you exile a nonland card. Put three time counters on it. If it doesn't have suspend, it gains suspend.\nTimey-Wimey — {7}: Time travel three times. Activate only as a sorcery. (For each suspended card you own and each permanent you control with a time counter on it, you may add or remove a time counter. Then do it two more times.)"
       }
     ],
     "color_identity": "W-U-R"
@@ -4342,7 +4391,8 @@
         "name": "Nalia de'Arnise",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/7/a/7a1294fd-9885-4dfd-8192-0ca074fc83f7.jpg?1674140693",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "You may look at the top card of your library any time.\nYou may cast Cleric, Rogue, Warrior, and Wizard spells from the top of your library.\nAt the beginning of combat on your turn, if you have a full party, put a +1/+1 counter on each creature you control and those creatures gain deathtouch until end of turn."
       }
     ],
     "color_identity": "W-B-R"
@@ -4430,7 +4480,8 @@
         "name": "Inquisitor Greyfax",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/6/86a4afac-69fd-46e9-8009-58de59bf3f5c.jpg?1674058362",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Vigilance\nUnquestionable Wisdom — Other creatures you control get +1/+0 and have vigilance.\nHunt for Heresy — {1}, {T}: Tap target creature an opponent controls. Investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this artifact: Draw a card.\")"
       }
     ],
     "color_identity": "W-U-B"
@@ -4511,7 +4562,8 @@
         "name": "Kaito Shizuki",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/d/2d35a710-3008-4e27-8afd-6e83329f9917.jpg?1654568510",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "At the beginning of your end step, if Kaito entered this turn, he phases out.\n+1: Draw a card. Then discard a card unless you attacked this turn.\n−2: Create a 1/1 blue Ninja creature token with \"This token can't be blocked.\"\n−7: You get an emblem with \"Whenever a creature you control deals combat damage to a player, search your library for a blue or black creature card, put it onto the battlefield, then shuffle.\""
       }
     ],
     "color_identity": "U-B"
@@ -4591,7 +4643,8 @@
         "name": "Patron of the Moon",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/e/5e5fcd6f-1653-44bf-a796-4c9ff9adf390.jpg?1562877337",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Moonfolk offering (You may cast this spell any time you could cast an instant by sacrificing a Moonfolk and paying the difference in mana costs between this and the sacrificed Moonfolk. Mana cost includes color.)\nFlying\n{1}: Put up to two land cards from your hand onto the battlefield tapped."
       }
     ],
     "color_identity": "U"
@@ -4671,7 +4724,8 @@
         "name": "Marrow-Gnawer",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/7/2/72e4548b-c171-4f10-b896-af37543dcf0f.jpg?1579203069",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "All Rats have fear.\n{T}, Sacrifice a Rat: Create X 1/1 black Rat creature tokens, where X is the number of Rats you control."
       }
     ],
     "color_identity": "B"
@@ -4749,7 +4803,8 @@
         "name": "Seshiro the Anointed",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/3/8/3823e561-5a0a-4020-9322-a2b481499807.jpg?1562759347",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Other Snake creatures you control get +2/+2.\nWhenever a Snake you control deals combat damage to a player, you may draw a card."
       }
     ],
     "color_identity": "G"
@@ -4836,7 +4891,8 @@
         "name": "Szarekh, the Silent King",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/e/1/e11174b2-2423-4a6e-9dcf-ff550eee7e5a.jpg?1674058343",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying\nMy Will Be Done — Whenever Szarekh, the Silent King attacks, mill three cards. You may put an artifact creature card or Vehicle card from among the cards milled this way into your hand."
       }
     ],
     "color_identity": "W-U-B"
@@ -4924,7 +4980,8 @@
         "name": "Mind Flayer, the Shadow",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/0/f/0fbaa2f0-9ad0-4ce2-8ce6-359d01bd524c.jpg?1757465872",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Arvinox isn't a creature unless you control three or more permanents you don't own.\nAt the beginning of your end step, exile the bottom card of each opponent's library face down. For as long as those cards remain exiled, you may look at them, you may cast permanent spells from among them, and you may spend mana as though it were mana of any color to cast those spells."
       }
     ],
     "color_identity": "U-B"
@@ -5011,7 +5068,8 @@
         "name": "Chun-Li, Countless Kicks",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/c/2/c22ee4a5-c74b-46eb-b709-808ebc803757.jpg?1757465831",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Multikicker {W/U}\nWhen Zethi, Arcane Blademaster enters, exile up to X target instant cards from your graveyard, where X is the number of times Zethi was kicked. Put a kick counter on each of them.\nWhenever Zethi attacks, copy each exiled card you own with a kick counter on it. You may cast the copies."
       }
     ],
     "color_identity": "W-U"
@@ -5098,7 +5156,8 @@
         "name": "Ryu, World Warrior",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/d/6/d65a3a8b-ebf8-4e51-8b57-5b14e5cb7abb.jpg?1757465192",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Training (Whenever this creature attacks with another creature with greater power, put a +1/+1 counter on this creature.)\n{4}{R}, {Q}, Discard a card: Vikya, Scorching Stalwart deals damage equal to its power to any target. If excess damage was dealt to a creature this way, draw a card. ({Q} is the untap symbol.)"
       }
     ],
     "color_identity": "W-R"
@@ -5181,7 +5240,8 @@
         "name": "Urza, Chief Artificer",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/e/a/ea409050-4296-4b76-a6cd-2896ce1b88e4.jpg?1705542672",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Affinity for artifact creatures (This spell costs {1} less to cast for each artifact creature you control.)\nArtifact creatures you control have menace.\nAt the beginning of your end step, create a 0/0 colorless Construct artifact creature token with \"This token gets +1/+1 for each artifact you control.\""
       }
     ],
     "color_identity": "W-U-B"
@@ -5269,7 +5329,8 @@
         "name": "Abaddon the Despoiler",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/c/9/c9f1fc97-00c0-492b-a4a3-b179afc2f95d.jpg?1674058353",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Trample\nMark of Chaos Ascendant — During your turn, spells you cast from your hand with mana value X or less have cascade, where X is the total amount of life your opponents have lost this turn."
       }
     ],
     "color_identity": "U-B-R"
@@ -5359,7 +5420,8 @@
         "name": "Megatron, Tyrant",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/a/c/ac6ded62-7bf2-476f-ad8e-020da6327c6b.jpg?1763297344",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "More Than Meets the Eye {1}{R}{W}{B} (You may cast this card converted for {1}{R}{W}{B}.)\nYour opponents can't cast spells during combat.\nAt the beginning of each of your postcombat main phases, you may convert Megatron. If you do, add {C} for each 1 life your opponents have lost this turn."
       }
     ],
     "color_identity": "U-B-R"
@@ -5446,7 +5508,8 @@
         "name": "Optimus Prime, Hero",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/f/0/f04ed2cc-aae1-400b-9cc5-5d4e3e3dd714.jpg?1763297345",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "More Than Meets the Eye {2}{U}{R}{W} (You may cast this card converted for {2}{U}{R}{W}.)\nAt the beginning of each end step, bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)\nWhen Optimus Prime dies, return it to the battlefield converted under its owner's control."
       }
     ],
     "color_identity": "W-U-R"
@@ -5528,7 +5591,8 @@
         "name": "The Swarmlord",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/d/5/d5c4077c-604e-4e8a-b448-0807849040ca.jpg?1674058371",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Rapid Regeneration — The Swarmlord enters with two +1/+1 counters on it for each time you've cast your commander from the command zone this game.\nXenos Cunning — Whenever a creature you control with a counter on it dies, draw a card."
       }
     ],
     "color_identity": "U-G"
@@ -5612,7 +5676,8 @@
         "name": "Myra the Magnificent",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/e/5e57baea-00ee-49dc-80ce-a8c11a67a6db.jpg?1708617230",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever you cast an instant or sorcery spell from your hand, open an Attraction.\n{X}, {T}: Exile target instant or sorcery card with mana value X from your graveyard and choose an Attraction you control that doesn't have a midway counter on it. Put a midway counter on it. For as long as that Attraction is on the battlefield, whenever you visit it, copy the exiled card. You may cast the copy without paying its mana cost."
       }
     ],
     "color_identity": "W-U-B-R"
@@ -5778,7 +5843,8 @@
         "name": "Galea, Kindler of Hope",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/1/e/1efbea01-c6a1-4380-a14f-6206c7895e48.jpg?1632335378",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Vigilance\nYou may look at the top card of your library any time.\nYou may cast Aura and Equipment spells from the top of your library. When you cast an Equipment spell this way, it gains \"When this Equipment enters, attach it to target creature you control.\""
       }
     ],
     "color_identity": "W-U-G"
@@ -5857,7 +5923,8 @@
         "name": "Vrondiss, Rage of Ancients",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/6/8/683ca7f0-e9df-459b-a8e3-cf80b39c732d.jpg?1632335388",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Enrage — Whenever Vrondiss is dealt damage, you may create a 5/4 red and green Dragon Spirit creature token with \"When this token deals damage, sacrifice it.\"\nWhenever you roll one or more dice, you may have Vrondiss deal 1 damage to itself."
       }
     ],
     "color_identity": "R-G"
@@ -5939,7 +6006,8 @@
         "name": "Tovolar, Dire Overlord",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/f/9/f953fad3-0cd1-48aa-8ed9-d7d2e293e6e2.jpg?1637114341",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever a Wolf or Werewolf you control deals combat damage to a player, draw a card.\nAt the beginning of your upkeep, if you control three or more Wolves and/or Werewolves, it becomes night. Then transform any number of Human Werewolves you control.\nDaybound"
       }
     ],
     "color_identity": "R-G"
@@ -6019,7 +6087,8 @@
         "name": "Ayula, Queen Among Bears",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/c/0/c046dfb0-9ca3-4219-a6b0-d7503bc2fbd0.jpg?1562202020",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever another Bear you control enters, choose one —\n• Put two +1/+1 counters on target Bear.\n• Target Bear you control fights target creature you don't control."
       }
     ],
     "color_identity": "G"
@@ -6098,7 +6167,8 @@
         "name": "Moritte of the Frost",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/2/22fdbe71-abca-4e48-99b2-1cb6b35d930b.jpg?1631051717",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Changeling (This card is every creature type.)\nYou may have Moritte enter as a copy of a permanent you control, except it's legendary and snow in addition to its other types and, if it's a creature, it enters with two additional +1/+1 counters on it and has changeling."
       }
     ],
     "color_identity": "U-G"
@@ -6175,7 +6245,8 @@
         "name": "Osgir, the Reconstructor",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/8/5815fe6e-e26b-4918-a090-55d6442722c1.jpg?1674185818",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Vigilance\n{1}, Sacrifice an artifact: Target creature you control gets +2/+0 until end of turn.\n{X}, {T}, Exile an artifact card with mana value X from your graveyard: Create two tokens that are copies of the exiled card. Activate only as a sorcery."
       }
     ],
     "color_identity": "R-W"
@@ -6253,7 +6324,8 @@
         "name": "Krenko, Mob Boss",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/2/824b2d73-2151-4e5e-9f05-8f63e2bdcaa9.jpg?1730632010",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "{T}: Create X 1/1 red Goblin creature tokens, where X is the number of Goblins you control."
       }
     ],
     "color_identity": "R"
@@ -6332,7 +6404,8 @@
         "name": "Chatterfang, Squirrel General",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/1/7/1785cf85-1ac0-4246-9b89-1a8221a8e1b2.jpg?1626097239",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)\nIf one or more tokens would be created under your control, those tokens plus that many 1/1 green Squirrel creature tokens are created instead.\n{B}, Sacrifice X Squirrels: Target creature gets +X/-X until end of turn."
       }
     ],
     "color_identity": "B-G"
@@ -6412,7 +6485,8 @@
         "name": "Prosper, Tome-Bound",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/d/7/d743336e-d5c7-4053-a23d-92ec7581f74e.jpg?1631839207",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Deathtouch\nMystic Arcanum — At the beginning of your end step, exile the top card of your library. Until the end of your next turn, you may play that card.\nPact Boon — Whenever you play a card from exile, create a Treasure token."
       }
     ],
     "color_identity": "B-R"
@@ -6491,7 +6565,8 @@
         "name": "Millicent, Restless Revenant",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/b/2b86b538-0766-440d-a2cd-f5d5bfcfb010.jpg?1641600129",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Affinity for Spirits (This spell costs {1} less to cast for each Spirit you control.)\nFlying\nWhenever Millicent or another nontoken Spirit you control dies or deals combat damage to a player, create a 1/1 white Spirit creature token with flying."
       }
     ],
     "color_identity": "W-U"
@@ -6572,7 +6647,8 @@
         "name": "Asmoranomardicadaistinaculdacar",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/d/9/d99a9a7d-d9ca-4c11-80ab-e39d5943a315.jpg?1759216568",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "As long as you've discarded a card this turn, you may pay {B/R} to cast this spell.\nWhen Asmoranomardicadaistinaculdacar enters, you may search your library for a card named The Underworld Cookbook, reveal it, put it into your hand, then shuffle.\nSacrifice two Foods: Target creature deals 6 damage to itself."
       }
     ],
     "color_identity": "B-R"
@@ -6648,7 +6724,8 @@
         "name": "Wilhelt, the Rotcleaver",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/5/2501a911-d072-436d-ae3b-a5164e3b30aa.jpg?1675456154",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever another Zombie you control dies, if it didn't have decayed, create a 2/2 black Zombie creature token with decayed. (It can't block. When it attacks, sacrifice it at end of combat.)\nAt the beginning of your end step, you may sacrifice a Zombie. If you do, draw a card."
       }
     ],
     "color_identity": "U-B"
@@ -6729,7 +6806,8 @@
         "name": "Strefan, Maurer Progenitor",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/f/8f54c6ce-fde4-47ef-a106-5c68b4397f99.jpg?1641600044",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying\nAt the beginning of your end step, create a Blood token for each player who lost life this turn.\nWhenever Strefan attacks, you may sacrifice two Blood tokens. If you do, you may put a Vampire card from your hand onto the battlefield tapped and attacking. It gains indestructible until end of turn."
       }
     ],
     "color_identity": "B-R"
@@ -6809,7 +6887,8 @@
         "name": "Kalamax, the Stormsire",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/f/9/f990cd78-2165-446f-a116-ae55d7a0f00d.jpg?1591234251",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever you cast your first instant spell each turn, if Kalamax is tapped, copy that spell. You may choose new targets for the copy.\nWhenever you copy an instant spell, put a +1/+1 counter on Kalamax."
       }
     ],
     "color_identity": "U-R-G"
@@ -6896,7 +6975,8 @@
         "name": "Godzilla, King of the Monsters",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/9/a/9a0639a0-c898-4a07-975c-a02bdd53175b.jpg?1592009220",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Trample\nLethal damage dealt to creatures you control is determined by their power rather than their toughness."
       }
     ],
     "color_identity": "B-G"
@@ -6977,7 +7057,8 @@
         "name": "Omnath, Locus of Creation",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/4/e/4e4fb50c-a81f-44d3-93c5-fa9a0b37f617.jpg?1639436752",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "When Omnath enters, draw a card.\nLandfall — Whenever a land you control enters, you gain 4 life if this is the first time this ability has resolved this turn. If it's the second time, add {R}{G}{W}{U}. If it's the third time, Omnath deals 4 damage to each opponent and each planeswalker you don't control."
       }
     ],
     "color_identity": "W-U-R-G"
@@ -7059,7 +7140,8 @@
         "name": "The Mimeoplasm",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/9/9/998b86f3-e53f-4ebb-b111-6f14577fded1.jpg?1712354748",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "As The Mimeoplasm enters, you may exile two creature cards from graveyards. If you do, it enters as a copy of one of those cards with a number of additional +1/+1 counters on it equal to the power of the other card."
       }
     ],
     "color_identity": "U-B-G"
@@ -7137,7 +7219,8 @@
         "name": "Purphoros, Bronze-Blooded",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/a/f/af3af5c4-0960-44a2-976e-abdf7803c436.jpg?1582178876",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Indestructible\nAs long as your devotion to red is less than five, Purphoros isn't a creature.\nOther creatures you control have haste.\n{2}{R}: You may put a red creature card or an artifact creature card from your hand onto the battlefield. Sacrifice it at the beginning of the next end step."
       }
     ],
     "color_identity": "R"
@@ -7218,7 +7301,8 @@
         "name": "Skeleton Ship",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/0/6/060b8dd4-d632-4216-87ba-355ab8a62e39.jpg?1581799322",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "When you control no Islands, sacrifice Skeleton Ship.\n{T}: Put a -1/-1 counter on target creature."
       }
     ],
     "color_identity": "U-B"
@@ -7298,7 +7382,8 @@
         "name": "Aboshan, Cephalid Emperor",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/2/82db4a41-03e8-4f0c-946c-a98fc5c9f7c8.jpg?1562919289",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Tap an untapped Octopus you control: Tap target permanent.\n{U}{U}{U}: Tap all creatures without flying."
       }
     ],
     "color_identity": "U"
@@ -7377,7 +7462,8 @@
         "name": "Aesi, Tyrant of Gyre Strait",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/6/7/673c21f8-02b6-4ac4-b2fc-df065b4ac662.jpg?1726285172",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "You may play an additional land on each of your turns.\nLandfall — Whenever a land you control enters, you may draw a card."
       }
     ],
     "color_identity": "U-G"
@@ -7455,7 +7541,8 @@
         "name": "Jirina Kudro",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/6/e/6e660d42-f5d3-452a-9662-74e18a1ae9e4.jpg?1591234244",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "When Jirina Kudro enters, create a 1/1 white Human Soldier creature token for each time you've cast a commander from the command zone this game.\nOther Humans you control get +2/+0."
       }
     ],
     "color_identity": "R-W-B"
@@ -7534,7 +7621,8 @@
         "name": "Kathril, Aspect Warper",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/e/b/ebc57f73-a517-463e-8d55-56aa996d091e.jpg?1591946565",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "When Kathril enters, put a flying counter on any creature you control if a creature card in your graveyard has flying. Repeat this process for first strike, double strike, deathtouch, hexproof, indestructible, lifelink, menace, reach, trample, and vigilance. Then put a +1/+1 counter on Kathril for each counter put on a creature this way."
       }
     ],
     "color_identity": "W-B-G"
@@ -7622,7 +7710,8 @@
         "name": "Negan, the Cold-Blooded",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/3/5/35d03f86-5219-4456-8136-802699ff26d3.jpg?1757464501",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "When Malik, Grim Manipulator enters the battlefield, you and target opponent each secretly choose a creature that player controls. Then those choices are revealed, and that player sacrifices those creatures.\nWhenever an opponent sacrifices a creature, you create a Treasure token."
       }
     ],
     "color_identity": "W-B-R"
@@ -7700,7 +7789,8 @@
         "name": "Gargos, Vicious Watcher",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/4/e/4e446e90-6e31-43ed-bcb1-a01422b503c0.jpg?1592517214",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Vigilance\nHydra spells you cast cost {4} less to cast.\nWhenever a creature you control becomes the target of a spell, Gargos fights up to one target creature you don't control."
       }
     ],
     "color_identity": "G"
@@ -7781,7 +7871,8 @@
         "name": "Kadena, Slinking Sorcerer",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/6/8/68a144f1-df18-4dc5-81c3-dff2af27527f.jpg?1568003696",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "The first face-down creature spell you cast each turn costs {3} less to cast.\nWhenever a face-down creature you control enters, draw a card."
       }
     ],
     "color_identity": "U-B-G"
@@ -7860,7 +7951,8 @@
         "name": "Anje Falkenrath",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/9/1/913dd06f-ed2f-4128-9c9d-9cd0d8a55425.jpg?1568003632",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Haste\n{T}, Discard a card: Draw a card.\nWhenever you discard a card, if it has madness, untap Anje Falkenrath."
       }
     ],
     "color_identity": "B-R"
@@ -7940,7 +8032,8 @@
         "name": "Sevinne, the Chronoclasm",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/c/2c209efe-b4dc-44a3-bd45-d647f5680cbe.jpg?1568003729",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Prevent all damage that would be dealt to Sevinne.\nWhenever you cast your first instant or sorcery spell from your graveyard each turn, copy that spell. You may choose new targets for the copy."
       }
     ],
     "color_identity": "W-U-R"
@@ -8021,7 +8114,8 @@
         "name": "Ghired, Conclave Exile",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/d/0/d0825bcd-8cf8-498a-a61e-406f136e1f3f.jpg?1568003672",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "When Ghired enters, create a 4/4 green Rhino creature token with trample.\nWhenever Ghired attacks, populate. The token enters tapped and attacking. (To populate, create a token that's a copy of a creature token you control.)"
       }
     ],
     "color_identity": "W-R-G"
@@ -8104,7 +8198,8 @@
         "name": "Syr Gwyn, Hero of Ashvale",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/a/3/a33add37-379d-4a90-9c04-529dff676986.jpg?1571282693",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Vigilance, menace\nWhenever an equipped creature you control attacks, you draw a card and you lose 1 life.\nEquipment you control have equip Knight {0}."
       }
     ],
     "color_identity": "W-B-R"
@@ -8184,7 +8279,8 @@
         "name": "Estrid, the Masked",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/3/3/3340b83e-72dc-42e2-9f93-92f732c047df.jpg?1755010071",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "+2: Untap each enchanted permanent you control.\n−1: Create a white Aura enchantment token named Mask attached to another target permanent. The token has enchant permanent and umbra armor.\n−7: Mill seven cards. Return all non-Aura enchantment cards from your graveyard to the battlefield, then do the same for Aura cards.\nEstrid, the Masked can be your commander."
       }
     ],
     "color_identity": "W-U-G"
@@ -8261,7 +8357,8 @@
         "name": "Saheeli, the Gifted",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/c/a/ca095559-ac77-4186-8d9b-b75ce0607582.jpg?1592710284",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "+1: Create a 1/1 colorless Servo artifact creature token.\n+1: The next spell you cast this turn has affinity for artifacts. (It costs {1} less to cast for each artifact you control as you cast it.)\n−7: For each artifact you control, create a token that's a copy of it. Those tokens gain haste. Exile those tokens at the beginning of the next end step.\nSaheeli, the Gifted can be your commander."
       }
     ],
     "color_identity": "U-R"
@@ -8342,7 +8439,8 @@
         "name": "Lord Windgrace",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/1/213d6fb8-5624-4804-b263-51f339482754.jpg?1592710275",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "+2: Discard a card, then draw a card. If a land card is discarded this way, draw an additional card.\n−3: Return up to two target land cards from your graveyard to the battlefield.\n−11: Destroy up to six target nonland permanents, then create six 2/2 green Cat Warrior creature tokens with forestwalk.\nLord Windgrace can be your commander."
       }
     ],
     "color_identity": "B-R-G"
@@ -8422,7 +8520,8 @@
         "name": "Aminatou, the Fateshifter",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/b/c/bc010302-e715-4946-89eb-a214e0b836ba.jpg?1673148265",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "+1: Draw a card, then put a card from your hand on top of your library.\n−1: Exile another target permanent you own, then return it to the battlefield under your control.\n−6: Choose left or right. Each player gains control of all nonland permanents other than Aminatou controlled by the next player in the chosen direction.\nAminatou, the Fateshifter can be your commander."
       }
     ],
     "color_identity": "W-U-B"
@@ -8504,7 +8603,8 @@
         "name": "Slimefoot, the Stowaway",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/c/b/cb12173d-3afb-4e8b-b612-fa7737a8c6c2.jpg?1689999266",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever a Saproling you control dies, Slimefoot deals 1 damage to each opponent and you gain 1 life.\n{4}: Create a 1/1 green Saproling creature token."
       }
     ],
     "color_identity": "B-G"
@@ -8581,7 +8681,8 @@
         "name": "Brudiclad, Telchor Engineer",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/5/25eff27a-eb58-4a95-b2df-4a341cf9bef6.jpg?1599707883",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Creature tokens you control have haste.\nAt the beginning of combat on your turn, create a 2/1 blue Phyrexian Myr artifact creature token. Then you may choose a token you control. If you do, each other token you control becomes a copy of that token."
       }
     ],
     "color_identity": "U-R"
@@ -8660,7 +8761,8 @@
         "name": "Arcades, the Strategist",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/1/e/1e90c638-d4b2-4243-bbc4-1cc10516c40f.jpg?1666961830",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying, vigilance\nWhenever a creature you control with defender enters, draw a card.\nEach creature you control with defender assigns combat damage equal to its toughness rather than its power and can attack as though it didn't have defender."
       }
     ],
     "color_identity": "W-U-G"
@@ -8744,7 +8846,8 @@
         "name": "Reaper King",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/0/502740bf-0bff-4358-8996-1a27e5f0343f.jpg?1562830062",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "({2/W} can be paid with any two mana or with {W}. This card's mana value is 10.)\nOther Scarecrow creatures you control get +1/+1.\nWhenever another Scarecrow you control enters, destroy target permanent."
       }
     ],
     "color_identity": "Five-color"
@@ -8825,7 +8928,8 @@
         "name": "The Locust God",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/7/e/7e599847-8ab0-4fd6-b2c0-cb44a7669aa5.jpg?1682209825",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying\nWhenever you draw a card, create a 1/1 blue and red Insect creature token with flying and haste.\n{2}{U}{R}: Draw a card, then discard a card.\nWhen The Locust God dies, return it to its owner's hand at the beginning of the next end step."
       }
     ],
     "color_identity": "U-R"
@@ -8905,7 +9009,8 @@
         "name": "Inalla, Archmage Ritualist",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/7/c/7c6e803a-451c-4aa6-97a2-400077f32c47.jpg?1627406462",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Eminence — Whenever another nontoken Wizard you control enters, if Inalla is in the command zone or on the battlefield, you may pay {1}. If you do, create a token that's a copy of that Wizard. The token gains haste. Exile it at the beginning of the next end step.\nTap five untapped Wizards you control: Target player loses 7 life."
       }
     ],
     "color_identity": "U-B-R"
@@ -8985,7 +9090,8 @@
         "name": "The Ur-Dragon",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/1/0/10d42b35-844f-4a64-9981-c6118d45e826.jpg?1689999317",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Eminence — As long as The Ur-Dragon is in the command zone or on the battlefield, other Dragon spells you cast cost {1} less to cast.\nFlying\nWhenever one or more Dragons you control attack, draw that many cards, then you may put a permanent card from your hand onto the battlefield."
       }
     ],
     "color_identity": "Five-color"
@@ -9064,7 +9170,8 @@
         "name": "Arahbo, Roar of the World",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/1/81dc3d00-97cd-4549-b5a4-15a1e08767f5.jpg?1567181403",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Eminence — At the beginning of combat on your turn, if Arahbo is in the command zone or on the battlefield, another target Cat you control gets +3/+3 until end of turn.\nWhenever another Cat you control attacks, you may pay {1}{G}{W}. If you do, it gains trample and gets +X/+X until end of turn, where X is its power."
       }
     ],
     "color_identity": "W-G"
@@ -9146,7 +9253,8 @@
         "name": "Admiral Beckett Brass",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/0/2/02cbd397-3ef3-465f-84fe-765dd1444af8.jpg?1698988417",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Other Pirates you control get +1/+1.\nAt the beginning of your end step, gain control of target nonland permanent controlled by a player who was dealt combat damage by three or more Pirates this turn."
       }
     ],
     "color_identity": "U-B-R"
@@ -9226,7 +9334,8 @@
         "name": "Edgar Markov",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/a/5/a577ba08-0aa8-45be-aa83-d5078770127c.jpg?1736468492",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Eminence — Whenever you cast another Vampire spell, if Edgar is in the command zone or on the battlefield, create a 1/1 black Vampire creature token.\nFirst strike, haste\nWhenever Edgar attacks, put a +1/+1 counter on each Vampire you control."
       }
     ],
     "color_identity": "W-B-R"
@@ -9308,7 +9417,8 @@
         "name": "Gishath, Sun's Avatar",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/b/c/bc4a65de-23b5-48f0-b8b7-94608eaced3e.jpg?1699044539",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Vigilance, trample, haste\nWhenever Gishath deals combat damage to a player, reveal that many cards from the top of your library. Put any number of Dinosaur creature cards from among them onto the battlefield and the rest on the bottom of your library in a random order."
       }
     ],
     "color_identity": "R-G-W"
@@ -9389,7 +9499,8 @@
         "name": "Kumena, Tyrant of Orazca",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/a/e/aebcbb35-2973-41bf-811a-e2413ef45c3e.jpg?1698988442",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Tap another untapped Merfolk you control: Kumena can't be blocked this turn.\nTap three untapped Merfolk you control: Draw a card.\nTap five untapped Merfolk you control: Put a +1/+1 counter on each Merfolk you control."
       }
     ],
     "color_identity": "U-G"
@@ -9470,7 +9581,8 @@
         "name": "Oona, Queen of the Fae",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/f/b/fbea42c8-6e9f-499d-9d26-401536afd5c2.jpg?1604195177",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying\n{X}{U/B}: Choose a color. Target opponent exiles the top X cards of their library. For each card of the chosen color exiled this way, create a 1/1 blue and black Faerie Rogue creature token with flying."
       }
     ],
     "color_identity": "U-B"
@@ -9550,7 +9662,8 @@
         "name": "Brigid, Hero of Kinsbaile",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/d/a/da70a20f-213e-4d79-a46f-1ef1fc3f4a51.jpg?1562370621",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "First strike\n{T}: Brigid deals 2 damage to each attacking or blocking creature target player controls."
       }
     ],
     "color_identity": "W"
@@ -9632,7 +9745,8 @@
         "name": "Doran, the Siege Tower",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/e/0/e0ad8e7f-cda0-4529-94fc-dd3709158a94.jpg?1673148514",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Each creature assigns combat damage equal to its toughness rather than its power."
       }
     ],
     "color_identity": "W-B-G"
@@ -9711,7 +9825,8 @@
         "name": "Neheb, the Worthy",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/7/5/7593d5fb-c6b3-4d24-b9d3-97a4378161fd.jpg?1543676084",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "First strike\nOther Minotaurs you control have first strike.\nAs long as you have one or fewer cards in hand, Minotaurs you control get +2/+0.\nWhenever Neheb deals combat damage to a player, each player discards a card."
       }
     ],
     "color_identity": "B-R"
@@ -9789,7 +9904,8 @@
         "name": "Unesh, Criosphinx Sovereign",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/f/d/fdd1a8b2-f4ba-45af-9586-98a98834b8bc.jpg?1562821253",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying\nSphinx spells you cast cost {2} less to cast.\nWhenever Unesh or another Sphinx you control enters, reveal the top four cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard."
       }
     ],
     "color_identity": "U"
@@ -9873,7 +9989,8 @@
         "name": "Atraxa, Praetors' Voice",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/d/0/d0d33d52-3d28-4635-b985-51e126289259.jpg?1599707796",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying, vigilance, deathtouch, lifelink\nAt the beginning of your end step, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)"
       }
     ],
     "color_identity": "W-U-B-G"
@@ -9954,7 +10071,8 @@
         "name": "Yidris, Maelstrom Wielder",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/c/2/c219dd22-433c-4f6a-a0c4-fae12239291c.jpg?1562418099",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Trample\nWhenever Yidris deals combat damage to a player, as you cast spells from your hand this turn, they gain cascade. (When you cast the spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)"
       }
     ],
     "color_identity": "U-B-R-G"
@@ -10032,7 +10150,8 @@
         "name": "Breya, Etherium Shaper",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/b/8bf3929c-957f-4ea2-a27d-7d53979844af.jpg?1763999888",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "When Breya enters, create two 1/1 blue Thopter artifact creature tokens with flying.\n{2}, Sacrifice two artifacts: Choose one —\n• Breya deals 3 damage to target player or planeswalker.\n• Target creature gets -4/-4 until end of turn.\n• You gain 5 life."
       }
     ],
     "color_identity": "W-U-B-R"
@@ -10112,7 +10231,8 @@
         "name": "Saskia the Unyielding",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/b/5b483db6-b614-4af1-820a-42a4ee0c8707.jpg?1562401580",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Vigilance, haste\nAs Saskia enters, choose a player.\nWhenever a creature you control deals combat damage to a player, it deals that much damage to the chosen player."
       }
     ],
     "color_identity": "W-B-R-G"
@@ -10193,7 +10313,8 @@
         "name": "Kynaios and Tiro of Meletis",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/9/7/97fa8615-2b6c-445a-bcaf-44a7e847bf65.jpg?1633190298",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "At the beginning of your end step, draw a card. Each player may put a land card from their hand onto the battlefield, then each opponent who didn't draws a card."
       }
     ],
     "color_identity": "W-U-R-G"
@@ -10273,7 +10394,8 @@
         "name": "Breya, Etherium Shaper",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/b/8bf3929c-957f-4ea2-a27d-7d53979844af.jpg?1763999888",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "When Breya enters, create two 1/1 blue Thopter artifact creature tokens with flying.\n{2}, Sacrifice two artifacts: Choose one —\n• Breya deals 3 damage to target player or planeswalker.\n• Target creature gets -4/-4 until end of turn.\n• You gain 5 life."
       }
     ],
     "color_identity": "W-U-B-R"
@@ -10351,7 +10473,8 @@
         "name": "Depala, Pilot Exemplar",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/9/592f3a92-787e-4180-9d0b-06c973ce8975.jpg?1576382792",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Other Dwarves you control get +1/+1.\nEach Vehicle you control gets +1/+1 as long as it's a creature.\nWhenever Depala becomes tapped, you may pay {X}. If you do, reveal the top X cards of your library, put all Dwarf and Vehicle cards from among them into your hand, then put the rest on the bottom of your library in a random order."
       }
     ],
     "color_identity": "R-W"
@@ -10428,7 +10551,8 @@
         "name": "Ishkanah, Grafwidow",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/2/a/2a61bad1-f212-4d9b-8422-8ec548b8155c.jpg?1726285069",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Reach\nDelirium — When Ishkanah enters, if there are four or more card types among cards in your graveyard, create three 1/2 green Spider creature tokens with reach.\n{6}{B}: Target opponent loses 1 life for each Spider you control."
       }
     ],
     "color_identity": "B-G"
@@ -10508,7 +10632,8 @@
         "name": "Daxos the Returned",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/4/a/4abe142e-7e87-464b-be2a-ad2fc7aebd51.jpg?1562703959",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever you cast an enchantment spell, you get an experience counter.\n{1}{W}{B}: Create a white and black Spirit enchantment creature token. It has \"This creature's power and toughness are each equal to the number of experience counters you have.\""
       }
     ],
     "color_identity": "W-B"
@@ -10588,7 +10713,8 @@
         "name": "Meren of Clan Nel Toth",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/0/508b1442-bf2c-4ad6-9bcf-bd894e081ab6.jpg?1743207181",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever another creature you control dies, you get an experience counter.\nAt the beginning of your end step, choose target creature card in your graveyard. If that card's mana value is less than or equal to the number of experience counters you have, return it to the battlefield. Otherwise, put it into your hand."
       }
     ],
     "color_identity": "B-G"
@@ -10668,7 +10794,8 @@
         "name": "Mizzix of the Izmagnus",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/2/82f949d0-41a0-4491-9057-bfb2bb20bdb3.jpg?1689999174",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever you cast an instant or sorcery spell with mana value greater than the number of experience counters you have, you get an experience counter.\nInstant and sorcery spells you cast cost {1} less to cast for each experience counter you have."
       }
     ],
     "color_identity": "U-R"
@@ -10748,7 +10875,8 @@
         "name": "Ezuri, Claw of Progress",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/6/b/6bf721b0-2b5a-4085-b50c-89cbe7420673.jpg?1673148596",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever a creature you control with power 2 or less enters, you get an experience counter.\nAt the beginning of combat on your turn, put X +1/+1 counters on another target creature you control, where X is the number of experience counters you have."
       }
     ],
     "color_identity": "U-G"
@@ -10828,7 +10956,8 @@
         "name": "Kalemne, Disciple of Iroas",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/3/c/3c718940-dc07-4449-ba35-4029f366c3eb.jpg?1562273430",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Double strike, vigilance\nWhenever you cast a creature spell with mana value 5 or greater, you get an experience counter.\nKalemne gets +1/+1 for each experience counter you have."
       }
     ],
     "color_identity": "W-R"
@@ -10907,7 +11036,8 @@
         "name": "Daretti, Scrap Savant",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/7/c/7cb9d4a0-66bd-454d-b676-80192a96c723.jpg?1689997720",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "+2: Discard up to two cards, then draw that many cards.\n−2: Sacrifice an artifact. If you do, return target artifact card from your graveyard to the battlefield.\n−10: You get an emblem with \"Whenever an artifact is put into your graveyard from the battlefield, return that card to the battlefield at the beginning of the next end step.\"\nDaretti, Scrap Savant can be your commander."
       }
     ],
     "color_identity": "R"
@@ -10985,7 +11115,8 @@
         "name": "Nahiri, the Lithomancer",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/b/0/b074e60a-6f9b-4679-9617-261e2e15e1e8.jpg?1689995897",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "+2: Create a 1/1 white Kor Soldier creature token. You may attach an Equipment you control to it.\n−2: You may put an Equipment card from your hand or graveyard onto the battlefield.\n−10: Create a colorless Equipment artifact token named Stoneforged Blade. It has indestructible, \"Equipped creature gets +5/+5 and has double strike,\" and equip {0}.\nNahiri, the Lithomancer can be your commander."
       }
     ],
     "color_identity": "W"
@@ -11063,7 +11194,8 @@
         "name": "Freyalise, Llanowar's Fury",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/2/52311be7-b484-4b14-a091-904c6b0c83d1.jpg?1689998532",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "+2: Create a 1/1 green Elf Druid creature token with \"{T}: Add {G}.\"\n−2: Destroy target artifact or enchantment.\n−6: Draw a card for each green creature you control.\nFreyalise, Llanowar's Fury can be your commander."
       }
     ],
     "color_identity": "G"
@@ -11147,7 +11279,8 @@
         "name": "Kaalia of the Vast",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/e/7/e71c8c39-3fbb-4a42-9cf6-b3224f5a56fc.jpg?1717013745",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying\nWhenever Kaalia attacks an opponent, you may put an Angel, Demon, or Dragon creature card from your hand onto the battlefield tapped and attacking that opponent."
       }
     ],
     "color_identity": "W-B-R"
@@ -11225,7 +11358,8 @@
         "name": "Teferi, Temporal Archmage",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/3/6/368c6e60-804c-447c-bc2b-ac9dc4cab5e7.jpg?1689996703",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "+1: Look at the top two cards of your library. Put one of them into your hand and the other on the bottom of your library.\n−1: Untap up to four target permanents.\n−10: You get an emblem with \"You may activate loyalty abilities of planeswalkers you control on any player's turn any time you could cast an instant.\"\nTeferi, Temporal Archmage can be your commander."
       }
     ],
     "color_identity": "U"
@@ -11303,7 +11437,8 @@
         "name": "Ob Nixilis of the Black Oath",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/f/b/fb4e4509-ffd8-4fd0-a678-19c9975d571b.jpg?1689997348",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "+2: Each opponent loses 1 life. You gain life equal to the life lost this way.\n−2: Create a 5/5 black Demon creature token with flying. You lose 2 life.\n−8: You get an emblem with \"{1}{B}, Sacrifice a creature: You gain X life and draw X cards, where X is the sacrificed creature's power.\"\nOb Nixilis of the Black Oath can be your commander."
       }
     ],
     "color_identity": "B"
@@ -11384,7 +11519,8 @@
         "name": "Oloro, Ageless Ascetic",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/a/b/abf8df47-405c-42d8-be9e-0f0d0a49589b.jpg?1562931285",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "At the beginning of your upkeep, you gain 2 life.\nWhenever you gain life, you may pay {1}. If you do, draw a card and each opponent loses 1 life.\nAt the beginning of your upkeep, if Oloro is in the command zone, you gain 2 life."
       }
     ],
     "color_identity": "W-U-B"
@@ -11465,7 +11601,8 @@
         "name": "Derevi, Empyrial Tactician",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/3/a/3a1d0dad-18a8-489e-ac11-08f64b72fda4.jpg?1592673365",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying\nWhen Derevi enters and whenever a creature you control deals combat damage to a player, you may tap or untap target permanent.\n{1}{G}{W}{U}: Put Derevi onto the battlefield from the command zone."
       }
     ],
     "color_identity": "W-U-G"
@@ -11546,7 +11683,8 @@
         "name": "Jeleva, Nephalia's Scourge",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/3/83f9aeb8-05ba-49d9-a834-62f42fcd295b.jpg?1562922860",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying\nWhen Jeleva enters, each player exiles the top X cards of their library, where X is the amount of mana spent to cast Jeleva.\nWhenever Jeleva attacks, you may cast an instant or sorcery spell from among cards exiled with Jeleva without paying its mana cost."
       }
     ],
     "color_identity": "U-B-R"
@@ -11627,7 +11765,8 @@
         "name": "Marath, Will of the Wild",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/5/7/57afa796-db46-45ff-91bd-f02922e5f33d.jpg?1665156235",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Marath enters with a number of +1/+1 counters on it equal to the amount of mana spent to cast it.\n{X}, Remove X +1/+1 counters from Marath: Choose one —\n• Put X +1/+1 counters on target creature. X can't be 0.\n• Marath deals X damage to any target. X can't be 0.\n• Create an X/X green Elemental creature token. X can't be 0."
       }
     ],
     "color_identity": "W-R-G"
@@ -11709,7 +11848,8 @@
         "name": "Prossh, Skyraider of Kher",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/8/8/889c1a0f-7df2-4497-8058-04358173d7e8.jpg?1562438016",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "When you cast this spell, create X 0/1 red Kobold creature tokens named Kobolds of Kher Keep, where X is the amount of mana spent to cast it.\nFlying\nSacrifice another creature: Prossh gets +1/+0 until end of turn."
       }
     ],
     "color_identity": "B-R-G"
@@ -11790,7 +11930,8 @@
         "name": "Ghave, Guru of Spores",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/c/2/c2be0e99-cf43-423f-974f-02e3313b3aa9.jpg?1673148645",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Ghave enters with five +1/+1 counters on it.\n{1}, Remove a +1/+1 counter from a creature you control: Create a 1/1 green Saproling creature token.\n{1}, Sacrifice a creature: Put a +1/+1 counter on target creature."
       }
     ],
     "color_identity": "W-B-G"
@@ -11870,7 +12011,8 @@
         "name": "The Mimeoplasm",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/9/9/998b86f3-e53f-4ebb-b111-6f14577fded1.jpg?1712354748",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "As The Mimeoplasm enters, you may exile two creature cards from graveyards. If you do, it enters as a copy of one of those cards with a number of additional +1/+1 counters on it equal to the power of the other card."
       }
     ],
     "color_identity": "U-B-G"
@@ -11952,7 +12094,8 @@
         "name": "Kaalia of the Vast",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/e/7/e71c8c39-3fbb-4a42-9cf6-b3224f5a56fc.jpg?1717013745",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Flying\nWhenever Kaalia attacks an opponent, you may put an Angel, Demon, or Dragon creature card from your hand onto the battlefield tapped and attacking that opponent."
       }
     ],
     "color_identity": "W-B-R"
@@ -12033,7 +12176,8 @@
         "name": "Riku of Two Reflections",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/7/0/70dd138f-391a-4956-bc2a-fe186429c71a.jpg?1599708286",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "Whenever you cast an instant or sorcery spell, you may pay {U}{R}. If you do, copy that spell. You may choose new targets for the copy.\nWhenever another nontoken creature you control enters, you may pay {G}{U}. If you do, create a token that's a copy of that creature."
       }
     ],
     "color_identity": "U-R-G"
@@ -12114,7 +12258,8 @@
         "name": "Zedruu the Greathearted",
         "is_commander": true,
         "image_url": "https://cards.scryfall.io/large/front/e/9/e9ea2a6b-5aaf-4178-b945-f409fe83c41a.jpg?1562424565",
-        "type_line": "Legendary Creature"
+        "type_line": "Legendary Creature",
+        "oracle_text": "At the beginning of your upkeep, you gain X life and draw X cards, where X is the number of permanents you own that your opponents control.\n{U}{R}{W}: Target opponent gains control of target permanent you control."
       }
     ],
     "color_identity": "W-U-R"

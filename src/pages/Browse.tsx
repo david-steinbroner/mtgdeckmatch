@@ -164,6 +164,13 @@ const Browse = () => {
                       <span className="font-semibold">Commander:</span> {precon.commander}
                     </div>
 
+                    {/* Commander Ability Text */}
+                    {commanderCard?.oracle_text && (
+                      <div className="text-[10px] text-muted-foreground italic leading-tight line-clamp-2">
+                        {commanderCard.oracle_text}
+                      </div>
+                    )}
+
                     {/* Colors */}
                     <div className="flex items-center gap-1">
                       <span className="text-muted-foreground">Colors:</span>

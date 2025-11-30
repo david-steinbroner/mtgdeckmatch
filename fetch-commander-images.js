@@ -45,16 +45,19 @@ async function fetchScryfallImageUrl(cardName) {
     // Handle double-faced cards (DFC)
     // Check card_faces first (for DFCs), then image_uris (for regular cards)
     let imageUrl = null;
+    let oracleText = null;
 
     if (data.card_faces && data.card_faces.length > 0) {
       // Double-faced card - use front face
       imageUrl = data.card_faces[0].image_uris?.large || data.card_faces[0].image_uris?.normal;
+      oracleText = data.card_faces[0].oracle_text || data.oracle_text;
       if (imageUrl) {
         console.log(`  ✓ Found (DFC): ${imageUrl.substring(0, 60)}...`);
       }
     } else {
       // Regular single-faced card
       imageUrl = data.image_uris?.large || data.image_uris?.normal;
+      oracleText = data.oracle_text;
       if (imageUrl) {
         console.log(`  ✓ Found: ${imageUrl.substring(0, 60)}...`);
       }
@@ -64,7 +67,8 @@ async function fetchScryfallImageUrl(cardName) {
       console.warn(`  ⚠️  No image_uris found for: ${correctedName}`);
     }
 
-    return imageUrl;
+    // Return both image URL and oracle text
+    return { imageUrl, oracleText };
   } catch (error) {
     console.error(`  ✗ Error fetching ${correctedName}:`, error.message);
     return null;
@@ -88,19 +92,23 @@ async function fetchWithFuzzySearch(cardName) {
 
     // Handle double-faced cards
     let imageUrl = null;
+    let oracleText = null;
+
     if (data.card_faces && data.card_faces.length > 0) {
       imageUrl = data.card_faces[0].image_uris?.large || data.card_faces[0].image_uris?.normal;
+      oracleText = data.card_faces[0].oracle_text || data.oracle_text;
       if (imageUrl) {
         console.log(`  ✓ Found via fuzzy (DFC): "${data.name}" - ${imageUrl.substring(0, 60)}...`);
       }
     } else {
       imageUrl = data.image_uris?.large || data.image_uris?.normal;
+      oracleText = data.oracle_text;
       if (imageUrl) {
         console.log(`  ✓ Found via fuzzy: "${data.name}" - ${imageUrl.substring(0, 60)}...`);
       }
     }
 
-    return imageUrl;
+    return { imageUrl, oracleText };
   } catch (error) {
     console.warn(`  ⚠️  Fuzzy search error: ${error.message}`);
     return null;
@@ -130,13 +138,16 @@ async function updateCommanderImages() {
       continue;
     }
 
-    // Check if already has a valid (non-placeholder) image URL
+    // Check if already has a valid (non-placeholder) image URL AND oracle text
     const hasPlaceholder = !commanderCard.image_url ||
                           commanderCard.image_url.includes('placeholder') ||
                           commanderCard.image_url.includes('/x/x/');
 
-    if (!hasPlaceholder) {
-      console.log(`Deck ${i + 1}/${decks.length}: ${deck.name} - Already has valid image, skipping`);
+    const hasOracleText = commanderCard.oracle_text && commanderCard.oracle_text.trim().length > 0;
+
+    // Skip if both image and oracle text already exist
+    if (!hasPlaceholder && hasOracleText) {
+      console.log(`Deck ${i + 1}/${decks.length}: ${deck.name} - Already has valid image and oracle text, skipping`);
       skippedCount++;
       continue;
     }
@@ -144,10 +155,13 @@ async function updateCommanderImages() {
     console.log(`\nDeck ${i + 1}/${decks.length}: ${deck.name}`);
     console.log(`Commander: ${deck.commander}`);
 
-    const imageUrl = await fetchScryfallImageUrl(deck.commander);
+    const result = await fetchScryfallImageUrl(deck.commander);
 
-    if (imageUrl) {
-      commanderCard.image_url = imageUrl;
+    if (result && result.imageUrl) {
+      commanderCard.image_url = result.imageUrl;
+      if (result.oracleText) {
+        commanderCard.oracle_text = result.oracleText;
+      }
       successCount++;
     } else {
       failCount++;
