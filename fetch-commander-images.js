@@ -13,34 +13,96 @@ const __dirname = path.dirname(__filename);
 // Add delay between requests to avoid rate limiting
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+// Manual name corrections for cards with wrong names in database
+const NAME_CORRECTIONS = {
+  "Valgavoth, Harvester of Souls": "Valgavoth, Terror Eater",
+  "Stella, Wild Card": "Stella Lee, Wild Card",
+};
+
 async function fetchScryfallImageUrl(cardName) {
+  // Check if we need to correct the card name
+  const correctedName = NAME_CORRECTIONS[cardName] || cardName;
+  if (correctedName !== cardName) {
+    console.log(`  🔧 Correcting name: "${cardName}" → "${correctedName}"`);
+  }
+
   try {
-    const encodedName = encodeURIComponent(cardName);
+    // Try exact search first
+    const encodedName = encodeURIComponent(correctedName);
     const url = `https://api.scryfall.com/cards/named?exact=${encodedName}`;
 
-    console.log(`Fetching: ${cardName}...`);
+    console.log(`Fetching: ${correctedName}...`);
     const response = await fetch(url);
 
     if (!response.ok) {
-      console.warn(`  ⚠️  Card not found: ${cardName} (${response.status})`);
+      console.warn(`  ⚠️  Exact match not found: ${correctedName} (${response.status})`);
+      // Try fuzzy search as fallback
+      return await fetchWithFuzzySearch(correctedName);
+    }
+
+    const data = await response.json();
+
+    // Handle double-faced cards (DFC)
+    // Check card_faces first (for DFCs), then image_uris (for regular cards)
+    let imageUrl = null;
+
+    if (data.card_faces && data.card_faces.length > 0) {
+      // Double-faced card - use front face
+      imageUrl = data.card_faces[0].image_uris?.large || data.card_faces[0].image_uris?.normal;
+      if (imageUrl) {
+        console.log(`  ✓ Found (DFC): ${imageUrl.substring(0, 60)}...`);
+      }
+    } else {
+      // Regular single-faced card
+      imageUrl = data.image_uris?.large || data.image_uris?.normal;
+      if (imageUrl) {
+        console.log(`  ✓ Found: ${imageUrl.substring(0, 60)}...`);
+      }
+    }
+
+    if (!imageUrl) {
+      console.warn(`  ⚠️  No image_uris found for: ${correctedName}`);
+    }
+
+    return imageUrl;
+  } catch (error) {
+    console.error(`  ✗ Error fetching ${correctedName}:`, error.message);
+    return null;
+  }
+}
+
+async function fetchWithFuzzySearch(cardName) {
+  try {
+    console.log(`  🔍 Trying fuzzy search for: ${cardName}...`);
+    const encodedQuery = encodeURIComponent(cardName);
+    const url = `https://api.scryfall.com/cards/named?fuzzy=${encodedQuery}`;
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      console.warn(`  ⚠️  Fuzzy search failed: ${cardName}`);
       return null;
     }
 
     const data = await response.json();
 
-    // Get the best quality image URL
-    // Prefer 'large' size for good quality without being too big
-    const imageUrl = data.image_uris?.large || data.image_uris?.normal || null;
-
-    if (imageUrl) {
-      console.log(`  ✓ Found: ${imageUrl.substring(0, 60)}...`);
+    // Handle double-faced cards
+    let imageUrl = null;
+    if (data.card_faces && data.card_faces.length > 0) {
+      imageUrl = data.card_faces[0].image_uris?.large || data.card_faces[0].image_uris?.normal;
+      if (imageUrl) {
+        console.log(`  ✓ Found via fuzzy (DFC): "${data.name}" - ${imageUrl.substring(0, 60)}...`);
+      }
     } else {
-      console.warn(`  ⚠️  No image_uris found for: ${cardName}`);
+      imageUrl = data.image_uris?.large || data.image_uris?.normal;
+      if (imageUrl) {
+        console.log(`  ✓ Found via fuzzy: "${data.name}" - ${imageUrl.substring(0, 60)}...`);
+      }
     }
 
     return imageUrl;
   } catch (error) {
-    console.error(`  ✗ Error fetching ${cardName}:`, error.message);
+    console.warn(`  ⚠️  Fuzzy search error: ${error.message}`);
     return null;
   }
 }
