@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
+import { Search, Library } from "lucide-react";
 import { useState } from "react";
 import { parseCustomInput } from "@/utils/customInputParser";
 const Welcome = () => {
@@ -54,27 +54,37 @@ const Welcome = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-2 md:gap-3 w-full max-w-2xl mx-auto">
-          <Button 
-            variant="hero" 
-            size="lg" 
-            onClick={() => navigate("/path-selection")} 
+          <Button
+            variant="hero"
+            size="lg"
+            onClick={() => navigate("/path-selection")}
             className="text-xs md:text-base px-5 md:px-10 py-2 md:py-4 h-auto rounded-lg md:rounded-xl w-full"
           >
             Match Me!
           </Button>
-          
-          <Button 
-            variant="hero" 
-            size="lg" 
-            onClick={() => navigate("/results", { 
-              state: { 
+
+          <Button
+            variant="hero"
+            size="lg"
+            onClick={() => navigate("/results", {
+              state: {
                 source: 'surprise',
                 path: 'pop_culture'
-              } 
-            })} 
+              }
+            })}
             className="text-xs md:text-base px-5 md:px-10 py-2 md:py-4 h-auto rounded-lg md:rounded-xl border-2 hover:bg-primary/10 hover:scale-105 transition-transform w-full"
           >
             Surprise Me!
+          </Button>
+
+          <Button
+            variant="outline"
+            size="lg"
+            onClick={() => navigate("/browse")}
+            className="text-xs md:text-base px-5 md:px-10 py-2 md:py-4 h-auto rounded-lg md:rounded-xl border-2 hover:border-primary hover:scale-105 transition-transform w-full flex items-center gap-2"
+          >
+            <Library className="w-4 h-4 md:w-5 md:h-5" />
+            Browse All
           </Button>
         </div>
 

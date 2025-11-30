@@ -11,7 +11,7 @@ import { matchPrecons } from "@/utils/matcher";
 import { deckELI5 } from "@/utils/deckDescriptions";
 import { deckDifficulty } from "@/utils/deckDifficulty";
 import { getScryfallImageUrl, isPlaceholderUrl } from "@/utils/cardImageUtils";
-import { Sparkles, X, ChevronDown, ChevronUp, Info } from "lucide-react";
+import { Sparkles, X, ChevronDown, ChevronUp, Info, Library } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
@@ -384,16 +384,25 @@ const Results = () => {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <Button 
-                    variant="default" 
+                  <Button
+                    variant="default"
                     size="sm"
                     onClick={handleShuffleAgain}
                     className="gap-2"
                   >
                     🔄 Shuffle Again
                   </Button>
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => navigate("/browse")}
+                    className="gap-1"
+                  >
+                    <Library className="w-3 h-3" />
+                    Browse
+                  </Button>
+                  <Button
+                    variant="outline"
                     size="sm"
                     onClick={() => navigate("/")}
                   >
@@ -419,8 +428,17 @@ const Results = () => {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => navigate("/browse")}
+                    className="gap-1"
+                  >
+                    <Library className="w-3 h-3" />
+                    Browse
+                  </Button>
+                  <Button
+                    variant="outline"
                     size="sm"
                     onClick={() => navigate("/")}
                   >
@@ -440,6 +458,10 @@ const Results = () => {
             </h2>
             {topMatches.length > 0 && (
               <div className="flex gap-3">
+                <Button variant="outline" size="sm" onClick={() => navigate("/browse")} className="gap-1">
+                  <Library className="w-3 h-3" />
+                  Browse
+                </Button>
                 <Button variant="outline" size="sm" onClick={() => navigate("/")}>
                   Start Over
                 </Button>

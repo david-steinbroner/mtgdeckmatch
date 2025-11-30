@@ -5,7 +5,7 @@ import { ProgressIndicator } from "@/components/ProgressIndicator";
 import { OptionCard } from "@/components/OptionCard";
 import { ColorCheckboxQuestion } from "@/components/ColorCheckboxQuestion";
 import { powerQuestions } from "@/data/power-questions";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Library } from "lucide-react";
 import { QuizAnswer } from "@/types/quiz";
 
 const PowerQuestions = () => {
@@ -85,15 +85,26 @@ const PowerQuestions = () => {
             <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
             Back
           </Button>
-          
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleStartOver}
-            className="text-xs md:text-sm h-7 md:h-9"
-          >
-            Start Over
-          </Button>
+
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => navigate("/browse")}
+              className="gap-1 text-xs md:text-sm h-7 md:h-9"
+            >
+              <Library className="w-3 h-3 md:w-4 md:h-4" />
+              Browse
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleStartOver}
+              className="text-xs md:text-sm h-7 md:h-9"
+            >
+              Start Over
+            </Button>
+          </div>
         </div>
 
         {/* Progress */}

@@ -12,6 +12,7 @@ import VibesQuestions from "./pages/VibesQuestions";
 import PowerQuestions from "./pages/PowerQuestions";
 import LoadingScreen from "./pages/LoadingScreen";
 import Results from "./pages/Results";
+import Browse from "./pages/Browse";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/power-questions" element={<PowerQuestions />} />
           <Route path="/loading" element={<LoadingScreen />} />
           <Route path="/results" element={<Results />} />
+          <Route path="/browse" element={<Browse />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
