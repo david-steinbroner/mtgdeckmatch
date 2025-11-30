@@ -164,13 +164,6 @@ const Browse = () => {
                       <span className="font-semibold">Commander:</span> {precon.commander}
                     </div>
 
-                    {/* Commander Ability Text */}
-                    {commanderCard?.oracle_text && (
-                      <div className="text-[10px] text-muted-foreground italic leading-tight line-clamp-2">
-                        {commanderCard.oracle_text}
-                      </div>
-                    )}
-
                     {/* Colors */}
                     <div className="flex items-center gap-1">
                       <span className="text-muted-foreground">Colors:</span>
@@ -200,6 +193,13 @@ const Browse = () => {
                 <CardContent className="px-2 pb-2 pt-0 space-y-1.5 flex flex-col">
                   {/* Deck Name */}
                   <h3 className="text-lg font-bold leading-tight text-foreground">{precon.name}</h3>
+
+                  {/* Commander Ability Text */}
+                  {commanderCard?.oracle_text && (
+                    <div className="text-xs text-muted-foreground italic leading-snug line-clamp-3">
+                      {commanderCard.oracle_text}
+                    </div>
+                  )}
 
                   {/* Flavor Text with expand/collapse */}
                   <div>
