@@ -186,6 +186,13 @@ const Browse = () => {
                         <span className="font-semibold">Difficulty:</span> TBD
                       </div>
                     )}
+
+                    {/* Power Level */}
+                    {precon.tags?.power_level && (
+                      <div className="text-muted-foreground text-[10px]">
+                        <span className="font-semibold">Power Level:</span> {precon.tags.power_level}/10
+                      </div>
+                    )}
                   </div>
                 </div>
 
