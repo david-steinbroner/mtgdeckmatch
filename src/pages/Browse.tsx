@@ -41,12 +41,49 @@ const Browse = () => {
     setSearchTerm("");
   };
 
+  // Helper function to extract all searchable text from a deck
+  const getSearchableText = (deck: any): string => {
+    const searchableFields: string[] = [
+      deck.name,
+      deck.commander,
+      deck.set,
+      deck.ip,
+      deck.tags?.complexity || "",
+    ];
+
+    // Add all tag arrays (primary and secondary)
+    const tagArrays = [
+      deck.tags?.aesthetic_vibe?.primary || [],
+      deck.tags?.aesthetic_vibe?.secondary || [],
+      deck.tags?.creature_types?.primary || [],
+      deck.tags?.creature_types?.secondary || [],
+      deck.tags?.themes?.primary || [],
+      deck.tags?.themes?.secondary || [],
+      deck.tags?.archetype?.primary || [],
+      deck.tags?.archetype?.secondary || [],
+      deck.tags?.play_pattern?.primary || [],
+      deck.tags?.play_pattern?.secondary || [],
+      deck.tags?.flavor_setting?.primary || [],
+      deck.tags?.flavor_setting?.secondary || [],
+      deck.tags?.tone?.primary || [],
+      deck.tags?.tone?.secondary || [],
+      deck.tags?.ip_meta_tags || [],
+    ];
+
+    // Flatten all arrays and combine with other fields
+    const allText = [
+      ...searchableFields,
+      ...tagArrays.flat(),
+    ].join(" ").toLowerCase();
+
+    return allText;
+  };
+
   // Filter decks by search term and selected colors
   const filteredDecks = preconsData.filter((deck: any) => {
-    // Search filter: match deck name OR commander name (case-insensitive)
+    // Search filter: match ANY field in the deck (case-insensitive)
     const matchesSearch = searchTerm.trim() === "" ||
-      deck.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      deck.commander.toLowerCase().includes(searchTerm.toLowerCase());
+      getSearchableText(deck).includes(searchTerm.toLowerCase());
 
     // Color filter: match ANY selected color
     const matchesColor = selectedColors.length === 0 ||
