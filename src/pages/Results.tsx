@@ -651,7 +651,7 @@ const Results = () => {
               {/* Full-width bottom section */}
               <CardContent className="px-2 pb-2 pt-0 space-y-1.5 flex flex-col">
                 {/* Deck Name - Second Largest */}
-                <h3 className="text-lg font-bold leading-tight text-foreground">{precon.name}</h3>
+                <h3 className="text-lg font-bold leading-tight text-foreground min-h-[3rem] flex items-start">{precon.name}</h3>
 
                 {/* Commander Ability Text */}
                 {commanderCard?.oracle_text && (
