@@ -54,7 +54,7 @@ const IPSelection = () => {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => navigate("/path-selection")}
+              onClick={() => navigate("/play")}
               className="gap-2"
             >
               <ArrowLeft className="w-4 h-4" />

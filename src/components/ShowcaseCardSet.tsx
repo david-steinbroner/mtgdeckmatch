@@ -65,7 +65,7 @@ export const ShowcaseCardSet = ({ cardSet, onClick }: ShowcaseCardSetProps) => {
       onClick={onClick}
     >
       {/* Card Image */}
-      <div className="relative aspect-[5/7] bg-muted/30">
+      <div className="relative aspect-[3/4] bg-muted/30">
         {imageUrl && (
           <img
             src={imageUrl}

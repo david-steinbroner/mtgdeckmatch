@@ -149,7 +149,7 @@ const Learn = () => {
               <Button
                 variant="default"
                 size="lg"
-                onClick={() => navigate("/path-selection")}
+                onClick={() => navigate("/play")}
                 className="flex items-center gap-2"
               >
                 <Sparkles className="w-5 h-5" />

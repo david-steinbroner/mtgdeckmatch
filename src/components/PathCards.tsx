@@ -20,7 +20,7 @@ export const PathCards = () => {
       title: "EXPLORE",
       description: "Browse decks by theme, strategy, and universe. Discover the variety Magic has to offer.",
       icon: <Sparkles className="w-12 h-12" />,
-      path: "/discover",
+      path: "/explore",
       color: "text-purple-500",
     },
     {
@@ -28,7 +28,7 @@ export const PathCards = () => {
       title: "PLAY",
       description: "Answer a few questions and we'll match you with the perfect deck for your playstyle.",
       icon: <Wand2 className="w-12 h-12" />,
-      path: "/path-selection",
+      path: "/play",
       color: "text-blue-500",
     },
     {

@@ -47,7 +47,8 @@ const App = () => {
               <Route path="/loading" element={<LoadingScreen />} />
               <Route path="/results" element={<Results />} />
               <Route path="/browse" element={<Browse />} />
-              <Route path="/discover" element={<Discover />} />
+              <Route path="/explore" element={<Discover />} />
+              <Route path="/play" element={<PathSelection />} />
               <Route path="/learn" element={<Learn />} />
               <Route path="/learn/glossary" element={<GlossaryPage />} />
               <Route path="/learn/:slug" element={<LearnArticlePage />} />

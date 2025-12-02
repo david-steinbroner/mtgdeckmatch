@@ -1,97 +1,148 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ProgressIndicator } from "@/components/ProgressIndicator";
-import { OptionCard } from "@/components/OptionCard";
-import { Heart, Trophy, ArrowLeft, Library } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { MainNav } from "@/components/MainNav";
+import { DeckDetailModal } from "@/components/DeckDetailModal";
+import { Target, Library, Shuffle } from "lucide-react";
+import preconsData from "@/data/precons-data.json";
 
 const PathSelection = () => {
   const navigate = useNavigate();
+  const [showSurpriseModal, setShowSurpriseModal] = useState(false);
+  const [randomDeck, setRandomDeck] = useState<any | null>(null);
 
-  const handlePathSelect = (path: "vibes" | "power" | "pop_culture") => {
-    if (path === "vibes") {
-      navigate("/vibes-questions");
-    } else if (path === "power") {
-      navigate("/power-questions");
-    } else if (path === "pop_culture") {
-      navigate("/ip-selection");
-    }
+  const handleMatchMe = () => {
+    // Go directly to vibes questions
+    navigate("/vibes-questions");
+  };
+
+  const handleBrowseAll = () => {
+    navigate("/browse");
+  };
+
+  const handleSurpriseMe = () => {
+    // Get a random deck
+    const random = preconsData[Math.floor(Math.random() * preconsData.length)];
+    setRandomDeck(random);
+    setShowSurpriseModal(true);
+  };
+
+  const handleTryAgain = () => {
+    // Get another random deck
+    const random = preconsData[Math.floor(Math.random() * preconsData.length)];
+    setRandomDeck(random);
   };
 
   return (
-    <div className="min-h-[100dvh] bg-gradient-to-br from-background via-background to-muted p-2 md:p-4 flex flex-col">
-      <div className="max-w-6xl mx-auto w-full flex-1 flex flex-col py-2 md:py-4 md:pt-12">
-        {/* Header */}
-        <div className="flex items-center justify-between py-1 md:py-2 shrink-0">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => navigate("/")}
-            className="gap-1 text-xs md:text-sm h-7 md:h-9"
-          >
-            <ArrowLeft className="w-3 h-3 md:w-4 md:h-4" />
-            Back
-          </Button>
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+      <MainNav />
 
-          <div className="flex gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => navigate("/browse")}
-              className="gap-1 text-xs md:text-sm h-7 md:h-9"
-            >
-              <Library className="w-3 h-3 md:w-4 md:h-4" />
-              Browse
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => navigate("/")}
-              className="text-xs md:text-sm h-7 md:h-9"
-            >
-              Start Over
-            </Button>
-          </div>
-        </div>
-
-        {/* Progress */}
-        <div className="py-2 md:py-3 shrink-0">
-          <ProgressIndicator 
-            currentStep={0} 
-            totalSteps={5}
-            onStepClick={(step) => console.log("Step clicked:", step)}
-          />
-        </div>
-
-        {/* Main Content */}
-        <div className="flex-1 flex flex-col justify-center space-y-2 md:space-y-4 animate-fade-in min-h-0">
-          <div className="text-center space-y-0.5 md:space-y-1 shrink-0">
-            <h2 className="text-lg md:text-3xl font-bold text-foreground">
-              How do you want to choose?
-            </h2>
-            <p className="text-muted-foreground text-xs md:text-base">
-              Pick the approach that feels right for you
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="space-y-12">
+          {/* Header */}
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
+              Find Your Perfect Deck
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Choose how you want to discover your next Commander deck
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-2.5 md:gap-4 max-w-3xl mx-auto w-full items-stretch">
-            {/* Vibes Option */}
-            <OptionCard
-              title="VIBES"
-              description="Match my personal style — cute, creepy, or chaotic"
-              icon={Heart}
-              onClick={() => handlePathSelect("vibes")}
-            />
+          {/* Three Options */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Match Me */}
+            <Card
+              className="group cursor-pointer hover:shadow-card-hover transition-all duration-300 border-2 hover:border-primary/50 hover:scale-105"
+              onClick={handleMatchMe}
+            >
+              <CardContent className="p-8 flex flex-col items-center text-center space-y-4 h-full">
+                <div className="text-primary group-hover:scale-110 transition-transform duration-300">
+                  <Target className="w-16 h-16" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">
+                  Match Me
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                  Answer a few questions to find your perfect match based on your playstyle and preferences
+                </p>
+                <Button variant="default" className="w-full">
+                  Start Quiz
+                </Button>
+              </CardContent>
+            </Card>
 
-            {/* Power Option */}
-            <OptionCard
-              title="POWER"
-              description="Build to win — I'm here to compete"
-              icon={Trophy}
-              onClick={() => handlePathSelect("power")}
-            />
+            {/* Browse All */}
+            <Card
+              className="group cursor-pointer hover:shadow-card-hover transition-all duration-300 border-2 hover:border-primary/50 hover:scale-105"
+              onClick={handleBrowseAll}
+            >
+              <CardContent className="p-8 flex flex-col items-center text-center space-y-4 h-full">
+                <div className="text-purple-500 group-hover:scale-110 transition-transform duration-300">
+                  <Library className="w-16 h-16" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">
+                  Browse All
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                  See all 148 decks with powerful filters for colors, themes, and strategies
+                </p>
+                <Button variant="outline" className="w-full">
+                  View Decks
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Surprise Me */}
+            <Card
+              className="group cursor-pointer hover:shadow-card-hover transition-all duration-300 border-2 hover:border-primary/50 hover:scale-105"
+              onClick={handleSurpriseMe}
+            >
+              <CardContent className="p-8 flex flex-col items-center text-center space-y-4 h-full">
+                <div className="text-green-500 group-hover:scale-110 transition-transform duration-300">
+                  <Shuffle className="w-16 h-16" />
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">
+                  Surprise Me
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                  Get a random deck pick and discover something unexpected
+                </p>
+                <Button variant="outline" className="w-full">
+                  Random Deck
+                </Button>
+              </CardContent>
+            </Card>
           </div>
+
+          {/* Bottom spacing */}
+          <div className="h-8" />
         </div>
       </div>
+
+      {/* Surprise Me Modal */}
+      {randomDeck && (
+        <DeckDetailModal
+          deck={randomDeck}
+          open={showSurpriseModal}
+          onClose={() => setShowSurpriseModal(false)}
+        />
+      )}
+
+      {/* Try Again Button (shown in modal footer via children) */}
+      {showSurpriseModal && (
+        <div className="fixed bottom-4 right-4 z-50">
+          <Button
+            variant="secondary"
+            onClick={handleTryAgain}
+            className="shadow-lg"
+          >
+            <Shuffle className="w-4 h-4 mr-2" />
+            Try Another
+          </Button>
+        </div>
+      )}
     </div>
   );
 };

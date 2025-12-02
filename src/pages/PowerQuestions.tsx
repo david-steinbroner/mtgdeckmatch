@@ -58,7 +58,7 @@ const PowerQuestions = () => {
       // Remove last answer
       setAnswers(answers.slice(0, -1));
     } else {
-      navigate("/path-selection");
+      navigate("/play");
     }
   };
 

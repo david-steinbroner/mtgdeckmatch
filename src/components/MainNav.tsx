@@ -11,13 +11,13 @@ export const MainNav = () => {
   const navItems = [
     {
       label: "EXPLORE",
-      path: "/discover",
+      path: "/explore",
       icon: <Sparkles className="w-4 h-4" />,
       description: "Browse by theme",
     },
     {
       label: "PLAY",
-      path: "/path-selection",
+      path: "/play",
       icon: <Wand2 className="w-4 h-4" />,
       description: "Find your deck",
     },

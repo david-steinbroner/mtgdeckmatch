@@ -138,7 +138,7 @@ export const LearnArticle = ({ article }: LearnArticleProps) => {
           </Button>
           <Button
             variant="default"
-            onClick={() => navigate('/path-selection')}
+            onClick={() => navigate('/play')}
             className="w-full sm:w-auto"
           >
             Find My Perfect Deck

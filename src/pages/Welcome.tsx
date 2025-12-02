@@ -74,7 +74,7 @@ const Welcome = () => {
           <Button
             variant="hero"
             size="lg"
-            onClick={() => navigate("/path-selection")}
+            onClick={() => navigate("/play")}
             className="min-w-[160px]"
           >
             Match Me
@@ -82,7 +82,7 @@ const Welcome = () => {
           <Button
             variant="outline"
             size="lg"
-            onClick={() => navigate("/discover")}
+            onClick={() => navigate("/explore")}
             className="min-w-[160px] flex items-center gap-2"
           >
             <Sparkles className="h-5 w-5" />

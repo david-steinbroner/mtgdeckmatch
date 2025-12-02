@@ -29,7 +29,7 @@ export const ShowcaseCard = ({ deck, onClick }: ShowcaseCardProps) => {
       onClick={onClick}
     >
       {/* Commander Image */}
-      <div className="relative aspect-[5/7] bg-muted/30">
+      <div className="relative aspect-[3/4] bg-muted/30">
         <img
           src={imageUrl}
           alt={deck.commander}
