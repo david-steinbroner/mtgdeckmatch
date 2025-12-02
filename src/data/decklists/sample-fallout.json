@@ -1,0 +1,122 @@
+{
+  "preconId": "mutant-menace",
+  "highlightCards": [
+    {
+      "name": "The Wise Mothman",
+      "cardType": "commander",
+      "whyItsCool": "Your commander! This legendary mutant gives all your creatures flying and draws you cards when they mutate."
+    },
+    {
+      "name": "Tato Farmer",
+      "cardType": "creature",
+      "whyItsCool": "Creates food tokens to keep you alive in the wasteland!"
+    },
+    {
+      "name": "Nuka-Nuke Launcher",
+      "cardType": "sorcery",
+      "whyItsCool": "Devastating board wipe that deals damage to all creatures - clear the battlefield!"
+    },
+    {
+      "name": "Pip-Boy 3000",
+      "cardType": "artifact",
+      "whyItsCool": "Equipment that gives card advantage and helps you survive. Every wasteland wanderer needs one!"
+    }
+  ],
+  "fullDecklist": {
+    "commander": ["The Wise Mothman"],
+    "creatures": [
+      "Bloatfly Swarm",
+      "Strong Back",
+      "Tato Farmer",
+      "Mutant's Prey",
+      "Gatekeepers of Malakir",
+      "Sakura-Tribe Elder",
+      "Wood Elves",
+      "Eternal Witness",
+      "Reclamation Sage",
+      "Acidic Slime",
+      "Mulldrifter",
+      "Solemn Simulacrum",
+      "Oracle of Mul Daya",
+      "Rampaging Baloths",
+      "Avenger of Zendikar",
+      "Craterhoof Behemoth",
+      "Sun Titan",
+      "Consecrated Sphinx",
+      "Prime Speaker Zegana",
+      "Woodfall Primus"
+    ],
+    "instantsSorceries": [
+      "Nuka-Nuke Launcher",
+      "Vault 112: Sadistic Simulation",
+      "Cultivate",
+      "Kodama's Reach",
+      "Rampant Growth",
+      "Nature's Lore",
+      "Farseek",
+      "Three Visits",
+      "Explosive Vegetation",
+      "Migration Path",
+      "Counterspell",
+      "Swan Song",
+      "Cyclonic Rift",
+      "Beast Within"
+    ],
+    "artifactsEnchantments": [
+      "Pip-Boy 3000",
+      "Wasteland Survival Guide",
+      "Sol Ring",
+      "Arcane Signet",
+      "Commander's Sphere",
+      "Thought Vessel",
+      "Mind Stone",
+      "Wayfarer's Bauble",
+      "Simic Signet",
+      "Dimir Signet",
+      "Golgari Signet",
+      "Cultivator's Caravan",
+      "Lightning Greaves",
+      "Swiftfoot Boots"
+    ],
+    "lands": [
+      "Command Tower",
+      "Exotic Orchard",
+      "Opulent Palace",
+      "Sandsteppe Citadel",
+      "Seaside Citadel",
+      "Arcane Sanctum",
+      "Evolving Wilds",
+      "Terramorphic Expanse",
+      "Sunken Hollow",
+      "Canopy Vista",
+      "Prairie Stream",
+      "Woodland Stream",
+      "Tranquil Cove",
+      "Thornwood Falls",
+      "Forest",
+      "Forest",
+      "Forest",
+      "Forest",
+      "Forest",
+      "Forest",
+      "Forest",
+      "Forest",
+      "Forest",
+      "Forest",
+      "Island",
+      "Island",
+      "Island",
+      "Island",
+      "Island",
+      "Island",
+      "Island",
+      "Island",
+      "Swamp",
+      "Swamp",
+      "Swamp",
+      "Swamp",
+      "Swamp",
+      "Swamp"
+    ]
+  }
+}

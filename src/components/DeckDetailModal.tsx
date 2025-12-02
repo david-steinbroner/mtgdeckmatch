@@ -1,10 +1,14 @@
+import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getCommanderCard, getColorSymbol } from "@/utils/deckHelpers";
 import { deckDifficulty } from "@/utils/deckDifficulty";
-import { ExternalLink } from "lucide-react";
+import { getDecklistById, hasDeckllist } from "@/data/decklists";
+import { DecklistView } from "@/components/DecklistView";
+import { ExternalLink, List } from "lucide-react";
 
 interface DeckDetailModalProps {
   deck: any | null;
@@ -13,22 +17,39 @@ interface DeckDetailModalProps {
 }
 
 export const DeckDetailModal = ({ deck, open, onClose }: DeckDetailModalProps) => {
+  const [activeTab, setActiveTab] = useState("overview");
+
   if (!deck) return null;
 
   const commanderCard = getCommanderCard(deck);
   const difficultyInfo = deckDifficulty[deck.id];
+  const decklist = getDecklistById(deck.id);
+  const hasDecklist = hasDeckllist(deck.id);
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl max-h-[80vh]">
+      <DialogContent className="max-w-4xl max-h-[90vh]">
         <DialogHeader>
           <DialogTitle className="text-2xl">
             {deck.name}
           </DialogTitle>
         </DialogHeader>
 
-        <ScrollArea className="max-h-[60vh] pr-4">
-          <div className="space-y-6">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          {/* Tab Headers */}
+          <TabsList className="grid w-full grid-cols-2 mb-4">
+            <TabsTrigger value="overview">Overview</TabsTrigger>
+            <TabsTrigger value="decklist" disabled={!hasDecklist}>
+              <List className="w-4 h-4 mr-2" />
+              Full Decklist
+              {!hasDecklist && <span className="ml-2 text-xs">(Coming Soon)</span>}
+            </TabsTrigger>
+          </TabsList>
+
+          {/* Overview Tab */}
+          <TabsContent value="overview">
+            <ScrollArea className="max-h-[60vh] pr-4">
+              <div className="space-y-6">
             {/* Commander Section */}
             <div>
               <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
@@ -124,16 +145,30 @@ export const DeckDetailModal = ({ deck, open, onClose }: DeckDetailModalProps) =
               </div>
             </div>
 
-            {/* Full Decklist Note */}
-            <div className="bg-muted/30 rounded-lg p-4 border border-border">
-              <p className="text-sm text-muted-foreground">
-                <strong>Note:</strong> Full decklists coming soon! For now, visit TCGPlayer to view the complete card list.
-              </p>
-            </div>
+            {/* Full Decklist availability note */}
+            {hasDecklist ? (
+              <div className="bg-primary/10 rounded-lg p-4 border border-primary/20">
+                <p className="text-sm text-foreground">
+                  <strong className="flex items-center gap-2">
+                    <List className="w-4 h-4" />
+                    Full decklist available!
+                  </strong>
+                  <span className="text-muted-foreground">
+                    Click the "Full Decklist" tab above to see all 100 cards in this deck.
+                  </span>
+                </p>
+              </div>
+            ) : (
+              <div className="bg-muted/30 rounded-lg p-4 border border-border">
+                <p className="text-sm text-muted-foreground">
+                  <strong>Note:</strong> Full decklist coming soon! For now, visit TCGPlayer to view the complete card list.
+                </p>
+              </div>
+            )}
           </div>
         </ScrollArea>
 
-        {/* Actions */}
+        {/* Overview Actions */}
         <div className="flex gap-3 pt-4 border-t">
           <Button
             variant="default"
@@ -150,6 +185,24 @@ export const DeckDetailModal = ({ deck, open, onClose }: DeckDetailModalProps) =
             Close
           </Button>
         </div>
+      </TabsContent>
+
+      {/* Decklist Tab */}
+      <TabsContent value="decklist">
+        {decklist && (
+          <ScrollArea className="max-h-[65vh] pr-4">
+            <DecklistView
+              decklist={decklist}
+              deckName={deck.name}
+              onBuyClick={() => {
+                const searchQuery = encodeURIComponent(deck.name + " commander deck");
+                window.open(`https://www.tcgplayer.com/search/magic/product?productLineName=magic&q=${searchQuery}&view=grid`, "_blank");
+              }}
+            />
+          </ScrollArea>
+        )}
+      </TabsContent>
+    </Tabs>
       </DialogContent>
     </Dialog>
   );
