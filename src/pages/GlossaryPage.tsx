@@ -1,0 +1,81 @@
+import { useNavigate } from "react-router-dom";
+import { MainNav } from "@/components/MainNav";
+import { Glossary } from "@/components/Glossary";
+import { Button } from "@/components/ui/button";
+import { BookOpen, ArrowLeft, Sparkles } from "lucide-react";
+
+const GlossaryPage = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+      <MainNav />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="space-y-8">
+          {/* Header */}
+          <div className="max-w-3xl mx-auto text-center space-y-4">
+            {/* Back Button */}
+            <Button
+              variant="ghost"
+              onClick={() => navigate('/learn')}
+              className="gap-2 mb-4"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Learn Hub
+            </Button>
+
+            {/* Icon and Title */}
+            <div className="flex justify-center">
+              <div className="p-4 bg-primary/10 rounded-full">
+                <BookOpen className="w-16 h-16 text-primary" />
+              </div>
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
+              Magic Terms Glossary
+            </h1>
+            <p className="text-lg text-muted-foreground">
+              Quick reference for common Magic: The Gathering and Commander terms
+            </p>
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-border/50" />
+
+          {/* Glossary Component */}
+          <Glossary />
+
+          {/* Footer CTAs */}
+          <div className="border-t border-border/50 pt-8">
+            <div className="max-w-3xl mx-auto space-y-4">
+              <p className="text-center text-muted-foreground">
+                Ready to explore decks?
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  variant="default"
+                  size="lg"
+                  onClick={() => navigate("/path-selection")}
+                  className="flex items-center gap-2"
+                >
+                  <Sparkles className="w-5 h-5" />
+                  Find My Perfect Deck
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => navigate("/browse")}
+                  className="flex items-center gap-2"
+                >
+                  Browse All Decks
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default GlossaryPage;

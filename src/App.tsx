@@ -20,6 +20,8 @@ import Results from "./pages/Results";
 import Browse from "./pages/Browse";
 import Discover from "./pages/Discover";
 import Learn from "./pages/Learn";
+import LearnArticlePage from "./pages/LearnArticlePage";
+import GlossaryPage from "./pages/GlossaryPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -47,6 +49,8 @@ const App = () => {
               <Route path="/browse" element={<Browse />} />
               <Route path="/discover" element={<Discover />} />
               <Route path="/learn" element={<Learn />} />
+              <Route path="/learn/glossary" element={<GlossaryPage />} />
+              <Route path="/learn/:slug" element={<LearnArticlePage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

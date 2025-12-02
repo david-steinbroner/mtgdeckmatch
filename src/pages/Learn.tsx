@@ -2,17 +2,24 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MainNav } from "@/components/MainNav";
-import { BookOpen, ArrowLeft, Sparkles } from "lucide-react";
+import { LearnArticleCard } from "@/components/LearnArticleCard";
+import { BookOpen, Sparkles } from "lucide-react";
+import { getArticlesByCategory } from "@/data/learn-articles";
 
 const Learn = () => {
   const navigate = useNavigate();
+
+  // Get articles by category
+  const gettingStartedArticles = getArticlesByCategory('getting-started');
+  const understandingDecksArticles = getArticlesByCategory('understanding-decks');
+  const specialTopicsArticles = getArticlesByCategory('special-topics');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
       <MainNav />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="space-y-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="space-y-12">
           {/* Header */}
           <div className="text-center space-y-4">
             <div className="flex justify-center">
@@ -21,88 +28,142 @@ const Learn = () => {
               </div>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
-              Learn Magic: The Gathering
+              Learn Magic
             </h1>
-            <p className="text-lg text-muted-foreground">
-              Your guide to understanding Commander format and getting started
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Everything you need to know to get started with Commander
             </p>
           </div>
 
-          {/* Coming Soon Card */}
-          <Card className="border-2">
-            <CardContent className="p-8 space-y-6">
-              <div className="flex items-center gap-3 pb-4 border-b border-border/50">
-                <Sparkles className="w-6 h-6 text-primary" />
-                <h2 className="text-2xl font-bold">Coming Soon</h2>
-              </div>
+          {/* Getting Started Section */}
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-2">
+                Getting Started
+              </h2>
+              <p className="text-muted-foreground">
+                New to Magic? Start here to learn the basics
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {gettingStartedArticles.map((article) => (
+                <LearnArticleCard
+                  key={article.id}
+                  article={article}
+                  onClick={() => navigate(`/learn/${article.slug}`)}
+                />
+              ))}
+            </div>
+          </div>
 
-              <div className="space-y-4 text-muted-foreground">
-                <p className="text-foreground font-semibold">
-                  We're building a comprehensive learning center to help you:
-                </p>
+          {/* Understanding Decks Section */}
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-2">
+                Understanding Decks
+              </h2>
+              <p className="text-muted-foreground">
+                Learn about precons, deck construction, and customization
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {understandingDecksArticles.map((article) => (
+                <LearnArticleCard
+                  key={article.id}
+                  article={article}
+                  onClick={() => navigate(`/learn/${article.slug}`)}
+                />
+              ))}
+            </div>
+          </div>
 
-                <ul className="space-y-3 ml-6">
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      <strong className="text-foreground">Understand the basics</strong> - Learn how Commander format works, from deck building to gameplay
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      <strong className="text-foreground">Decode the jargon</strong> - Glossary of Magic terms like "ramp," "removal," "board wipe," and more
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      <strong className="text-foreground">Choose your first deck</strong> - Beginner-friendly recommendations and what to look for
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      <strong className="text-foreground">Build your skills</strong> - Strategy guides, common mistakes to avoid, and how to improve
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      <strong className="text-foreground">Find your community</strong> - Where to play, how to find games, and Commander etiquette
-                    </span>
-                  </li>
-                </ul>
+          {/* Special Topics Section */}
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-2">
+                Special Topics
+              </h2>
+              <p className="text-muted-foreground">
+                Crossover cards and quick reference materials
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Special Topics Articles */}
+              {specialTopicsArticles.map((article) => (
+                <LearnArticleCard
+                  key={article.id}
+                  article={article}
+                  onClick={() => navigate(`/learn/${article.slug}`)}
+                />
+              ))}
 
-                <div className="pt-4 border-t border-border/50">
-                  <p className="text-sm italic">
-                    In the meantime, explore our deck collection to see what Magic has to offer!
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              {/* Glossary Card */}
+              <Card
+                className="group cursor-pointer hover:shadow-card-hover transition-all duration-300 border-2 hover:border-primary/50 h-full bg-gradient-to-br from-primary/5 to-primary/10"
+                onClick={() => navigate('/learn/glossary')}
+              >
+                <CardContent className="p-6 flex flex-col h-full space-y-4">
+                  {/* Icon */}
+                  <div className="text-5xl group-hover:scale-110 transition-transform duration-300">
+                    📖
+                  </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              variant="default"
-              size="lg"
-              onClick={() => navigate("/discover")}
-              className="flex items-center gap-2"
-            >
-              <Sparkles className="w-5 h-5" />
-              Explore Decks by Theme
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => navigate("/")}
-              className="flex items-center gap-2"
-            >
-              <ArrowLeft className="w-5 h-5" />
-              Back to Home
-            </Button>
+                  {/* Content */}
+                  <div className="flex-1 flex flex-col space-y-3">
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-foreground leading-tight">
+                      Glossary
+                    </h3>
+
+                    {/* Subtitle */}
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                      Quick reference for Magic terms and Commander jargon
+                    </p>
+                  </div>
+
+                  {/* Badge */}
+                  <div className="pt-3 border-t border-border/50">
+                    <span className="text-xs font-semibold text-primary">
+                      35+ Terms
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-border/50" />
+
+          {/* Call to Action */}
+          <div className="text-center space-y-6">
+            <div className="space-y-2">
+              <h2 className="text-2xl font-bold text-foreground">
+                Ready to find your deck?
+              </h2>
+              <p className="text-muted-foreground">
+                Explore our collection of 148+ Commander decks
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                variant="default"
+                size="lg"
+                onClick={() => navigate("/path-selection")}
+                className="flex items-center gap-2"
+              >
+                <Sparkles className="w-5 h-5" />
+                Find My Perfect Deck
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => navigate("/browse")}
+                className="flex items-center gap-2"
+              >
+                Browse All Decks
+              </Button>
+            </div>
           </div>
         </div>
       </div>
