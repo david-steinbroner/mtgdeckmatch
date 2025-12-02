@@ -9,6 +9,7 @@ import { SavedDecksProvider } from "@/contexts/SavedDecksContext";
 import { SavedDecksDrawer } from "@/components/SavedDecksDrawer";
 import { HelpModal } from "@/components/HelpModal";
 import { HelpCircle } from "lucide-react";
+import Home from "./pages/Home";
 import Welcome from "./pages/Welcome";
 import PathSelection from "./pages/PathSelection";
 import IPSelection from "./pages/IPSelection";
@@ -18,6 +19,7 @@ import LoadingScreen from "./pages/LoadingScreen";
 import Results from "./pages/Results";
 import Browse from "./pages/Browse";
 import Discover from "./pages/Discover";
+import Learn from "./pages/Learn";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,7 +36,8 @@ const App = () => {
           <BrowserRouter>
             <PostHogPageView />
             <Routes>
-              <Route path="/" element={<Welcome />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/welcome" element={<Welcome />} />
               <Route path="/path-selection" element={<PathSelection />} />
               <Route path="/ip-selection" element={<IPSelection />} />
               <Route path="/vibes-questions" element={<VibesQuestions />} />
@@ -43,6 +46,7 @@ const App = () => {
               <Route path="/results" element={<Results />} />
               <Route path="/browse" element={<Browse />} />
               <Route path="/discover" element={<Discover />} />
+              <Route path="/learn" element={<Learn />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
