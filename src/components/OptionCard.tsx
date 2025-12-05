@@ -18,7 +18,7 @@ export const OptionCard = ({ title, description, icon: Icon, imageUrl, onClick, 
         "group relative overflow-hidden rounded-lg md:rounded-xl",
         "border-2 border-border hover:border-primary",
         "transition-all duration-300 hover:shadow-card-hover hover:scale-105",
-        "w-full aspect-[2/1]",
+        "w-full aspect-[3/2]",
         className
       )}
     >

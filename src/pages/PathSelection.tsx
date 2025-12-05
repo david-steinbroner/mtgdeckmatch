@@ -1,13 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { MainNav } from "@/components/MainNav";
+import { QuizPageLayout } from "@/components/QuizPageLayout";
 import preconsData from "@/data/precons-data.json";
 import cardArtUrls from "@/data/card-art-urls.json";
+import { clearQuizState } from "@/utils/quizStateStorage";
 
 const PathSelection = () => {
   const navigate = useNavigate();
 
   const handleMatchMe = () => {
-    // Go directly to vibes questions
+    // Clear any previous quiz state before starting fresh
+    clearQuizState();
     navigate("/vibes-questions");
   };
 
@@ -18,11 +21,11 @@ const PathSelection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted flex flex-col">
       <MainNav />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="space-y-8">
+      <QuizPageLayout>
+        <div className="space-y-8 w-full">
           {/* Header */}
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
@@ -77,7 +80,7 @@ const PathSelection = () => {
             </button>
           </div>
         </div>
-      </div>
+      </QuizPageLayout>
     </div>
   );
 };

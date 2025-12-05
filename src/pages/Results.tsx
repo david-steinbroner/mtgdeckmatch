@@ -374,8 +374,14 @@ const Results = () => {
         <MainNav />
 
         <div className="max-w-6xl mx-auto px-4 py-6">
-          {/* Back Button */}
-          <BackButton fallbackPath="/play" className="mb-4" />
+          {/* Header row - Back Button */}
+          <div className="grid grid-cols-3 items-center mb-3">
+            <div className="justify-self-start">
+              <BackButton fallbackPath="/play" />
+            </div>
+            <div /> {/* Center column - empty */}
+            <div /> {/* Right column - empty */}
+          </div>
 
           {/* Surprise Me Header */}
           {source === 'surprise' && topMatches.length > 0 && (

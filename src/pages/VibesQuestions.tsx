@@ -10,6 +10,8 @@ import { forkQuestion, artQuestion, vibeQuestion, creatureTypeQuestions } from "
 import { Library } from "lucide-react";
 import { QuizAnswer } from "@/types/quiz";
 import cardArtUrls from "@/data/card-art-urls.json";
+import { saveQuizState, loadQuizState, clearQuizState } from "@/utils/quizStateStorage";
+import { cn } from "@/lib/utils";
 
 const VibesQuestions = () => {
   const navigate = useNavigate();
@@ -18,45 +20,62 @@ const VibesQuestions = () => {
 
   // Get step from URL, with fallback to location.state, then 0
   const urlStep = parseInt(searchParams.get('step') || '0');
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(urlStep);
-  const [answers, setAnswers] = useState<QuizAnswer[]>([]);
-  const [selectedPath, setSelectedPath] = useState<string | null>(null); // "art" or "gameplay"
-  const [selectedArtStyle, setSelectedArtStyle] = useState<string | null>(null); // Art path choice
-  const [selectedVibe, setSelectedVibe] = useState<string | null>(null); // Gameplay path choice
 
-  // Sync state with URL params (for browser back/forward button)
-  useEffect(() => {
-    setCurrentQuestionIndex(urlStep);
-  }, [urlStep]);
-
-  // Handle restoration from Results page back navigation or URL params
-  useEffect(() => {
-    if (location.state?.fromResults && location.state?.answers) {
-      const restoredAnswers = location.state.answers as QuizAnswer[];
-      setAnswers(restoredAnswers);
-      const restoredStep = location.state.currentQuestionIndex || restoredAnswers.length;
-      setCurrentQuestionIndex(restoredStep);
-      setSearchParams({ step: restoredStep.toString() });
-
-      // Restore path selection if it exists
-      const pathAnswer = restoredAnswers.find(a => a.questionId === "fork");
-      if (pathAnswer && typeof pathAnswer.answerId === "string") {
-        setSelectedPath(pathAnswer.answerId);
-      }
-
-      // Restore art style selection if it exists (art path only)
-      const artStyleAnswer = restoredAnswers.find(a => a.questionId === "art-style");
-      if (artStyleAnswer && typeof artStyleAnswer.answerId === "string") {
-        setSelectedArtStyle(artStyleAnswer.answerId);
-      }
-
-      // Restore vibe selection if it exists (gameplay path only)
-      const vibeAnswer = restoredAnswers.find(a => a.questionId === "vibe");
-      if (vibeAnswer && typeof vibeAnswer.answerId === "string") {
-        setSelectedVibe(vibeAnswer.answerId);
-      }
+  // Initialize state from sessionStorage OR location.state OR URL params
+  // Priority: location.state > sessionStorage > URL params/defaults
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(() => {
+    if (location.state?.fromResults) {
+      return location.state.currentQuestionIndex || 0;
     }
-  }, []);
+    const saved = loadQuizState();
+    return saved?.currentQuestionIndex ?? urlStep;
+  });
+
+  const [answers, setAnswers] = useState<QuizAnswer[]>(() => {
+    if (location.state?.fromResults && location.state.answers) {
+      return location.state.answers;
+    }
+    const saved = loadQuizState();
+    return saved?.answers ?? [];
+  });
+
+  const [selectedPath, setSelectedPath] = useState<string | null>(() => {
+    if (location.state?.fromResults && location.state.answers) {
+      const pathAnswer = location.state.answers.find((a: any) => a.questionId === "fork");
+      if (pathAnswer?.answerId) return pathAnswer.answerId as string;
+    }
+    const saved = loadQuizState();
+    return saved?.selectedPath ?? null;
+  });
+
+  const [selectedArtStyle, setSelectedArtStyle] = useState<string | null>(() => {
+    if (location.state?.fromResults && location.state.answers) {
+      const artStyleAnswer = location.state.answers.find((a: any) => a.questionId === "art-style");
+      if (artStyleAnswer?.answerId) return artStyleAnswer.answerId as string;
+    }
+    const saved = loadQuizState();
+    return saved?.selectedArtStyle ?? null;
+  });
+
+  const [selectedVibe, setSelectedVibe] = useState<string | null>(() => {
+    if (location.state?.fromResults && location.state.answers) {
+      const vibeAnswer = location.state.answers.find((a: any) => a.questionId === "vibe");
+      if (vibeAnswer?.answerId) return vibeAnswer.answerId as string;
+    }
+    const saved = loadQuizState();
+    return saved?.selectedVibe ?? null;
+  });
+
+  // Save state to sessionStorage whenever it changes
+  useEffect(() => {
+    saveQuizState({
+      currentQuestionIndex,
+      answers,
+      selectedPath,
+      selectedArtStyle,
+      selectedVibe
+    });
+  }, [currentQuestionIndex, answers, selectedPath, selectedArtStyle, selectedVibe]);
 
   // Dynamic total questions based on path
   const totalQuestions = selectedPath === "art" ? 2 : (selectedPath === "gameplay" ? 3 : 2);
@@ -113,7 +132,8 @@ const VibesQuestions = () => {
       setCurrentQuestionIndex(nextStep);
       setSearchParams({ step: nextStep.toString() });
     } else {
-      // Quiz complete, navigate to loading screen with answers and path type
+      // Quiz complete, clear saved state and navigate to loading screen
+      clearQuizState();
       const pathType = selectedPath === "art" ? "art" : "vibes";
       navigate("/loading", {
         state: {
@@ -158,8 +178,19 @@ const VibesQuestions = () => {
     }
   };
 
+  // Safety check: if state is invalid, reset to fork question
   if (!currentQuestion) {
-    return null; // Safety check
+    if (currentQuestionIndex !== 0) {
+      console.warn('Invalid quiz state detected, resetting to step 0', {
+        currentQuestionIndex,
+        selectedPath,
+        selectedVibe,
+        urlStep
+      });
+      setCurrentQuestionIndex(0);
+      setSearchParams({ step: '0' });
+    }
+    return null; // Will re-render with step 0
   }
 
   return (
@@ -202,11 +233,12 @@ const VibesQuestions = () => {
 
           {/* Multiple Choice Options */}
           {currentQuestion.type === "multiple-choice" && currentQuestion.options && (
-            <div className={`grid gap-3 items-stretch max-w-4xl mx-auto ${
+            <div className={cn(
+              "grid items-stretch mx-auto",
               currentQuestion.id === "fork"
-                ? "grid-cols-1 md:grid-cols-2" // Fork question: 2 columns
-                : "grid-cols-2 md:grid-cols-3" // Vibes/Art question: 3 columns (2x3 grid)
-            }`}>
+                ? "grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl" // 2 cards: larger gap, smaller container
+                : "grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl" // 6 cards: medium gap, larger container
+            )}>
               {currentQuestion.options.map((option) => {
                 // Get image URL based on question type
                 let imageUrl;
@@ -239,12 +271,17 @@ const VibesQuestions = () => {
           )}
 
           {/* Multi-Select Creature Question */}
-          {currentQuestion.type === "checkbox" && currentQuestion.options && (
+          {currentQuestion.type === "checkbox" && currentQuestion.options && selectedVibe && (
             <MultiSelectCreatureQuestion
-              options={currentQuestion.options.map(opt => ({
-                id: opt.id,
-                label: opt.title
-              }))}
+              options={currentQuestion.options.map(opt => {
+                // Get image URL from card-art-urls.json
+                const imageUrl = (cardArtUrls.creatureTypeImages as any)?.[selectedVibe]?.[opt.id];
+                return {
+                  id: opt.id,
+                  label: opt.title,
+                  imageUrl: imageUrl
+                };
+              })}
               onSubmit={handleAnswer}
               maxSelections={3}
             />

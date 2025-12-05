@@ -9,16 +9,18 @@
  */
 export const artStyleToFilters: Record<string, {
   ip?: string[];
+  set?: string[];
   tags?: string[];
   special?: boolean;
 }> = {
-  "anime-stylized": {
-    // Decks with stylized/anime aesthetics or alt-art potential
-    tags: ["stylized", "anime", "magical", "elegant"]
+  "classic-fantasy": {
+    // Classic MTG fantasy - dragons, wizards, elves, angels, knights
+    tags: ["dragon", "wizard", "elf", "angel", "knight"]
   },
   "cute-cozy": {
     // Bloomburrow decks
-    ip: ["bloomburrow"]
+    set: ["Bloomburrow"],
+    tags: ["cute", "whimsical", "playful", "mouse", "badger", "otter", "squirrel"]
   },
   "scifi-franchises": {
     // Sci-fi crossover IPs
@@ -26,12 +28,13 @@ export const artStyleToFilters: Record<string, {
   },
   "horror-dark": {
     // Horror-themed decks and Walking Dead
-    ip: ["walking_dead", "innistrad"],
-    tags: ["vampire", "zombie", "horror", "dark"]
+    ip: ["walking_dead"],
+    tags: ["vampire", "zombie", "horror", "dark", "werewolf"]
   },
-  "wild-weird": {
-    // Special handling - educational content about Secret Lair
-    special: true
+  "dinosaurs-beasts": {
+    // Dinosaurs and beasts - Ixalan and Jurassic World
+    ip: ["jurassic_world"],
+    tags: ["dinosaur", "beast", "tyranid", "primal"]
   },
   "epic-fantasy": {
     // Fantasy crossover IPs
@@ -55,6 +58,13 @@ export function filterDecksByArtStyle(decks: any[], artStyle: string): any[] {
   }
 
   return decks.filter(deck => {
+    // Check set match
+    if (filters.set && filters.set.length > 0) {
+      if (filters.set.some(s => deck.set && deck.set.includes(s))) {
+        return true;
+      }
+    }
+
     // Check IP match
     if (filters.ip && filters.ip.length > 0) {
       if (filters.ip.includes(deck.ip)) {
@@ -92,38 +102,13 @@ export function filterDecksByArtStyle(decks: any[], artStyle: string): any[] {
 }
 
 /**
- * Get "chaotic energy" deck recommendations for Wild & Weird selection
- * Returns decks that are unconventional, quirky, or have random/chaotic effects
+ * Get "chaotic energy" deck recommendations (legacy function, no longer used)
+ * Kept for backward compatibility
  */
 export function getChaoticEnergyDecks(decks: any[]): any[] {
-  // Filter for decks that have chaotic, random, or unconventional themes
-  return decks.filter(deck => {
-    const chaoticKeywords = [
-      "chaos",
-      "random",
-      "coin",
-      "dice",
-      "luck",
-      "unpredictable",
-      "silly",
-      "party"
-    ];
-
-    // Check IP (Doctor Who has time travel weirdness)
-    if (deck.ip === "doctor_who") {
-      return true;
-    }
-
-    // Check tags for chaotic keywords
-    if (deck.tags) {
-      const tagString = JSON.stringify(deck.tags).toLowerCase();
-      if (chaoticKeywords.some(keyword => tagString.includes(keyword))) {
-        return true;
-      }
-    }
-
-    return false;
-  }).slice(0, 6); // Return up to 6 chaotic decks
+  // No longer needed since "Wild & Weird" was replaced with "Dinosaurs & Beasts"
+  // Return empty array
+  return [];
 }
 
 /**
@@ -131,11 +116,11 @@ export function getChaoticEnergyDecks(decks: any[]): any[] {
  */
 export function getArtStyleDisplayName(artStyle: string): string {
   const displayNames: Record<string, string> = {
-    "anime-stylized": "Anime & Stylized Art",
+    "classic-fantasy": "Classic Fantasy",
     "cute-cozy": "Cute & Cozy",
     "scifi-franchises": "Sci-Fi & Franchises",
     "horror-dark": "Horror & Dark",
-    "wild-weird": "Wild & Weird",
+    "dinosaurs-beasts": "Dinosaurs & Beasts",
     "epic-fantasy": "Epic Fantasy"
   };
 

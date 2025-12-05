@@ -70,14 +70,15 @@ const LoadingScreen = () => {
 
     // Navigate to results after 2 seconds
     const timer = setTimeout(() => {
-      navigate("/results", { 
-        state: { 
-          answers, 
+      navigate("/results", {
+        state: {
+          answers,
           path: pathType,
           customText: detectedCustomText,
           isCustomInput: hasCustomInput,
           selectedIP
-        } 
+        },
+        replace: true  // Replace loading screen in history to prevent back button loop
       });
     }, 2000);
 

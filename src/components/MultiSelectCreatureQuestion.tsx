@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 interface CreatureOption {
   id: string;
   label: string;
+  imageUrl?: string;
 }
 
 interface MultiSelectCreatureQuestionProps {
@@ -64,37 +65,53 @@ export const MultiSelectCreatureQuestion = ({
               onClick={() => toggleCreature(option.id)}
               disabled={disabled}
               className={cn(
-                "relative bg-gradient-to-br from-card to-card/80 rounded-lg md:rounded-xl",
+                "relative rounded-lg md:rounded-xl overflow-hidden",
                 "border-2 transition-all duration-200",
-                "text-center flex items-center justify-center",
-                // Fixed height for uniform sizing across all vibe categories
-                "h-[70px] md:h-[100px]",
-                "px-4 py-3 md:px-6 md:py-4",
+                "text-center",
+                // Use aspect ratio for images, fixed height for text
+                option.imageUrl ? "aspect-[3/2]" : "h-[70px] md:h-[100px] flex items-center justify-center bg-gradient-to-br from-card to-card/80 px-4 py-3 md:px-6 md:py-4",
                 isSelected
-                  ? "border-accent shadow-card-hover bg-accent/5 scale-[1.02]"
+                  ? "border-accent shadow-card-hover scale-[1.02]"
                   : "border-border hover:border-primary/50 hover:scale-[1.01]",
                 disabled && "opacity-40 cursor-not-allowed hover:scale-100",
                 !disabled && !isSelected && "hover:shadow-md"
               )}
             >
+              {/* Image background if available */}
+              {option.imageUrl && (
+                <>
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-200 group-hover:scale-110"
+                    style={{ backgroundImage: `url(${option.imageUrl})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+                </>
+              )}
+
               {/* Checkmark for selected */}
               {isSelected && (
-                <div className="absolute top-1 right-1 md:top-2 md:right-2 w-4 h-4 md:w-6 md:h-6 rounded-full bg-accent flex items-center justify-center animate-scale-in">
+                <div className={cn(
+                  "absolute top-1 right-1 md:top-2 md:right-2",
+                  "w-4 h-4 md:w-6 md:h-6 rounded-full bg-accent flex items-center justify-center",
+                  "animate-scale-in z-10"
+                )}>
                   <Check className="w-2.5 h-2.5 md:w-4 md:h-4 text-accent-foreground" />
                 </div>
               )}
 
-              {/* Creature Label with dynamic text sizing */}
-              <span className={cn(
-                "font-semibold text-center leading-tight",
-                // Scale font based on text length
-                option.label.length > 15
-                  ? "text-[9px] md:text-sm"
-                  : "text-xs md:text-base",
-                isSelected ? "text-accent" : "text-foreground"
+              {/* Label */}
+              <div className={cn(
+                "relative z-10",
+                option.imageUrl ? "absolute bottom-0 left-0 right-0 p-2 md:p-3" : "flex items-center justify-center h-full"
               )}>
-                {option.label}
-              </span>
+                <span className={cn(
+                  "font-semibold leading-tight text-center",
+                  option.label.length > 15 ? "text-[9px] md:text-sm" : "text-xs md:text-base",
+                  option.imageUrl ? "text-white drop-shadow-lg" : (isSelected ? "text-accent" : "text-foreground")
+                )}>
+                  {option.label}
+                </span>
+              </div>
             </button>
           );
         })}

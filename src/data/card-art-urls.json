@@ -32,11 +32,11 @@
     "glossary": "https://cards.scryfall.io/art_crop/front/d/3/d33d91d0-1506-45e4-9def-975bf901815e.jpg?1731652624"
   },
   "artStyles": {
-    "anime-stylized": "https://cards.scryfall.io/art_crop/front/4/8/48b25568-46e9-4f4e-a4b5-7f371314e49e.jpg",
+    "classic-fantasy": "https://cards.scryfall.io/art_crop/front/0/2/029b1edb-e1de-4f1c-81df-8d17f4920318.jpg",
     "cute-cozy": "https://cards.scryfall.io/art_crop/front/d/c/dc2c1de0-6233-469a-be72-a050b97d2c8f.jpg",
     "scifi-franchises": "https://cards.scryfall.io/art_crop/front/f/0/f04ed2cc-aae1-400b-9cc5-5d4e3e3dd714.jpg",
     "horror-dark": "https://cards.scryfall.io/art_crop/front/d/7/d7533a72-77d1-40cd-b3a1-7597d566c428.jpg",
-    "wild-weird": "https://cards.scryfall.io/art_crop/front/f/7/f78bfbdf-719d-48f2-b26d-970aad3dbe06.jpg",
+    "dinosaurs-beasts": "https://cards.scryfall.io/art_crop/front/2/b/2be38927-637b-4dce-b228-83ce4f50c4a4.jpg",
     "epic-fantasy": "https://cards.scryfall.io/art_crop/front/e/2/e2b975e6-e709-481f-bfbc-41a832508283.jpg"
   },
   "gameplayStyles": {
@@ -54,5 +54,73 @@
   "forkQuestion": {
     "artPath": "https://cards.scryfall.io/art_crop/front/9/a/9a0639a0-c898-4a07-975c-a02bdd53175b.jpg",
     "gameplayPath": "https://cards.scryfall.io/art_crop/front/e/9/e98d5321-ec09-456c-a9ea-c8ca2cfc6205.jpg"
+  },
+  "creatureTypeImages": {
+    "lots-of-little-guys": {
+      "goblins": "https://api.scryfall.com/cards/m13/138?format=image&version=art_crop",
+      "elves": "https://api.scryfall.com/cards/khc/1?format=image&version=art_crop",
+      "soldiers": "https://api.scryfall.com/cards/bro/18?format=image&version=art_crop",
+      "zombies": "https://api.scryfall.com/cards/hou/145?format=image&version=art_crop",
+      "squirrels": "https://api.scryfall.com/cards/mh2/151?format=image&version=art_crop",
+      "vampires": "https://api.scryfall.com/cards/c17/36?format=image&version=art_crop",
+      "rats": "https://api.scryfall.com/cards/chk/124?format=image&version=art_crop",
+      "faeries": "https://api.scryfall.com/cards/mma/193?format=image&version=art_crop",
+      "saprolings": "https://api.scryfall.com/cards/dom/205?format=image&version=art_crop"
+    },
+    "few-big-guys": {
+      "dragons": "https://api.scryfall.com/cards/afr/235?format=image&version=art_crop",
+      "dinosaurs": "https://api.scryfall.com/cards/rex/18?format=image&version=art_crop",
+      "eldrazi": "https://api.scryfall.com/cards/emn/6?format=image&version=art_crop",
+      "hydras": "https://api.scryfall.com/cards/mma/182?format=image&version=art_crop",
+      "demons": "https://api.scryfall.com/cards/rtr/187?format=image&version=art_crop",
+      "angels": "https://api.scryfall.com/cards/avr/6?format=image&version=art_crop",
+      "giants": "https://api.scryfall.com/cards/thb/221?format=image&version=art_crop",
+      "beasts": "https://api.scryfall.com/cards/eld/171?format=image&version=art_crop",
+      "wurms": "https://api.scryfall.com/cards/rtr/211?format=image&version=art_crop"
+    },
+    "tricks-and-spells": {
+      "wizards": "https://api.scryfall.com/cards/grn/192?format=image&version=art_crop",
+      "shamans": "https://api.scryfall.com/cards/c13/210?format=image&version=art_crop",
+      "druids": "https://api.scryfall.com/cards/dom/206?format=image&version=art_crop",
+      "spellcasters": "https://api.scryfall.com/cards/c17/39?format=image&version=art_crop",
+      "storm": "https://api.scryfall.com/cards/c15/50?format=image&version=art_crop",
+      "control": "https://api.scryfall.com/cards/jmp/181?format=image&version=art_crop",
+      "burn": "https://api.scryfall.com/cards/hou/104?format=image&version=art_crop",
+      "copy-spells": "https://api.scryfall.com/cards/c21/3?format=image&version=art_crop",
+      "big-spells": "https://api.scryfall.com/cards/cmc/83?format=image&version=art_crop"
+    },
+    "cheat-death": {
+      "zombies": "https://api.scryfall.com/cards/mic/2?format=image&version=art_crop",
+      "spirits": "https://api.scryfall.com/cards/cmd/207?format=image&version=art_crop",
+      "skeletons": "https://api.scryfall.com/cards/ice/315?format=image&version=art_crop",
+      "vampires": "https://api.scryfall.com/cards/znr/98?format=image&version=art_crop",
+      "phoenixes": "https://api.scryfall.com/cards/rix/111?format=image&version=art_crop",
+      "horrors": "https://api.scryfall.com/cards/npm/68?format=image&version=art_crop",
+      "demons": "https://api.scryfall.com/cards/hou/73?format=image&version=art_crop",
+      "clerics": "https://api.scryfall.com/cards/znr/233?format=image&version=art_crop",
+      "anything-dies": "https://api.scryfall.com/cards/cma/186?format=image&version=art_crop"
+    },
+    "konami-code": {
+      "artifacts": "https://api.scryfall.com/cards/c16/29?format=image&version=art_crop",
+      "enchantments": "https://api.scryfall.com/cards/mh2/214?format=image&version=art_crop",
+      "treasures": "https://api.scryfall.com/cards/afc/2?format=image&version=art_crop",
+      "food": "https://api.scryfall.com/cards/c21/5?format=image&version=art_crop",
+      "clues": "https://api.scryfall.com/cards/mh2/204?format=image&version=art_crop",
+      "counters": "https://api.scryfall.com/cards/cm2/10?format=image&version=art_crop",
+      "energy": "https://api.scryfall.com/cards/kld/193?format=image&version=art_crop",
+      "vehicles": "https://api.scryfall.com/cards/nec/4?format=image&version=art_crop",
+      "infinite-loops": "https://api.scryfall.com/cards/c16/46?format=image&version=art_crop"
+    },
+    "main-character-energy": {
+      "knights": "https://api.scryfall.com/cards/eld/330?format=image&version=art_crop",
+      "warriors": "https://api.scryfall.com/cards/bbd/62?format=image&version=art_crop",
+      "angels": "https://api.scryfall.com/cards/neo/25?format=image&version=art_crop",
+      "dragons": "https://api.scryfall.com/cards/arb/124?format=image&version=art_crop",
+      "rogues": "https://api.scryfall.com/cards/c18/52?format=image&version=art_crop",
+      "merfolk": "https://api.scryfall.com/cards/rix/162?format=image&version=art_crop",
+      "cats": "https://api.scryfall.com/cards/c17/35?format=image&version=art_crop",
+      "samurai": "https://api.scryfall.com/cards/neo/224?format=image&version=art_crop",
+      "commanders": "https://api.scryfall.com/cards/cmc/10?format=image&version=art_crop"
+    }
   }
 }
