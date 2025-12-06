@@ -96,6 +96,24 @@ export const CardSetDetailModal = ({ cardSet, open, onClose }: CardSetDetailModa
     }
   }, [cardSet, open]);
 
+  // Handle browser back button to close modal instead of navigating away
+  useEffect(() => {
+    if (open) {
+      // Push a history state when modal opens
+      window.history.pushState({ modal: true }, '');
+
+      const handlePopState = () => {
+        onClose();
+      };
+
+      window.addEventListener('popstate', handlePopState);
+
+      return () => {
+        window.removeEventListener('popstate', handlePopState);
+      };
+    }
+  }, [open, onClose]);
+
   if (!cardSet) return null;
 
   const availabilityStyle = availabilityConfig[cardSet.availability];

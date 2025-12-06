@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +18,24 @@ interface DeckDetailModalProps {
 
 export const DeckDetailModal = ({ deck, open, onClose }: DeckDetailModalProps) => {
   const [activeTab, setActiveTab] = useState("overview");
+
+  // Handle browser back button to close modal instead of navigating away
+  useEffect(() => {
+    if (open) {
+      // Push a history state when modal opens
+      window.history.pushState({ modal: true }, '');
+
+      const handlePopState = () => {
+        onClose();
+      };
+
+      window.addEventListener('popstate', handlePopState);
+
+      return () => {
+        window.removeEventListener('popstate', handlePopState);
+      };
+    }
+  }, [open, onClose]);
 
   if (!deck) return null;
 
