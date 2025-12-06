@@ -213,17 +213,19 @@ const Discover = () => {
         {/* Tabs for Theme Browsing and Crossovers */}
         {!selectedTheme && (
           <Tabs value={activeTab} onValueChange={(value) => setSearchParams({ tab: value })} className="w-full">
-            <TabsList className="mb-6 w-full flex">
-              <TabsTrigger value="themes" className="flex-1">Decks by Theme</TabsTrigger>
-              <TabsTrigger value="crossovers" className="flex-1 flex flex-col">
-                <span>Decks by Franchise</span>
-                <span className="text-xs text-muted-foreground">(Universes Beyond)</span>
-              </TabsTrigger>
-              <TabsTrigger value="cardsets" className="flex-1 flex flex-col">
-                <span>Cards with Special Art</span>
-                <span className="text-xs text-muted-foreground">(Secret Lair)</span>
-              </TabsTrigger>
-            </TabsList>
+            <div className="overflow-x-auto -mx-4 px-4 scrollbar-hide mb-6">
+              <TabsList className="min-w-max w-full flex">
+                <TabsTrigger value="themes" className="flex-1">Decks by Theme</TabsTrigger>
+                <TabsTrigger value="crossovers" className="flex-1 flex flex-col">
+                  <span>Decks by Franchise</span>
+                  <span className="text-xs text-muted-foreground">(Universes Beyond)</span>
+                </TabsTrigger>
+                <TabsTrigger value="cardsets" className="flex-1 flex flex-col">
+                  <span>Cards with Special Art</span>
+                  <span className="text-xs text-muted-foreground">(Secret Lair)</span>
+                </TabsTrigger>
+              </TabsList>
+            </div>
 
             {/* Themes Tab */}
             <TabsContent value="themes" className="space-y-6">
