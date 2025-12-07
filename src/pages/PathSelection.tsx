@@ -11,7 +11,7 @@ const PathSelection = () => {
   const handleMatchMe = () => {
     // Clear any previous quiz state before starting fresh
     clearQuizState();
-    navigate("/vibes-questions");
+    navigate("/vibes-questions?step=0");
   };
 
   const handleSurpriseMe = () => {
@@ -34,7 +34,7 @@ const PathSelection = () => {
           </div>
 
           {/* Two Image Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
             {/* Match Me */}
             <button
               onClick={handleMatchMe}

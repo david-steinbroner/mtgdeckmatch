@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { MainNav } from "@/components/MainNav";
 import { Glossary } from "@/components/Glossary";
 import { BackButton } from "@/components/BackButton";
