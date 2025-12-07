@@ -28,7 +28,8 @@ const Home = () => {
         {/* Hero - Consolidated */}
         <section className="text-center pt-2 sm:pt-6 pb-2 px-4">
           <h1 className="text-lg sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">
-            You made it. You're discovering Magic.
+            You made it.{' '}
+            <span className="block">You're discovering Magic: The Gathering.</span>
           </h1>
         </section>
 
@@ -66,7 +67,7 @@ const Home = () => {
         </div>
 
         {/* Carousel */}
-        <div className="mt-3">
+        <div className="mt-6 sm:mt-8">
           <p className="text-xs text-muted-foreground px-4 mb-2">
             Check these out →
           </p>

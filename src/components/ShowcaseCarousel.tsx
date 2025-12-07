@@ -46,11 +46,11 @@ export const ShowcaseCarousel = ({ items, onItemClick }: ShowcaseCarouselProps) 
 
   return (
     <div className="flex items-center justify-center gap-4">
-      {/* Left Arrow - OUTSIDE cards */}
+      {/* Left Arrow - OUTSIDE cards - Hidden on mobile */}
       <Button
         variant="outline"
         size="icon"
-        className={`flex-shrink-0 ${!canScrollLeft ? 'opacity-30 cursor-not-allowed' : ''}`}
+        className={`hidden sm:flex flex-shrink-0 ${!canScrollLeft ? 'opacity-30 cursor-not-allowed' : ''}`}
         onClick={() => scroll('left')}
         disabled={!canScrollLeft}
         aria-label="Scroll left"
@@ -76,11 +76,11 @@ export const ShowcaseCarousel = ({ items, onItemClick }: ShowcaseCarouselProps) 
         ))}
       </div>
 
-      {/* Right Arrow - OUTSIDE cards */}
+      {/* Right Arrow - OUTSIDE cards - Hidden on mobile */}
       <Button
         variant="outline"
         size="icon"
-        className={`flex-shrink-0 ${!canScrollRight ? 'opacity-30 cursor-not-allowed' : ''}`}
+        className={`hidden sm:flex flex-shrink-0 ${!canScrollRight ? 'opacity-30 cursor-not-allowed' : ''}`}
         onClick={() => scroll('right')}
         disabled={!canScrollRight}
         aria-label="Scroll right"
