@@ -85,7 +85,8 @@ const LoadingScreen = () => {
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Run once on mount - intentionally omit deps to prevent re-navigation
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted flex items-center justify-center p-4">

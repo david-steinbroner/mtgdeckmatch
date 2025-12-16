@@ -27,7 +27,8 @@ const PowerQuestions = () => {
       trackQuizStarted("power");
       hasTrackedStart.current = true;
     }
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Track only once on mount
 
   // Handle restoration from Results page back navigation or URL params
   useEffect(() => {
@@ -38,7 +39,8 @@ const PowerQuestions = () => {
       setCurrentQuestionIndex(restoredStep);
       setSearchParams({ step: restoredStep.toString() });
     }
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Restore state only once on mount from navigation
 
   const currentQuestion = powerQuestions[currentQuestionIndex];
   const totalQuestions = powerQuestions.length;

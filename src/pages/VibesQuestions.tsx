@@ -74,7 +74,8 @@ const VibesQuestions = () => {
       trackQuizStarted("vibes");
       hasTrackedStart.current = true;
     }
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Track only once on mount
 
   // Save state to sessionStorage whenever it changes
   useEffect(() => {
@@ -108,7 +109,8 @@ const VibesQuestions = () => {
         }
       }
     }
-  }, [searchParams]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]); // Sync with URL - currentQuestionIndex omitted to prevent loops
 
   // Dynamic total questions based on path
   const totalQuestions = selectedPath === "art" ? 2 : (selectedPath === "gameplay" ? 3 : 2);

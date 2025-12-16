@@ -76,7 +76,8 @@ const Results = () => {
     if (source === 'surprise') {
       setSurpriseDecks(getRandomIPDecks());
     }
-  }, []); // Only run once on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Only run once on mount - source is stable from navigation state
 
   // Convert answers array to preferences object based on path
   let userPreferences: Record<string, unknown> = {};
@@ -153,7 +154,8 @@ const Results = () => {
         hasTrackedCompletion.current = true;
       }
     }
-  }, [matchedResults.length, surpriseDecks]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [matchedResults.length, surpriseDecks]); // Intentionally use .length to avoid infinite loops
 
   const topMatches = displayedDecks;
 
@@ -205,7 +207,8 @@ const Results = () => {
     };
 
     generateIntros();
-  }, []); // Run once on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Run once on mount - deps are stable from navigation state
 
   // Get user's input for personalization
   const getUserInputBullet = () => {
