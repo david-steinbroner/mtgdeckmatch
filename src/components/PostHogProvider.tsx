@@ -6,7 +6,8 @@ export const PostHogPageView = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (import.meta.env.VITE_POSTHOG_API_KEY && import.meta.env.PROD) {
+    // Only capture pageviews in production when the public PostHog key is set
+    if (import.meta.env.VITE_PUBLIC_POSTHOG_KEY && import.meta.env.PROD) {
       posthog.capture("$pageview", {
         $current_url: window.location.href,
       });

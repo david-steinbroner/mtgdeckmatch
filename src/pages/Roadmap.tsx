@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CheckCircle2, Circle, Loader2 } from "lucide-react";
+import { CheckCircle2, Circle, Loader2, LucideIcon } from "lucide-react";
 
 interface Phase {
   id: string;
@@ -13,7 +13,16 @@ interface RoadmapData {
   phases: Phase[];
 }
 
-const statusConfig = {
+interface StatusConfig {
+  icon: LucideIcon;
+  label: string;
+  color: string;
+  bg: string;
+  border: string;
+  animate?: boolean;
+}
+
+const statusConfig: Record<Phase["status"], StatusConfig> = {
   complete: {
     icon: CheckCircle2,
     label: "Complete",
