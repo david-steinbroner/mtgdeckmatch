@@ -27,6 +27,7 @@ export default function DeckFindingOptions() {
       <main className="flex-1 flex flex-col md:flex-row items-center justify-center gap-6 p-6 max-w-4xl mx-auto w-full">
         <Link
           to="/start/v3/interests"
+          state={{ from: 'deck-finding' }}
           className="group flex flex-col items-center p-8 rounded-2xl border-2 border-purple-500/50 bg-gradient-to-br from-purple-900/40 to-purple-800/20 hover:border-purple-400 transition-all min-h-[200px] max-w-[350px] w-full"
         >
           <Palette className="w-12 h-12 text-purple-400 mb-4" />
