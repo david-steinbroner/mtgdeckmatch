@@ -44,7 +44,13 @@ export const MainNav = () => {
     },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => {
+    if (path === "/discover") {
+      // /start pages are part of the discovery flow
+      return location.pathname === path || location.pathname.startsWith("/start");
+    }
+    return location.pathname === path;
+  };
   const savedCount = savedDeckIds.length;
 
   return (

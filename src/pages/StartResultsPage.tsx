@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MainNav } from "@/components/MainNav";
 import { getInterestById, curatedCardSetIds, curatedDeckIds } from "@/data/interest-mappings";
 import {
   getCardSetsForInterest,
@@ -74,6 +75,7 @@ const StartResultsPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <MainNav />
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Header Row with Back Button */}
         <div className="grid grid-cols-3 items-center mb-8">

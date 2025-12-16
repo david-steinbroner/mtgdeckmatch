@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { interests } from "@/data/interest-mappings";
+import { MainNav } from "@/components/MainNav";
 import { QuizPageLayout } from "@/components/QuizPageLayout";
 import { trackInterestSelected } from "@/lib/analytics";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -23,7 +24,9 @@ const StartPage = () => {
   const bannerInterest = interests[8]; // "Just Show Me Cool Stuff"
 
   return (
-    <QuizPageLayout>
+    <div className="min-h-screen bg-background flex flex-col">
+      <MainNav />
+      <QuizPageLayout>
       <div className="w-full max-w-6xl mx-auto px-4 py-8">
         {/* Header Row with Back Button */}
         <div className="grid grid-cols-3 items-center mb-3">
@@ -131,6 +134,7 @@ const StartPage = () => {
         </div> */}
       </div>
     </QuizPageLayout>
+    </div>
   );
 };
 
