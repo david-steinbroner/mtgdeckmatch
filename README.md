@@ -1,73 +1,162 @@
-# Welcome to your Lovable project
+# Discovering Magic 🎴
 
-## Project info
+> Help people discover Magic: The Gathering through things they already love.
 
-**URL**: https://lovable.dev/projects/8ddda47b-c208-4016-a3b6-15be5bb0e057
+**Live site:** [discoveringmagic.com](https://discoveringmagic.com)
 
-## How can I edit this code?
+-----
 
-There are several ways of editing your application.
+## What is this?
 
-**Use Lovable**
+Discovering Magic is a discovery platform that connects people’s existing interests to Magic: The Gathering products. Instead of overwhelming newcomers with 30 years of cards and jargon, we ask one question: **“What are you already into?”**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8ddda47b-c208-4016-a3b6-15be5bb0e057) and start prompting.
+Then we show them the Fallout deck. The Doctor Who cards. The Furby. The SpongeBob crossover.
 
-Changes made via Lovable will be committed automatically to this repo.
+The “holy shit, Magic has THAT?!” moment — bottled into a website.
 
-**Use your preferred IDE**
+-----
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## The Problem
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+People don’t bounce off Magic because they hate it. They bounce because nothing connected to something they already cared about.
 
-Follow these steps:
+Traditional entry points assume you already care about Magic. We don’t.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+-----
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Who It’s For
 
-# Step 3: Install the necessary dependencies.
-npm i
+|Audience               |What they need                                                               |
+|-----------------------|-----------------------------------------------------------------------------|
+|**Bounced-off players**|“My friend tried to get me into Magic but…” — Show them their hook           |
+|**Recruiters**         |Magic players who want to convert their friends — Give them a link to send   |
+|**New players**        |Already sold, just overwhelmed — Match them to their first deck in 60 seconds|
+|**Gift buyers**        |Zero Magic knowledge — Guide them to a safe purchase                         |
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+-----
+
+## Features
+
+- **START Flow** — Fork between “never played” and “played before” for tailored paths
+- **12 Interest Categories** — Video games, anime, cute animals, horror, superheroes, etc.
+- **Deck Quiz** — Art-focused or gameplay-focused matching in under a minute
+- **148 Commander Precons** — Full catalog with beginner-friendly descriptions
+- **Card Set Showcase** — Universes Beyond crossovers and Secret Lairs
+- **Learn Section** — Jargon-free education for total beginners
+- **Browse & Filter** — For people who know what they want
+
+-----
+
+## Tech Stack
+
+|Layer         |Tech                                     |
+|--------------|-----------------------------------------|
+|Framework     |React 18 + TypeScript                    |
+|Build         |Vite                                     |
+|UI            |shadcn/ui + Radix UI                     |
+|Styling       |Tailwind CSS                             |
+|Routing       |React Router v6                          |
+|State         |React Context, sessionStorage, URL params|
+|Data          |TanStack Query, Scryfall API             |
+|Analytics     |PostHog                                  |
+|Error Tracking|Sentry                                   |
+|Hosting       |Cloudflare Pages                         |
+
+-----
+
+## Local Development
+
+```bash
+# Clone
+git clone https://github.com/YOUR_USERNAME/discovering-magic.git
+cd discovering-magic
+
+# Install dependencies
+npm install
+
+# Start dev server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Requires Node.js 18+ (recommend using [nvm](https://github.com/nvm-sh/nvm))
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+-----
 
-**Use GitHub Codespaces**
+## Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+src/
+├── components/
+│   ├── start/           # START flow v3 components
+│   ├── MainNav.tsx      # Site navigation
+│   ├── DeckCard.tsx     # Deck preview cards
+│   └── ...
+├── pages/
+│   ├── start/           # START flow pages
+│   ├── Home.tsx         # Homepage
+│   ├── Discover.tsx     # Theme browsing
+│   ├── Browse.tsx       # All decks with filters
+│   └── ...
+├── data/
+│   ├── precons-data.json       # 148 Commander decks
+│   ├── card-sets.json          # Universes Beyond sets
+│   ├── interest-categories.ts  # START flow categories
+│   └── ...
+├── hooks/               # Custom React hooks
+├── contexts/            # React Context providers
+└── lib/                 # Utilities
+```
 
-## What technologies are used for this project?
+-----
 
-This project is built with:
+## Key Data Files
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+|File                    |What it contains                                     |
+|------------------------|-----------------------------------------------------|
+|`precons-data.json`     |All Commander precon decks with comprehensive tagging|
+|`card-sets.json`        |~30 Universes Beyond and Secret Lair sets            |
+|`interest-categories.ts`|12 interests with matching logic                     |
+|`themes.json`           |Discover page theme definitions                      |
+|`learn-articles.ts`     |Educational content                                  |
+|`glossary.ts`           |35+ beginner-friendly term definitions               |
 
-## How can I deploy this project?
+-----
 
-Simply open [Lovable](https://lovable.dev/projects/8ddda47b-c208-4016-a3b6-15be5bb0e057) and click on Share -> Publish.
+## Deployment
 
-## Can I connect a custom domain to my Lovable project?
+**Production:** Cloudflare Pages auto-deploys from `main` branch
 
-Yes, you can!
+**Preview:** Push to any branch for automatic preview deployment
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+-----
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Documentation
+
+- [SITE_BIBLE.md](./SITE_BIBLE.md) — Full product reference and vision
+- [SITE_BIBLE-3.md](./SITE_BIBLE-3.md) — Updated bible with v3 START flow details
+
+-----
+
+## Contributing
+
+This is primarily a solo portfolio project, but feedback is welcome:
+
+1. Open an issue for bugs or suggestions
+1. Check existing issues before creating new ones
+1. PRs welcome for typos, broken links, or data corrections
+
+-----
+
+## License
+
+MIT
+
+-----
+
+## About
+
+Built by [David](https://github.com/YOUR_USERNAME) as both a passion project and PM portfolio piece.
+
+The goal: solve a real problem I observed in the Magic community while demonstrating product thinking, user research, and shipping discipline.
+
+Questions? [Open an issue](https://github.com/YOUR_USERNAME/discovering-magic/issues) or reach out.
